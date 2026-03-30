@@ -45,11 +45,10 @@ img{max-width:100%;display:block}
 .nav a{font-family:var(--fd);font-size:13px;font-weight:500;color:var(--g8);text-decoration:none;transition:color .2s;letter-spacing:.02em}
 .nav a:hover{color:var(--b6)}
 .nav-cta{background:var(--b7)!important;color:var(--w)!important;padding:10px 22px!important;border-radius:6px;font-weight:600!important}
-.lang-sw{display:inline-flex;align-items:center;gap:0;border:1px solid var(--g2);border-radius:4px;overflow:hidden;font-size:13px}
-.lang-sw a{padding:6px 12px!important;font-size:13px!important;color:var(--g6)!important;text-decoration:none;transition:all .2s}
-.lang-sw a.active{background:var(--b7);color:var(--w)!important;font-weight:600}
-.lang-sw a:not(.active):hover{background:var(--g0)}
-.lang-sep{width:1px;height:20px;background:var(--g2)}
+.lang-sw{display:flex;align-items:center;gap:2px;font-size:13px;font-weight:600;border:1px solid var(--g2);border-radius:6px;overflow:hidden}
+.lang-sw a{padding:6px 12px;text-decoration:none;color:var(--g6);transition:all .2s}
+.lang-sw a.active{background:var(--b7);color:var(--w)}
+.lang-sw a:hover:not(.active){background:var(--g1);color:var(--g8)}
 /* Logo & product images */
 .logo-img{height:36px;width:auto}
 .logo-img.footer{height:30px}
@@ -68,12 +67,12 @@ img{max-width:100%;display:block}
 
 /* ===== PAGE HERO (white) ===== */
 .page-hero{padding:clamp(48px,6vw,80px) 0;text-align:center}
-.page-hero h1{font-family:var(--fd);font-size:clamp(32px,4.5vw,52px);font-weight:700;line-height:1.15;letter-spacing:-.02em;margin-bottom:16px;color:var(--g9)}
+.page-hero h1{font-family:var(--fd);font-size:clamp(32px,4vw,48px);font-weight:700;line-height:1.15;letter-spacing:-.02em;margin-bottom:16px;color:var(--g9)}
 .page-hero-sub{font-family:var(--fd);font-size:clamp(16px,2vw,20px);font-weight:400;color:var(--g6);margin-bottom:28px}
 .page-hero-intro{font-size:16px;color:var(--g8);line-height:1.8;max-width:760px;margin:0 auto}
 
 /* ===== CE MARK FEATURE PANEL ===== */
-.ce-shell{background:linear-gradient(180deg,rgba(255,255,255,.95),rgba(227,242,253,.72));border:1px solid rgba(66,165,245,.24);border-radius:32px;padding:clamp(22px,3.8vw,36px);box-shadow:0 24px 60px rgba(8,36,62,.06)}
+.ce-shell{background:var(--w);border:1px solid var(--g2);border-radius:16px;padding:clamp(22px,3.8vw,36px);box-shadow:0 24px 60px rgba(8,36,62,.06)}
 .ce-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(320px,.85fr);gap:28px;align-items:start}
 .ce-copy{display:flex;flex-direction:column;gap:22px}
 .ce-intro{max-width:720px}
@@ -81,7 +80,7 @@ img{max-width:100%;display:block}
 .ce-kicker::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--gd);box-shadow:0 0 0 6px rgba(229,168,50,.16)}
 .ce-lead{font-size:19px;line-height:1.72;color:var(--g9);max-width:620px}
 .ce-feature-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
-.ce-feature-card{background:rgba(255,255,255,.86);border:1px solid rgba(144,202,249,.55);border-radius:20px;padding:18px;display:flex;gap:16px;transition:all .25s}
+.ce-feature-card{background:var(--w);border:1px solid var(--g2);border-radius:16px;padding:18px;display:flex;gap:16px;transition:all .25s}
 .ce-feature-card:hover{border-color:var(--b4);box-shadow:0 14px 30px rgba(16,65,122,.08);transform:translateY(-2px)}
 .ce-feature-icon{width:48px;height:48px;background:var(--b1);border-radius:14px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .ce-feature-icon .ico{width:24px;height:24px;stroke:var(--b7)}
@@ -107,7 +106,7 @@ img{max-width:100%;display:block}
 .ce-benefits-head h3{font-family:var(--fd);font-size:24px;font-weight:700;color:var(--g9)}
 .ce-benefits-head p{max-width:420px;font-size:14px;color:var(--g6);line-height:1.7}
 .ce-points{list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
-.ce-points li{display:flex;align-items:flex-start;gap:14px;background:rgba(255,255,255,.82);border:1px solid rgba(144,202,249,.45);border-radius:18px;padding:18px 20px}
+.ce-points li{display:flex;align-items:flex-start;gap:14px;background:var(--w);border:1px solid var(--g2);border-radius:16px;padding:18px 20px}
 .ce-points li .ico{width:20px;height:20px;stroke:var(--gn);margin-top:2px;flex-shrink:0}
 .ce-point-copy{display:flex;flex-direction:column;gap:4px}
 .ce-point-copy strong{font-family:var(--fd);font-size:15px;font-weight:700;color:var(--g9)}
@@ -118,7 +117,7 @@ img{max-width:100%;display:block}
 .iso-text p{font-size:16px;color:var(--g8);line-height:1.8;margin-bottom:20px}
 .iso-text p:last-child{margin-bottom:0}
 .iso-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.iso-card{background:var(--g0);border:1px solid var(--g2);border-radius:16px;padding:32px 24px;text-align:center;transition:all .3s}
+.iso-card{background:var(--w);border:1px solid var(--g2);border-radius:16px;padding:32px 24px;text-align:center;transition:all .3s}
 .iso-card:hover{border-color:var(--b4);box-shadow:0 8px 32px rgba(13,75,143,.06);transform:translateY(-4px)}
 .iso-icon{width:52px;height:52px;margin:0 auto 18px;background:var(--b1);border-radius:12px;display:flex;align-items:center;justify-content:center}
 .iso-icon .ico{width:26px;height:26px;stroke:var(--b7)}
@@ -263,7 +262,6 @@ body.oc-open{overflow:hidden}
     <a href="/en/contact/">Contact</a>
     <div class="lang-sw">
       <a href="/en/compliance.html" class="active">EN</a>
-      <span class="lang-sep"></span>
       <a href="/tr/sertifikalar.html">TR</a>
     </div>
     <a href="/en/product/alkosafe-saliva-alcohol-test.html" class="nav-cta">Buy Now</a>

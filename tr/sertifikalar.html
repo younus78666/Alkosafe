@@ -47,11 +47,10 @@ img{max-width:100%;display:block}
 .logo-img{height:36px;width:auto}
 .logo-img.footer{height:30px}
 /* Language switcher */
-.lang-sw{display:flex;align-items:center;gap:4px;font-size:13px}
-.lang-sw a{color:var(--g6);text-decoration:none;padding:4px 8px;border-radius:4px;transition:all .2s}
-.lang-sw a:hover{color:var(--b6)}
-.lang-sw a.active{font-weight:700;color:var(--b8);background:var(--b1)}
-.lang-sw .divider{color:var(--g4)}
+.lang-sw{display:flex;align-items:center;gap:2px;font-size:13px;font-weight:600;border:1px solid var(--g2);border-radius:6px;overflow:hidden}
+.lang-sw a{padding:6px 12px;text-decoration:none;color:var(--g6);transition:all .2s}
+.lang-sw a.active{background:var(--b7);color:var(--w)}
+.lang-sw a:hover:not(.active){background:var(--g1);color:var(--g8)}
 /* Mobile hamburger */
 .mob-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px}
 .mob-toggle .ico{width:24px;height:24px;stroke:var(--g8)}
@@ -68,7 +67,7 @@ img{max-width:100%;display:block}
 /* Hero intro */
 .cert-hero{background:var(--w)}
 .cert-hero-in{max-width:800px;margin:0 auto;text-align:center}
-.cert-hero h1{font-family:var(--fd);font-size:clamp(32px,4.5vw,52px);font-weight:700;line-height:1.15;letter-spacing:-.02em;margin-bottom:28px;color:var(--g9)}
+.cert-hero h1{font-family:var(--fd);font-size:clamp(32px,4vw,48px);font-weight:700;line-height:1.15;letter-spacing:-.02em;margin-bottom:28px;color:var(--g9)}
 .cert-hero .intro{font-size:17px;color:var(--g6);line-height:1.75;max-width:720px;margin:0 auto}
 /* CE / ISO content sections */
 .cert-content{max-width:800px;margin:0 auto}
@@ -213,7 +212,6 @@ body.oc-open{overflow:hidden}
     <a href="/tr/iletisim/">Iletisim</a>
     <div class="lang-sw">
       <a href="/en/compliance.html">EN</a>
-      <span class="divider">|</span>
       <a href="/tr/sertifikalar.html" class="active">TR</a>
     </div>
     <a href="/tr/#buy" class="nav-cta">Hemen Al</a>

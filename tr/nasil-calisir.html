@@ -47,11 +47,10 @@ img{max-width:100%;display:block}
 .logo-img{height:36px;width:auto}
 .logo-img.footer{height:30px}
 /* Language switcher */
-.lang-sw{display:flex;align-items:center;gap:4px;font-size:13px}
-.lang-sw a{color:var(--g6);text-decoration:none;padding:4px 8px;border-radius:4px;transition:all .2s}
-.lang-sw a:hover{color:var(--b6)}
-.lang-sw a.active{font-weight:700;color:var(--b8);background:var(--b1)}
-.lang-sw .divider{color:var(--g4)}
+.lang-sw{display:flex;align-items:center;gap:2px;font-size:13px;font-weight:600;border:1px solid var(--g2);border-radius:6px;overflow:hidden}
+.lang-sw a{padding:6px 12px;text-decoration:none;color:var(--g6);transition:all .2s}
+.lang-sw a.active{background:var(--b7);color:var(--w)}
+.lang-sw a:hover:not(.active){background:var(--g1);color:var(--g8)}
 /* Mobile hamburger */
 .mob-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px}
 .mob-toggle .ico{width:24px;height:24px;stroke:var(--g8)}
@@ -68,8 +67,8 @@ img{max-width:100%;display:block}
 /* Hero intro */
 .hiw-hero{background:var(--w)}
 .hiw-hero-in{max-width:800px;margin:0 auto;text-align:center}
-.hiw-hero h1{font-family:var(--fd);font-size:clamp(32px,4.5vw,52px);font-weight:700;line-height:1.15;letter-spacing:-.02em;margin-bottom:16px;color:var(--g9)}
-.hiw-hero .subtitle{font-family:var(--fd);font-size:clamp(16px,2vw,20px);font-weight:500;color:var(--b6);margin-bottom:28px}
+.hiw-hero h1{font-family:var(--fd);font-size:clamp(32px,4vw,48px);font-weight:700;line-height:1.1;letter-spacing:-.02em;margin-bottom:16px;color:var(--g9)}
+.hiw-hero .subtitle{font-family:var(--fd);font-size:clamp(16px,2vw,20px);font-weight:500;color:var(--g6);margin-bottom:28px}
 .hiw-hero .intro{font-size:17px;color:var(--g6);line-height:1.75;max-width:720px;margin:0 auto}
 /* Science section */
 .sci-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
@@ -80,14 +79,14 @@ img{max-width:100%;display:block}
 .sci-steps li::before{content:counter(sci);flex-shrink:0;width:32px;height:32px;background:var(--b7);color:var(--w);border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-size:14px;font-weight:700}
 .sci-note{font-size:14px;color:var(--g6);line-height:1.7;padding:16px 20px;background:var(--b1);border-radius:12px;border-left:4px solid var(--b7)}
 .sci-img{display:flex;justify-content:center;align-items:center}
-.sci-img-wrap{background:var(--g0);border:1px solid var(--g2);border-radius:20px;padding:40px;display:flex;align-items:center;justify-content:center}
+.sci-img-wrap{background:var(--g0);border:1px solid var(--g2);border-radius:16px;padding:40px;display:flex;align-items:center;justify-content:center}
 .sci-img-wrap img{max-height:380px;width:auto;object-fit:contain}
 /* Saliva section */
 .saliva-content{max-width:800px;margin:0 auto}
 .saliva-content p{font-size:16px;color:var(--g8);line-height:1.8;margin-bottom:0}
 /* Steps */
 .sg4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-.s4c{background:var(--w);border:1px solid var(--g2);border-radius:20px;padding:32px 24px 28px;text-align:center;position:relative;transition:all .35s}
+.s4c{background:var(--w);border:1px solid var(--g2);border-radius:16px;padding:32px 24px 28px;text-align:center;position:relative;transition:all .35s}
 .s4c:hover{border-color:var(--b4);box-shadow:0 16px 48px rgba(13,75,143,.08);transform:translateY(-6px)}
 .sn{width:56px;height:56px;margin:0 auto 20px;background:var(--b7);border-radius:14px;display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-size:24px;font-weight:700;color:var(--w)}
 .s4c h3{font-size:18px;font-weight:700;margin-bottom:10px;color:var(--g9)}
@@ -247,7 +246,6 @@ body.oc-open{overflow:hidden}
     <a href="/tr/iletisim/">Iletisim</a>
     <div class="lang-sw">
       <a href="/en/how-it-works.html">EN</a>
-      <span class="divider">|</span>
       <a href="/tr/nasil-calisir.html" class="active">TR</a>
     </div>
     <a href="/tr/#buy" class="nav-cta">Hemen Al</a>

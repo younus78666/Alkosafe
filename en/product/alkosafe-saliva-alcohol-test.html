@@ -45,11 +45,10 @@ img{max-width:100%;display:block}
 .nav a{font-family:var(--fd);font-size:13px;font-weight:500;color:var(--g8);text-decoration:none;transition:color .2s;letter-spacing:.02em}
 .nav a:hover{color:var(--b6)}
 .nav-cta{background:var(--b7)!important;color:var(--w)!important;padding:10px 22px!important;border-radius:6px;font-weight:600!important}
-.lang-sw{display:inline-flex;align-items:center;gap:0;border:1px solid var(--g2);border-radius:4px;overflow:hidden;font-size:13px}
-.lang-sw a{padding:6px 12px!important;font-size:13px!important;color:var(--g6)!important;text-decoration:none;transition:all .2s}
-.lang-sw a.active{background:var(--b7);color:var(--w)!important;font-weight:600}
-.lang-sw a:not(.active):hover{background:var(--g0)}
-.lang-sep{width:1px;height:20px;background:var(--g2)}
+.lang-sw{display:flex;align-items:center;gap:2px;font-size:13px;font-weight:600;border:1px solid var(--g2);border-radius:6px;overflow:hidden}
+.lang-sw a{padding:6px 12px;text-decoration:none;color:var(--g6);transition:all .2s}
+.lang-sw a.active{background:var(--b7);color:var(--w)}
+.lang-sw a:hover:not(.active){background:var(--g1);color:var(--g8)}
 /* Logo image */
 .logo-img{height:36px;width:auto}
 .logo-img.footer{height:30px}
@@ -222,7 +221,7 @@ img{max-width:100%;display:block}
 .ctac h2{font-family:var(--fd);font-size:clamp(28px,3.5vw,40px);font-weight:700;margin-bottom:14px;letter-spacing:-.02em}
 .ctac p{font-size:17px;color:rgba(255,255,255,.7);line-height:1.7;margin-bottom:32px}
 .ctas{display:grid;grid-template-columns:1fr 1fr;gap:20px;min-width:280px}
-.sb{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:24px;text-align:center}
+.sb{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:24px;text-align:center}
 .sbn{font-family:var(--fd);font-size:32px;font-weight:700;color:var(--gl);margin-bottom:4px}
 .sbl{font-size:13px;color:rgba(255,255,255,.55)}
 
@@ -317,9 +316,7 @@ body.oc-open{overflow:hidden}
     <a href="/en/about/">About</a>
     <a href="/en/contact/">Contact</a>
     <div class="lang-sw">
-      <a href="/en/product/alkosafe-saliva-alcohol-test.html" class="active">EN</a>
-      <span class="lang-sep"></span>
-      <a href="/tr/urun/alkosafe-tukuruk-alkol-testi.html">TR</a>
+      <a href="/en/product/alkosafe-saliva-alcohol-test.html" class="active">EN</a><a href="/tr/urun/alkosafe-tukuruk-alkol-testi.html">TR</a>
     </div>
     <a href="#buy" class="nav-cta">Buy Now</a>
   </nav>

@@ -86,7 +86,7 @@ img{max-width:100%;display:block}
 .step-time .ico{width:14px;height:14px;stroke:var(--b6)}
 /* Standards */
 .stg{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-.stc{background:var(--g0);border:1px solid var(--g2);border-radius:14px;padding:32px 24px;text-align:center;transition:all .3s}
+.stc{background:var(--g0);border:1px solid var(--g2);border-radius:16px;padding:32px 24px;text-align:center;transition:all .3s}
 .stc:hover{border-color:var(--b3);transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,.04)}
 .stic{width:56px;height:56px;margin:0 auto 20px;background:var(--b1);border-radius:12px;display:flex;align-items:center;justify-content:center}
 .stic .ico{width:28px;height:28px;stroke:var(--b7)}
@@ -104,7 +104,7 @@ img{max-width:100%;display:block}
 .cl li .ico{width:20px;height:20px;stroke:var(--gn)}
 /* Features */
 .fg{display:grid;grid-template-columns:repeat(2,1fr);gap:32px}
-.fr{display:flex;gap:20px;align-items:flex-start;background:var(--w);border:1px solid var(--g2);border-radius:14px;padding:28px;transition:all .3s}
+.fr{display:flex;gap:20px;align-items:flex-start;background:var(--w);border:1px solid var(--g2);border-radius:16px;padding:28px;transition:all .3s}
 .fr:hover{border-color:var(--b3);box-shadow:0 6px 24px rgba(0,0,0,.04)}
 .fic{width:48px;height:48px;background:var(--b1);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .fic .ico{width:24px;height:24px;stroke:var(--b7)}
@@ -120,7 +120,7 @@ img{max-width:100%;display:block}
 .ctabs{display:flex;gap:16px;flex-wrap:wrap}
 .bgh{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--w);padding:15px 32px;border:1.5px solid rgba(255,255,255,.25);border-radius:8px;font-size:15px;font-weight:600;text-decoration:none}
 .ctas{display:grid;grid-template-columns:1fr 1fr;gap:20px;min-width:280px}
-.sb{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:24px;text-align:center}
+.sb{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:24px;text-align:center}
 .sbn{font-family:var(--fd);font-size:32px;font-weight:700;color:var(--gl);margin-bottom:4px}
 .sbl{font-size:13px;color:rgba(255,255,255,.55)}
 /* Disclaimer */
@@ -253,11 +253,10 @@ img{max-width:100%;display:block}
 .faq-item.open .faq-a{display:block}
 
 /* Language switcher */
-.lang-sw{display:flex;align-items:center;gap:4px;font-size:13px}
-.lang-sw a{color:var(--g6);text-decoration:none;padding:4px 8px;border-radius:4px;transition:all .2s}
-.lang-sw a:hover{color:var(--b6)}
-.lang-sw a.active{font-weight:700;color:var(--b8);background:var(--b1)}
-.lang-sw .divider{color:var(--g4)}
+.lang-sw{display:flex;align-items:center;gap:2px;font-size:13px;font-weight:600;border:1px solid var(--g2);border-radius:6px;overflow:hidden}
+.lang-sw a{padding:6px 12px;text-decoration:none;color:var(--g6);transition:all .2s}
+.lang-sw a.active{background:var(--b7);color:var(--w)}
+.lang-sw a:hover:not(.active){background:var(--g1);color:var(--g8)}
 
 /* Mobile hamburger */
 .mob-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px}
@@ -356,9 +355,7 @@ body.oc-open{overflow:hidden}
     <a href="/tr/hakkimizda/">Hakkimizda</a>
     <a href="/tr/iletisim/">Iletisim</a>
     <div class="lang-sw">
-      <a href="/en/product/alkosafe-saliva-alcohol-test.html">EN</a>
-      <span class="divider">|</span>
-      <a href="/tr/urun/alkosafe-tukuruk-alkol-testi.html" class="active">TR</a>
+      <a href="/en/product/alkosafe-saliva-alcohol-test.html">EN</a><a href="/tr/urun/alkosafe-tukuruk-alkol-testi.html" class="active">TR</a>
     </div>
     <a href="#satin-al" class="nav-cta">Hemen Al</a>
   </nav>

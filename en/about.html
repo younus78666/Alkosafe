@@ -45,11 +45,10 @@ img{max-width:100%;display:block}
 .nav a{font-family:var(--fd);font-size:13px;font-weight:500;color:var(--g8);text-decoration:none;transition:color .2s;letter-spacing:.02em}
 .nav a:hover{color:var(--b6)}
 .nav-cta{background:var(--b7)!important;color:var(--w)!important;padding:10px 22px!important;border-radius:6px;font-weight:600!important}
-.lang-sw{display:inline-flex;align-items:center;gap:0;border:1px solid var(--g2);border-radius:4px;overflow:hidden;font-size:13px}
-.lang-sw a{padding:6px 12px!important;font-size:13px!important;color:var(--g6)!important;text-decoration:none;transition:all .2s}
-.lang-sw a.active{background:var(--b7);color:var(--w)!important;font-weight:600}
-.lang-sw a:not(.active):hover{background:var(--g0)}
-.lang-sep{width:1px;height:20px;background:var(--g2)}
+.lang-sw{display:flex;align-items:center;gap:2px;font-size:13px;font-weight:600;border:1px solid var(--g2);border-radius:6px;overflow:hidden}
+.lang-sw a{padding:6px 12px;text-decoration:none;color:var(--g6);transition:all .2s}
+.lang-sw a.active{background:var(--b7);color:var(--w)}
+.lang-sw a:hover:not(.active){background:var(--g1);color:var(--g8)}
 /* Logo & product images */
 .logo-img{height:36px;width:auto}
 .logo-img.footer{height:30px}
@@ -68,7 +67,7 @@ img{max-width:100%;display:block}
 
 /* ===== PAGE HERO (white) ===== */
 .page-hero{padding:clamp(48px,6vw,80px) 0;text-align:center}
-.page-hero h1{font-family:var(--fd);font-size:clamp(32px,4.5vw,52px);font-weight:700;line-height:1.15;letter-spacing:-.02em;margin-bottom:16px;color:var(--g9)}
+.page-hero h1{font-family:var(--fd);font-size:clamp(32px,4vw,48px);font-weight:700;line-height:1.15;letter-spacing:-.02em;margin-bottom:16px;color:var(--g9)}
 .page-hero-sub{font-family:var(--fd);font-size:clamp(16px,2vw,20px);font-weight:400;color:var(--g6);margin-bottom:28px}
 .page-hero-intro{font-size:16px;color:var(--g8);line-height:1.8;max-width:760px;margin:0 auto}
 
@@ -76,14 +75,14 @@ img{max-width:100%;display:block}
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
 .about-text p{font-size:16px;color:var(--g8);line-height:1.8;margin-bottom:20px}
 .about-text p:last-child{margin-bottom:0}
-.about-img{display:flex;align-items:center;justify-content:center;background:var(--w);border:1px solid var(--g2);border-radius:24px;padding:40px;min-height:320px}
+.about-img{display:flex;align-items:center;justify-content:center;background:var(--w);border:1px solid var(--g2);border-radius:16px;padding:40px;min-height:320px}
 .about-img img{max-height:360px;width:auto;filter:drop-shadow(0 12px 32px rgba(0,0,0,.08))}
 
 /* ===== MANUFACTURING CARDS ===== */
 .mfg-text{max-width:800px;margin:0 auto 48px}
 .mfg-text p{font-size:16px;color:var(--g8);line-height:1.8}
 .mfg-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-.mfg-card{background:var(--g0);border:1px solid var(--g2);border-radius:16px;padding:32px 24px;text-align:center;transition:all .3s}
+.mfg-card{background:var(--w);border:1px solid var(--g2);border-radius:16px;padding:32px 24px;text-align:center;transition:all .3s}
 .mfg-card:hover{border-color:var(--b4);box-shadow:0 8px 32px rgba(13,75,143,.06);transform:translateY(-4px)}
 .mfg-icon{width:52px;height:52px;margin:0 auto 18px;background:var(--b1);border-radius:12px;display:flex;align-items:center;justify-content:center}
 .mfg-icon .ico{width:26px;height:26px;stroke:var(--b7)}
@@ -225,7 +224,6 @@ body.oc-open{overflow:hidden}
     <a href="/en/contact/">Contact</a>
     <div class="lang-sw">
       <a href="/en/about.html" class="active">EN</a>
-      <span class="lang-sep"></span>
       <a href="/tr/hakkimizda.html">TR</a>
     </div>
     <a href="/en/product/alkosafe-saliva-alcohol-test.html" class="nav-cta">Buy Now</a>
