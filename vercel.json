@@ -9,6 +9,8 @@
     { "source": "/tr/urun/alkosafe-tukuruk-alkol-testi", "destination": "/tr/urun/alkosafe-tukuruk-alkol-testi.html" },
     { "source": "/en/how-it-works", "destination": "/en/how-it-works.html" },
     { "source": "/en/how-it-works/", "destination": "/en/how-it-works.html" },
+    { "source": "/en/certifications", "destination": "/en/compliance.html" },
+    { "source": "/en/certifications/", "destination": "/en/compliance.html" },
     { "source": "/tr/nasil-calisir", "destination": "/tr/nasil-calisir.html" },
     { "source": "/tr/nasil-calisir/", "destination": "/tr/nasil-calisir.html" },
     { "source": "/en/compliance", "destination": "/en/compliance.html" },
