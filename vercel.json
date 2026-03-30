@@ -10,7 +10,11 @@
     { "source": "/en/how-it-works", "destination": "/en/how-it-works.html" },
     { "source": "/en/how-it-works/", "destination": "/en/how-it-works.html" },
     { "source": "/tr/nasil-calisir", "destination": "/tr/nasil-calisir.html" },
-    { "source": "/tr/nasil-calisir/", "destination": "/tr/nasil-calisir.html" }
+    { "source": "/tr/nasil-calisir/", "destination": "/tr/nasil-calisir.html" },
+    { "source": "/en/compliance", "destination": "/en/compliance.html" },
+    { "source": "/en/compliance/", "destination": "/en/compliance.html" },
+    { "source": "/tr/sertifikalar", "destination": "/tr/sertifikalar.html" },
+    { "source": "/tr/sertifikalar/", "destination": "/tr/sertifikalar.html" }
   ],
   "headers": [
     {
