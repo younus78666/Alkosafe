@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AlkoSafe Hakkinda — Turk Uretimi, Avrupa Standartlari</title>
+<meta name="description" content="AlkoSafe, CROM TEST tarafindan Turkiye'de uretilen tukuruk alkol testidir. Isvicre malzemeleri, Ingiliz arastirma metodolojisi ve ISO 13485 kalite yonetimi.">
+<link rel="alternate" hreflang="en" href="/en/about.html">
+<link rel="alternate" hreflang="tr" href="/tr/hakkimizda.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --b9:#08243E;--b8:#10417A;--b7:#155091;--b6:#1A64B0;--b5:#2176CC;
+  --b4:#42A5F5;--b3:#90CAF9;--b1:#E3F2FD;
+  --gd:#E5A832;--gl:#F2CA6B;
+  --w:#fff;--g0:#FAFBFC;--g1:#F1F3F5;--g2:#E9ECEF;--g4:#ADB5BD;--g6:#6C757D;--g8:#343A40;--g9:#1A1D21;
+  --gn:#2E7D32;
+  --fd:'Roboto',sans-serif;--fb:'Poppins',-apple-system,sans-serif;
+  --mw:1200px;--sp:clamp(60px,8vw,110px);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:var(--fb);color:var(--g9);background:var(--w);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+.c{max-width:var(--mw);margin:0 auto;padding:0 24px}
+.sp{padding-top:var(--sp);padding-bottom:var(--sp)}
+.tc{text-align:center}
+/* Icon base */
+.ico{width:24px;height:24px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+.ico-sm{width:16px;height:16px}
+.ico-lg{width:28px;height:28px}
+/* Announcement */
+.ann{background:var(--b9);color:var(--b3);text-align:center;padding:10px 16px;font-size:13px;letter-spacing:.04em;font-weight:500}
+.ann strong{color:var(--gl)}
+/* Header */
+.hdr{background:var(--w);border-bottom:1px solid var(--g2);position:sticky;top:0;z-index:100}
+.hdr-in{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo-div{width:1px;height:28px;background:var(--g2)}
+.logo-txt{font-family:var(--fd);font-size:17px;font-weight:700;color:var(--b8);letter-spacing:.04em}
+.logo-txt span{color:var(--gd)}
+.logo-img{height:36px;width:auto}
+.logo-img.footer{height:30px}
+.nav{display:flex;gap:28px;align-items:center}
+.nav a{font-family:var(--fd);font-size:13px;font-weight:500;color:var(--g8);text-decoration:none;transition:color .2s;letter-spacing:.02em}
+.nav a:hover{color:var(--b6)}
+.nav a.active-nav{color:var(--b6);font-weight:700}
+.nav-cta{background:var(--b7)!important;color:var(--w)!important;padding:10px 22px!important;border-radius:6px;font-weight:600!important}
+.lang-sw{display:flex;align-items:center;gap:2px;font-size:13px;font-weight:600;border:1px solid var(--g2);border-radius:6px;overflow:hidden}
+.lang-sw a{padding:6px 12px;text-decoration:none;color:var(--g6);transition:all .2s}
+.lang-sw a.active{background:var(--b7);color:var(--w)}
+.lang-sw a:hover:not(.active){background:var(--g1);color:var(--g8)}
+/* Page Hero (white background, centered) */
+.pg-hero{padding:clamp(60px,8vw,100px) 0 clamp(40px,5vw,60px)}
+.pg-hero h1{font-family:var(--fd);font-size:clamp(36px,5vw,54px);font-weight:700;line-height:1.1;letter-spacing:-.02em;margin-bottom:16px;color:var(--g9)}
+.pg-hero .sub{font-family:var(--fd);font-size:clamp(18px,2.5vw,24px);font-weight:600;color:var(--b6);margin-bottom:24px}
+.pg-hero .intro{font-size:17px;color:var(--g6);line-height:1.7;max-width:720px;margin:0 auto}
+/* Section Headers */
+.sh{max-width:600px;margin:0 auto 56px}
+.sl{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--b6);margin-bottom:12px}
+.sh h2{font-family:var(--fd);font-size:clamp(28px,3.5vw,40px);font-weight:700;letter-spacing:-.02em;margin-bottom:14px}
+.sh p{font-size:16px;color:var(--g6);line-height:1.7}
+/* Two-column layout */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.two-col-text p{font-size:16px;color:var(--g6);line-height:1.8;margin-bottom:20px}
+.two-col-text p:last-child{margin-bottom:0}
+.two-col-img{display:flex;justify-content:center;align-items:center}
+.two-col-img img{border-radius:16px;max-height:420px;object-fit:contain}
+/* Icon Cards (4-col) */
+.ic-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:48px}
+.ic-card{background:var(--w);border:1px solid var(--g2);border-radius:16px;padding:32px 24px;text-align:center;transition:all .3s}
+.ic-card:hover{border-color:var(--b4);box-shadow:0 8px 32px rgba(13,75,143,.06);transform:translateY(-4px)}
+.ic-icon{width:52px;height:52px;margin:0 auto 20px;background:var(--b1);border-radius:12px;display:flex;align-items:center;justify-content:center}
+.ic-icon .ico{width:26px;height:26px;stroke:var(--b7)}
+.ic-card h3{font-size:15px;font-weight:700;margin-bottom:8px}
+.ic-card p{font-size:13px;color:var(--g6);line-height:1.6}
+/* Stats row */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:48px}
+.stat{background:var(--w);border:1px solid var(--g2);border-radius:14px;padding:28px 20px;text-align:center;transition:all .3s}
+.stat:hover{border-color:var(--b4);box-shadow:0 6px 24px rgba(13,75,143,.06)}
+.stat-n{font-family:var(--fd);font-size:32px;font-weight:700;color:var(--b7);margin-bottom:4px}
+.stat-l{font-size:13px;color:var(--g6);font-weight:500}
+/* Commitment text block */
+.commit-text{max-width:720px;margin:0 auto}
+.commit-text p{font-size:17px;color:var(--g6);line-height:1.8}
+/* CTA Banner */
+.ctab{background:linear-gradient(135deg,var(--b9),var(--b8));color:var(--w);position:relative;overflow:hidden}
+.ctab::before{content:'';position:absolute;top:-50%;right:-10%;width:500px;height:500px;background:radial-gradient(circle,rgba(229,168,50,.1),transparent 70%);pointer-events:none}
+.ctai{display:flex;align-items:center;justify-content:space-between;gap:40px;position:relative;z-index:2}
+.ctac{max-width:560px}
+.ctac h2{font-family:var(--fd);font-size:clamp(28px,3.5vw,40px);font-weight:700;margin-bottom:14px;letter-spacing:-.02em}
+.ctac p{font-size:17px;color:rgba(255,255,255,.7);line-height:1.7;margin-bottom:32px}
+.ctabs{display:flex;gap:16px;flex-wrap:wrap}
+.btn-g{display:inline-flex;align-items:center;gap:10px;background:var(--gd);color:var(--b9);padding:16px 36px;border-radius:8px;font-size:16px;font-weight:700;text-decoration:none;transition:all .25s;box-shadow:0 4px 20px rgba(229,168,50,.3)}
+.btn-g:hover{background:var(--gl);transform:translateY(-2px)}
+.btn-g .ico{stroke:var(--b9);width:18px;height:18px}
+.bgh{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--w);padding:15px 32px;border:1.5px solid rgba(255,255,255,.25);border-radius:8px;font-size:15px;font-weight:600;text-decoration:none}
+.ctas{display:grid;grid-template-columns:1fr 1fr;gap:20px;min-width:280px}
+.sb{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:24px;text-align:center}
+.sbn{font-family:var(--fd);font-size:32px;font-weight:700;color:var(--gl);margin-bottom:4px}
+.sbl{font-size:13px;color:rgba(255,255,255,.55)}
+/* Disclaimer */
+.disc{background:#FFF8E1;border-top:1px solid #FFE082;border-bottom:1px solid #FFE082;padding:16px 0}
+.disci{display:flex;align-items:flex-start;gap:12px;font-size:13px;color:#5D4037;line-height:1.6}
+.disci .ico{width:18px;height:18px;stroke:#E65100;margin-top:2px}
+/* Footer */
+.ftr{background:var(--g9);color:rgba(255,255,255,.6);padding:60px 0 32px}
+.ftg{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:48px}
+.ftb p{font-size:14px;line-height:1.7;margin-top:14px;max-width:320px}
+.ftr h4{font-family:var(--fd);font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.85);margin-bottom:18px}
+.ftl{list-style:none}.ftl li{margin-bottom:10px}
+.ftl a{font-size:14px;color:rgba(255,255,255,.5);text-decoration:none;transition:color .2s}.ftl a:hover{color:var(--w)}
+.ftbt{border-top:1px solid rgba(255,255,255,.08);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;font-size:13px}
+.ftlg{display:flex;gap:24px}.ftlg a{color:rgba(255,255,255,.4);text-decoration:none}.ftlg a:hover{color:rgba(255,255,255,.7)}
+/* Responsive */
+@media(max-width:1024px){.two-col{grid-template-columns:1fr;text-align:center}.two-col-img{order:-1}.ic-grid{grid-template-columns:repeat(2,1fr)}.stats{grid-template-columns:repeat(2,1fr)}.ctai{flex-direction:column;text-align:center}.ctabs{justify-content:center}.ftg{grid-template-columns:1fr 1fr}.nav{display:none}}
+@media(max-width:768px){.ic-grid{grid-template-columns:1fr}.stats{grid-template-columns:1fr}.ftg{grid-template-columns:1fr}}
+.fu{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}.fu.v{opacity:1;transform:translateY(0)}
+</style>
+</head>
+<body>
+
+<!-- SVG Icon Definitions (hidden) -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+  <symbol id="i-check-circle" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></symbol>
+  <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="8" r="7"/><path d="M8.21 13.89L7 23l5-3 5 3-1.21-9.12"/></symbol>
+  <symbol id="i-factory" viewBox="0 0 24 24"><path d="M2 20h20"/><path d="M5 20V8l4 4V8l4 4V4h6v16"/><path d="M15 10h2m-2 4h2"/></symbol>
+  <symbol id="i-beaker" viewBox="0 0 24 24"><path d="M9 3h6m-5 0v6.5L4 18.5a1 1 0 001 1.5h14a1 1 0 001-1.5L14 9.5V3"/><path d="M7 15h10"/></symbol>
+  <symbol id="i-map-pin" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-truck" viewBox="0 0 24 24"><path d="M1 3h15v13H1z"/><path d="M16 8h4l3 4v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></symbol>
+  <symbol id="i-alert-tri" viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></symbol>
+  <symbol id="i-microscope" viewBox="0 0 24 24"><path d="M6 18h8"/><path d="M3 22h18"/><path d="M14 22a7 7 0 100-14h-1"/><path d="M9 14h2"/><path d="M9 12a2 2 0 01-2-2V6h6v4a2 2 0 01-2 2H9z"/><path d="M12 6V3a1 1 0 00-1-1H9a1 1 0 00-1 1v3"/></symbol>
+  <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
+  <symbol id="i-zap" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></symbol>
+  <symbol id="i-eye" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></symbol>
+  <symbol id="i-dollar" viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></symbol>
+  <symbol id="i-clipboard" viewBox="0 0 24 24"><path d="M16 4h2a2 2 0 012 2v14a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></symbol>
+</svg>
+
+<!-- ANNOUNCEMENT BAR -->
+<div class="ann">Tum siparislerde <strong>ucretsiz kargo</strong> &middot; CE Sertifikali &middot; 2 dakikada sonuc</div>
+
+<!-- HEADER -->
+<header class="hdr"><div class="c hdr-in">
+  <a href="/tr/" class="logo">
+    <img src="/images/logo.png" alt="CROM TEST" class="logo-img">
+    <span class="logo-div"></span>
+    <span class="logo-txt">Alko<span>Safe</span></span>
+  </a>
+  <nav class="nav">
+    <a href="/tr/nasil-calisir/">Nasil Calisir</a>
+    <a href="/tr/sertifikalar/">Sertifikalar</a>
+    <a href="/tr/hakkimizda/" class="active-nav">Hakkimizda</a>
+    <a href="/tr/iletisim/">Iletisim</a>
+    <div class="lang-sw"><a href="/en/about.html">EN</a><a href="/tr/hakkimizda.html" class="active">TR</a></div>
+    <a href="/tr/#buy" class="nav-cta">Hemen Al</a>
+  </nav>
+</div></header>
+
+<!-- SECTION 1: HERO (white) -->
+<section class="pg-hero"><div class="c tc fu">
+  <h1>AlkoSafe Hakkinda</h1>
+  <p class="sub">Turk Uretimi. Avrupa Standartlari.</p>
+  <p class="intro">AlkoSafe, hizli kromatografik immunoassay tani testi uretiminde uzmanlasmis bir Turk sirketi olan CROM TEST tarafindan uretilmektedir. Bireyler, isyerleri ve kurumlar icin hizli, guvenilir ve ulasilabilir fiyatli test urunleri uretiyoruz.</p>
+</div></section>
+
+<!-- SECTION 2: BIZ KIMIZ (gray) -->
+<section class="sp" style="background:var(--g0)"><div class="c">
+  <div class="two-col">
+    <div class="two-col-text fu">
+      <div class="sl">Hikayemiz</div>
+      <h2 style="font-family:var(--fd);font-size:clamp(28px,3.5vw,40px);font-weight:700;letter-spacing:-.02em;margin-bottom:24px">Biz Kimiz?</h2>
+      <p>CROM TEST, Turk ve bolgesel hizli test pazarindaki net bir boslugu gidermek icin kuruldu: Bati Avrupali uretici kalitesini Turk uretiminin fiyat erisilebilirligi ve yerli uretim avantajlariyla birlestiren urunler.</p>
+      <p>Sonuc AlkoSafe — Avrupa hastane labslariyla ayni malzemeleri kullanan, Isvicre ve Ingiliz arastirma metodolojisiyle dogrulanmis, ISO 13485:2016 kalite yonetimi altinda Turkiye'de uretilen bir tukuruk alkol testidir.</p>
+      <p>20 yildan fazla hastane sistemleri, adli uygulamalar, kolluk kuvvetleri ekipmanlari ve buyuk olcekli saglik altyapisi deneyimine sahip EGEFE &amp; Green Med grubu buyusesinde faaliyet gosteriyoruz.</p>
+    </div>
+    <div class="two-col-img fu">
+      <img src="/images/product-front.png" alt="AlkoSafe Tukuruk Alkol Testi" class="prod-img" style="max-height:400px;filter:drop-shadow(0 16px 40px rgba(0,0,0,.12))">
+    </div>
+  </div>
+</div></section>
+
+<!-- SECTION 3: URETIM (white) -->
+<section class="sp"><div class="c">
+  <div class="sh tc fu">
+    <div class="sl">Uretim</div>
+    <h2>Turkiye'de Uretim</h2>
+    <p>Yerel uretim, kalite kontrolunden tedarik zincirine kadar her asamada avantaj saglar. AlkoSafe tamamen Turkiye'de uretilmekte ve buradan sevk edilmektedir.</p>
+  </div>
+  <div class="ic-grid">
+    <div class="ic-card fu">
+      <div class="ic-icon"><svg class="ico ico-lg"><use href="#i-zap"/></svg></div>
+      <h3>Hizli Yanit</h3>
+      <p>Yerel uretim, siparis karsilama ve lojistik sureclerinde maksimum hiz ve esneklik saglar.</p>
+    </div>
+    <div class="ic-card fu">
+      <div class="ic-icon"><svg class="ico ico-lg"><use href="#i-eye"/></svg></div>
+      <h3>Dogrudan Kalite Kontrolu</h3>
+      <p>Her parti, tesislerimizde ISO 13485:2016 standartlarina uygun olarak denetlenir ve onaylanir.</p>
+    </div>
+    <div class="ic-card fu">
+      <div class="ic-icon"><svg class="ico ico-lg"><use href="#i-dollar"/></svg></div>
+      <h3>Rekabetci Fiyatlandirma</h3>
+      <p>Turk uretim maliyet avantaji sayesinde ithal urunlerle karsilastirilabilir kaliteyi daha uygun fiyata sunuyoruz.</p>
+    </div>
+    <div class="ic-card fu">
+      <div class="ic-icon"><svg class="ico ico-lg"><use href="#i-clipboard"/></svg></div>
+      <h3>Tam Uyumluluk</h3>
+      <p>CE sertifikasi, ISO 13485 kalite yonetimi ve Avrupa IVD duzenlemelerine tam uygunluk.</p>
+    </div>
+  </div>
+</div></section>
+
+<!-- SECTION 4: MALZEMELER (gray) -->
+<section class="sp" style="background:var(--g0)"><div class="c">
+  <div class="sh tc fu">
+    <div class="sl">Ar-Ge</div>
+    <h2>Isvicre Malzemeleri. Ingiliz Know-How'u.</h2>
+    <p>AlkoSafe, Merck ve Sartorius tarafindan uretilen Isvicre mensei nitroseluloz membranlar kullanir — Avrupa hastane laboratuvarlarinda kullanilan ayni tedarikci. Arastirma metodolojimiz, Ingiliz klinik dogrulama protokollerini esas alir ve her parti bagimsiz olarak test edilir.</p>
+  </div>
+  <div class="stats">
+    <div class="stat fu">
+      <div class="stat-n">%99,7</div>
+      <div class="stat-l">Hassasiyet</div>
+    </div>
+    <div class="stat fu">
+      <div class="stat-n">%99,5</div>
+      <div class="stat-l">Ozgunluk</div>
+    </div>
+    <div class="stat fu">
+      <div class="stat-n">0.2&#8240;</div>
+      <div class="stat-l">Esik</div>
+    </div>
+    <div class="stat fu">
+      <div class="stat-n">24 ay</div>
+      <div class="stat-l">Raf Omru</div>
+    </div>
+  </div>
+</div></section>
+
+<!-- SECTION 5: TAAHHUDUMUZ (white) -->
+<section class="sp"><div class="c tc">
+  <div class="sh tc fu">
+    <div class="sl">Sozumuz</div>
+    <h2>Taahhudumuz</h2>
+  </div>
+  <div class="commit-text fu">
+    <p>Guvenlik araclarina herkes ulasabilmeli diye inaniyoruz. AlkoSafe, gunluk kullanim icin pratik hale getiren bir fiyat noktasinda profesyonel duzeyde alkol tarama performansi sunar.</p>
+  </div>
+</div></section>
+
+<!-- CTA BANNER -->
+<section class="ctab sp"><div class="c"><div class="ctai fu">
+  <div class="ctac">
+    <h2>Tahmin Etme. Test Et.</h2>
+    <p>AlkoSafe 2 dakikada net bir cevap verir. Kendinizi, ehliyetinizi ve cevrenizdeki insanlari koruyun.</p>
+    <div class="ctabs">
+      <a href="/tr/#buy" class="btn-g">AlkoSafe Satin Al <svg class="ico" style="width:16px;height:16px"><use href="#i-arrow"/></svg></a>
+      <a href="/tr/iletisim/" class="bgh">Toplu Siparis? Bize Ulasin</a>
+    </div>
+  </div>
+  <div class="ctas">
+    <div class="sb"><div class="sbn">99.7%</div><div class="sbl">Hassasiyet</div></div>
+    <div class="sb"><div class="sbn">2 dk</div><div class="sbl">Sonuc Suresi</div></div>
+    <div class="sb"><div class="sbn">0.2&#8240;</div><div class="sbl">Tespit Esigi</div></div>
+    <div class="sb"><div class="sbn">24 ay</div><div class="sbl">Raf Omru</div></div>
+  </div>
+</div></div></section>
+
+<!-- DISCLAIMER -->
+<div class="disc"><div class="c"><div class="disci">
+  <svg class="ico" style="stroke:#E65100"><use href="#i-alert-tri"/></svg>
+  <span><strong>Onemli:</strong> AlkoSafe kisisel karar verme icin bireysel bir tarama aracidir. Resmi kolluk kuvvetleri alkol olcumu veya kan testlerinin yerini almaz. Negatif bir AlkoSafe sonucu, mahkemede pozitif bir polis testine itiraz etmek icin kullanilamaz. AlkoSafe herhangi bir renk degisimi gosteriyorsa arac kullanmayin. Test etmeden once yemek yedikten, icecek icttikten veya sigara icttikten sonra en az 15 dakika bekleyin.</span>
+</div></div></div>
+
+<!-- FOOTER -->
+<footer class="ftr"><div class="c">
+  <div class="ftg">
+    <div class="ftb">
+      <a href="/tr/" class="logo">
+        <img src="/images/logo.png" alt="CROM TEST" class="logo-img footer" style="filter:brightness(0) invert(1)">
+        <span class="logo-div" style="background:rgba(255,255,255,.2)"></span>
+        <span class="logo-txt" style="color:white">Alko<span>Safe</span></span>
+      </a>
+      <p>CROM TEST tarafindan uretilen tukuruk alkol testi. Isvicre kalitesinde malzemeler. Ingiliz bilgi birikimi. Avrupa CE standartlarina uygun olarak Turkiye'de uretilmistir.</p>
+    </div>
+    <div><h4>Urun</h4><ul class="ftl"><li><a href="/tr/#buy">AlkoSafe Satin Al</a></li><li><a href="/tr/nasil-calisir/">Nasil Calisir</a></li><li><a href="/tr/sertifikalar/">Sertifikalar</a></li></ul></div>
+    <div><h4>Sirket</h4><ul class="ftl"><li><a href="/tr/hakkimizda/">CROM TEST Hakkinda</a></li><li><a href="/tr/iletisim/">Iletisim</a></li><li><a href="/tr/blog/">Blog</a></li></ul></div>
+    <div><h4>Destek</h4><ul class="ftl"><li><a href="/tr/kargo-ve-iade/">Kargo ve Iade</a></li><li><a href="/tr/sss/">SSS</a></li><li><a href="mailto:info@alkosafe.com">info@alkosafe.com</a></li></ul></div>
+  </div>
+  <div class="ftbt">
+    <span>&copy; 2026 CROM TEST. Tum haklari saklidir.</span>
+    <div class="ftlg"><a href="/tr/gizlilik/">Gizlilik</a><a href="/tr/sartlar/">Sartlar</a><a href="/tr/cerezler/">Cerezler</a><a href="/tr/yasal-uyari/">Yasal Uyari</a></div>
+  </div>
+</div></footer>
+
+<script>
+const obs=new IntersectionObserver(e=>{e.forEach(en=>{if(en.isIntersecting)en.target.classList.add('v')})},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.fu').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>

@@ -14,7 +14,15 @@
     { "source": "/en/compliance", "destination": "/en/compliance.html" },
     { "source": "/en/compliance/", "destination": "/en/compliance.html" },
     { "source": "/tr/sertifikalar", "destination": "/tr/sertifikalar.html" },
-    { "source": "/tr/sertifikalar/", "destination": "/tr/sertifikalar.html" }
+    { "source": "/tr/sertifikalar/", "destination": "/tr/sertifikalar.html" },
+    { "source": "/en/about", "destination": "/en/about.html" },
+    { "source": "/en/about/", "destination": "/en/about.html" },
+    { "source": "/tr/hakkimizda", "destination": "/tr/hakkimizda.html" },
+    { "source": "/tr/hakkimizda/", "destination": "/tr/hakkimizda.html" },
+    { "source": "/en/contact", "destination": "/en/contact.html" },
+    { "source": "/en/contact/", "destination": "/en/contact.html" },
+    { "source": "/tr/iletisim", "destination": "/tr/iletisim.html" },
+    { "source": "/tr/iletisim/", "destination": "/tr/iletisim.html" }
   ],
   "headers": [
     {
