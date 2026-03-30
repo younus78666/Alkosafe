@@ -160,18 +160,20 @@ img{max-width:100%;display:block}
 .prod-subtitle{font-size:15px;color:var(--g6);line-height:1.6;margin-bottom:28px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
 .prod-subtitle .sep{color:var(--g4)}
 
-/* Variant Selector */
-.variants{display:flex;flex-direction:column;gap:12px;margin-bottom:28px}
-.variant{border:2px solid var(--g2);border-radius:12px;padding:16px 20px;cursor:pointer;transition:all .2s;display:flex;align-items:center;justify-content:space-between;position:relative}
-.variant:hover{border-color:var(--b4)}
-.variant.selected{border-color:var(--b6);background:var(--b1)}
-.variant-tag{position:absolute;top:-10px;right:16px;background:var(--b7);color:var(--w);font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 12px;border-radius:100px}
-.variant-left{display:flex;flex-direction:column;gap:2px}
-.variant-name{font-weight:700;font-size:15px;color:var(--g9)}
-.variant-desc{font-size:13px;color:var(--g6)}
-.variant-right{text-align:right}
-.variant-price{font-size:22px;font-weight:700;color:var(--b8)}
-.variant-unit{font-size:12px;color:var(--g4)}
+/* WooCommerce-style Variant Dropdown */
+.var-wrap{margin-bottom:28px}
+.var-label{font-size:13px;font-weight:600;color:var(--g6);margin-bottom:8px;text-transform:uppercase;letter-spacing:.06em}
+.var-select-wrap{position:relative}
+.var-select{width:100%;padding:14px 48px 14px 18px;border:2px solid var(--g2);border-radius:10px;font-family:var(--fb);font-size:15px;font-weight:600;color:var(--g9);background:var(--w);cursor:pointer;appearance:none;-webkit-appearance:none;transition:border-color .2s}
+.var-select:focus{outline:none;border-color:var(--b7);box-shadow:0 0 0 3px rgba(21,80,145,.08)}
+.var-select:hover{border-color:var(--b4)}
+.var-select-arrow{position:absolute;right:16px;top:50%;transform:translateY(-50%);width:20px;height:20px;pointer-events:none;stroke:var(--g6);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.var-price-display{display:flex;align-items:baseline;gap:12px;margin-top:16px;padding:20px;background:var(--g0);border-radius:12px;border:1px solid var(--g2)}
+.var-price-main{font-family:var(--fd);font-size:36px;font-weight:700;color:var(--b8)}
+.var-price-per{font-size:14px;color:var(--g6);font-weight:500}
+.var-price-save{display:inline-block;background:#E8F5E9;color:var(--gn);font-size:12px;font-weight:700;padding:4px 10px;border-radius:100px;margin-left:auto}
+.var-price-row{display:flex;align-items:center;width:100%;flex-wrap:wrap;gap:8px}
+.var-desc{font-size:13px;color:var(--g6);margin-top:6px}
 
 /* Add to Cart */
 .add-cart{margin-bottom:24px}
@@ -357,38 +359,24 @@ img{max-width:100%;display:block}
       <span>Isvicre kalitesinde hammadde</span>
     </div>
 
-    <!-- Variant Selector -->
-    <div class="variants" id="variants">
-      <div class="variant" data-price="580" onclick="selectVariant(this)">
-        <div class="variant-left">
-          <div class="variant-name">BASLANGIC — 5 Test</div>
-          <div class="variant-desc">Denemek icin</div>
-        </div>
-        <div class="variant-right">
-          <div class="variant-price">&#8378;580</div>
-          <div class="variant-unit">&#8378;116 / test</div>
-        </div>
+    <!-- WooCommerce-style Variant Dropdown -->
+    <div class="var-wrap">
+      <label class="var-label" for="pack-size">Paket Boyutu</label>
+      <div class="var-select-wrap">
+        <select class="var-select" id="pack-size" onchange="updateVariant()">
+          <option value="5" data-price="580" data-per="116" data-save="" data-desc="Denemek icin">AlkoSafe 5 — 5 Test</option>
+          <option value="10" data-price="980" data-per="98" data-save="%15" data-desc="Duzenli surucular" selected>AlkoSafe 10 — 10 Test (En Populer)</option>
+          <option value="20" data-price="1550" data-per="77" data-save="%34" data-desc="Aile ve isyeri">AlkoSafe 20 — 20 Test (En Avantajli)</option>
+        </select>
+        <svg class="var-select-arrow" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
       </div>
-      <div class="variant selected" data-price="980" onclick="selectVariant(this)">
-        <div class="variant-tag">En Populer</div>
-        <div class="variant-left">
-          <div class="variant-name">EN POPULER — 10 Test</div>
-          <div class="variant-desc">Duzenli surucular</div>
+      <div class="var-price-display" id="price-display">
+        <div class="var-price-row">
+          <span class="var-price-main" id="var-price">&#8378;980</span>
+          <span class="var-price-per" id="var-per">&#8378;98 / test</span>
+          <span class="var-price-save" id="var-save">%15 Tasarruf</span>
         </div>
-        <div class="variant-right">
-          <div class="variant-price">&#8378;980</div>
-          <div class="variant-unit">&#8378;98 / test</div>
-        </div>
-      </div>
-      <div class="variant" data-price="1550" onclick="selectVariant(this)">
-        <div class="variant-left">
-          <div class="variant-name">EN AVANTAJLI — 20 Test</div>
-          <div class="variant-desc">Aile ve isyeri</div>
-        </div>
-        <div class="variant-right">
-          <div class="variant-price">&#8378;1.550</div>
-          <div class="variant-unit">&#8378;77 / test</div>
-        </div>
+        <div class="var-desc" id="var-desc">Duzenli surucular</div>
       </div>
     </div>
 
@@ -619,10 +607,26 @@ function switchImage(thumb, src){
   thumb.classList.add('active');
 }
 
-// Variant selector
-function selectVariant(el){
-  document.querySelectorAll('.variant').forEach(v=>v.classList.remove('selected'));
-  el.classList.add('selected');
+// WooCommerce-style variant dropdown
+function updateVariant() {
+  const sel = document.getElementById('pack-size');
+  const opt = sel.options[sel.selectedIndex];
+  const price = parseInt(opt.dataset.price);
+  const per = opt.dataset.per;
+  const save = opt.dataset.save;
+  const desc = opt.dataset.desc;
+
+  document.getElementById('var-price').innerHTML = '&#8378;' + price.toLocaleString('tr-TR');
+  document.getElementById('var-per').innerHTML = '&#8378;' + per + ' / test';
+  document.getElementById('var-desc').textContent = desc;
+
+  const saveEl = document.getElementById('var-save');
+  if (save) {
+    saveEl.textContent = save + ' Tasarruf';
+    saveEl.style.display = 'inline-block';
+  } else {
+    saveEl.style.display = 'none';
+  }
 }
 
 // FAQ accordion

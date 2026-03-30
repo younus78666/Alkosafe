@@ -109,23 +109,20 @@ img{max-width:100%;display:block}
 .gallery-thumb.active{border-color:var(--b7);box-shadow:0 0 0 2px rgba(21,80,145,.15)}
 .gallery-thumb img{max-height:100%;object-fit:contain}
 
-/* Variant Selector */
-.variants{display:flex;flex-direction:column;gap:12px;margin-bottom:24px}
-.variant-card{border:2px solid var(--g2);border-radius:12px;padding:18px 20px;cursor:pointer;transition:all .2s;display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:center;position:relative}
-.variant-card:hover{border-color:var(--b4)}
-.variant-card.selected{border-color:var(--b7);background:var(--b1);box-shadow:0 0 0 2px rgba(21,80,145,.1)}
-.variant-radio{width:20px;height:20px;border-radius:50%;border:2px solid var(--g4);display:flex;align-items:center;justify-content:center;transition:all .2s;flex-shrink:0}
-.variant-card.selected .variant-radio{border-color:var(--b7)}
-.variant-radio-dot{width:10px;height:10px;border-radius:50%;background:var(--b7);transform:scale(0);transition:transform .2s}
-.variant-card.selected .variant-radio-dot{transform:scale(1)}
-.variant-info{display:flex;flex-direction:column;gap:2px}
-.variant-label{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--b6)}
-.variant-name{font-size:16px;font-weight:700;color:var(--g9)}
-.variant-desc{font-size:13px;color:var(--g6)}
-.variant-price{text-align:right}
-.variant-price-main{font-size:22px;font-weight:700;color:var(--b8)}
-.variant-price-per{font-size:12px;color:var(--g4)}
-.variant-badge{position:absolute;top:-10px;right:16px;background:var(--gd);color:var(--b9);font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:4px 12px;border-radius:100px}
+/* WooCommerce-style Variant Dropdown */
+.var-wrap{margin-bottom:28px}
+.var-label{font-size:13px;font-weight:600;color:var(--g6);margin-bottom:8px;text-transform:uppercase;letter-spacing:.06em}
+.var-select-wrap{position:relative}
+.var-select{width:100%;padding:14px 48px 14px 18px;border:2px solid var(--g2);border-radius:10px;font-family:var(--fb);font-size:15px;font-weight:600;color:var(--g9);background:var(--w);cursor:pointer;appearance:none;-webkit-appearance:none;transition:border-color .2s}
+.var-select:focus{outline:none;border-color:var(--b7);box-shadow:0 0 0 3px rgba(21,80,145,.08)}
+.var-select:hover{border-color:var(--b4)}
+.var-select-arrow{position:absolute;right:16px;top:50%;transform:translateY(-50%);width:20px;height:20px;pointer-events:none;stroke:var(--g6);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.var-price-display{display:flex;align-items:baseline;gap:12px;margin-top:16px;padding:20px;background:var(--g0);border-radius:12px;border:1px solid var(--g2)}
+.var-price-main{font-family:var(--fd);font-size:36px;font-weight:700;color:var(--b8)}
+.var-price-per{font-size:14px;color:var(--g6);font-weight:500}
+.var-price-save{display:inline-block;background:#E8F5E9;color:var(--gn);font-size:12px;font-weight:700;padding:4px 10px;border-radius:100px;margin-left:auto}
+.var-price-row{display:flex;align-items:center;width:100%;flex-wrap:wrap;gap:8px}
+.var-desc{font-size:13px;color:var(--g6);margin-top:6px}
 
 /* Trust Badges Inline */
 .trust-inline{display:flex;flex-wrap:wrap;gap:16px;margin:20px 0}
@@ -220,8 +217,8 @@ img{max-width:100%;display:block}
   .steps-grid{grid-template-columns:1fr;max-width:340px;margin:0 auto 48px}
   .steps-grid::before{display:none}
   .gallery-thumbs{justify-content:center}
-  .variant-card{grid-template-columns:auto 1fr;gap:12px}
-  .variant-price{grid-column:2;text-align:left}
+  .var-price-main{font-size:28px}
+  .var-price-row{gap:6px}
   .ftg{grid-template-columns:1fr}
   .ctas{grid-template-columns:1fr 1fr;min-width:auto}
   .result-table td,.result-table th{padding:12px 14px;font-size:14px}
@@ -311,45 +308,24 @@ img{max-width:100%;display:block}
       <strong>Important:</strong> AlkoSafe is a screening tool only. It is not a diagnostic device and does not replace official breathalyser testing conducted by law enforcement or medical professionals.
     </div>
 
-    <!-- Variant Selector -->
-    <div class="variants" id="variants">
-      <div class="variant-card" data-price="580" data-name="5" onclick="selectVariant(this)">
-        <div class="variant-radio"><div class="variant-radio-dot"></div></div>
-        <div class="variant-info">
-          <span class="variant-label">Starter</span>
-          <span class="variant-name">5 Tests</span>
-          <span class="variant-desc">Try it out</span>
-        </div>
-        <div class="variant-price">
-          <div class="variant-price-main">&#8378;580</div>
-          <div class="variant-price-per">&#8378;116 per test</div>
-        </div>
+    <!-- WooCommerce-style Variant Dropdown -->
+    <div class="var-wrap">
+      <label class="var-label" for="pack-size">Pack Size</label>
+      <div class="var-select-wrap">
+        <select class="var-select" id="pack-size" onchange="updateVariant()">
+          <option value="5" data-price="580" data-per="116" data-save="" data-desc="Try it out">AlkoSafe 5 — 5 Tests</option>
+          <option value="10" data-price="980" data-per="98" data-save="15%" data-desc="Regular drivers" selected>AlkoSafe 10 — 10 Tests (Most Popular)</option>
+          <option value="20" data-price="1550" data-per="77" data-save="34%" data-desc="Families &amp; workplace">AlkoSafe 20 — 20 Tests (Best Value)</option>
+        </select>
+        <svg class="var-select-arrow" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
       </div>
-      <div class="variant-card selected" data-price="980" data-name="10" onclick="selectVariant(this)">
-        <div class="variant-badge">Most Popular</div>
-        <div class="variant-radio"><div class="variant-radio-dot"></div></div>
-        <div class="variant-info">
-          <span class="variant-label">Most Popular</span>
-          <span class="variant-name">10 Tests</span>
-          <span class="variant-desc">Regular drivers</span>
+      <div class="var-price-display" id="price-display">
+        <div class="var-price-row">
+          <span class="var-price-main" id="var-price">&#8378;980</span>
+          <span class="var-price-per" id="var-per">&#8378;98 per test</span>
+          <span class="var-price-save" id="var-save">Save 15%</span>
         </div>
-        <div class="variant-price">
-          <div class="variant-price-main">&#8378;980</div>
-          <div class="variant-price-per">&#8378;98 per test</div>
-        </div>
-      </div>
-      <div class="variant-card" data-price="1550" data-name="20" onclick="selectVariant(this)">
-        <div class="variant-badge" style="background:var(--gn);color:var(--w)">Best Value</div>
-        <div class="variant-radio"><div class="variant-radio-dot"></div></div>
-        <div class="variant-info">
-          <span class="variant-label">Best Value</span>
-          <span class="variant-name">20 Tests</span>
-          <span class="variant-desc">Families &amp; workplace</span>
-        </div>
-        <div class="variant-price">
-          <div class="variant-price-main">&#8378;1,550</div>
-          <div class="variant-price-per">&#8378;77 per test</div>
-        </div>
+        <div class="var-desc" id="var-desc">Regular drivers</div>
       </div>
     </div>
 
@@ -595,10 +571,26 @@ function switchImage(thumb, src, alt) {
   thumb.classList.add('active');
 }
 
-/* Variant selector */
-function selectVariant(card) {
-  document.querySelectorAll('.variant-card').forEach(c => c.classList.remove('selected'));
-  card.classList.add('selected');
+/* WooCommerce-style variant dropdown */
+function updateVariant() {
+  const sel = document.getElementById('pack-size');
+  const opt = sel.options[sel.selectedIndex];
+  const price = parseInt(opt.dataset.price);
+  const per = opt.dataset.per;
+  const save = opt.dataset.save;
+  const desc = opt.dataset.desc;
+
+  document.getElementById('var-price').innerHTML = '&#8378;' + price.toLocaleString('en-US');
+  document.getElementById('var-per').innerHTML = '&#8378;' + per + ' per test';
+  document.getElementById('var-desc').textContent = desc;
+
+  const saveEl = document.getElementById('var-save');
+  if (save) {
+    saveEl.textContent = 'Save ' + save;
+    saveEl.style.display = 'inline-block';
+  } else {
+    saveEl.style.display = 'none';
+  }
 }
 
 /* FAQ accordion */
