@@ -1,0 +1,10 @@
+*.docx
+*-raw.png
+*-raw.jpg
+process-images.py
+.vercel
+node_modules
+images/IMG_2906.jpeg
+images/pomelli-image-1.png
+images/pomelli-image-2.png
+images/resource_9OY_aMwPFGzaOnpFMAK_ka.png

@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AlkoSafe — Know Before You Drive</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --b9:#08243E;--b8:#10417A;--b7:#155091;--b6:#1A64B0;--b5:#2176CC;
+  --b4:#42A5F5;--b3:#90CAF9;--b1:#E3F2FD;
+  --gd:#E5A832;--gl:#F2CA6B;
+  --w:#fff;--g0:#FAFBFC;--g1:#F1F3F5;--g2:#E9ECEF;--g4:#ADB5BD;--g6:#6C757D;--g8:#343A40;--g9:#1A1D21;
+  --gn:#2E7D32;
+  --fd:'Playfair Display',Georgia,serif;--fb:'DM Sans',-apple-system,sans-serif;
+  --mw:1200px;--sp:clamp(60px,8vw,110px);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:var(--fb);color:var(--g9);background:var(--w);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+.c{max-width:var(--mw);margin:0 auto;padding:0 24px}
+.sp{padding-top:var(--sp);padding-bottom:var(--sp)}
+.tc{text-align:center}
+/* Icon base */
+.ico{width:24px;height:24px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+.ico-sm{width:16px;height:16px}
+.ico-lg{width:28px;height:28px}
+/* Announcement */
+.ann{background:var(--b9);color:var(--b3);text-align:center;padding:10px 16px;font-size:13px;letter-spacing:.04em;font-weight:500}
+.ann strong{color:var(--gl)}
+/* Header */
+.hdr{background:var(--w);border-bottom:1px solid var(--g2);position:sticky;top:0;z-index:100}
+.hdr-in{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo-div{width:1px;height:28px;background:var(--g2)}
+.logo-txt{font-size:18px;font-weight:700;color:var(--b8);letter-spacing:.02em}
+.logo-txt span{color:var(--gd)}
+.nav{display:flex;gap:28px;align-items:center}
+.nav a{font-size:14px;font-weight:500;color:var(--g8);text-decoration:none;transition:color .2s}
+.nav a:hover{color:var(--b6)}
+.nav-cta{background:var(--b7)!important;color:var(--w)!important;padding:10px 22px!important;border-radius:6px;font-weight:600!important}
+/* Hero */
+.hero{background:linear-gradient(160deg,var(--b9),var(--b8) 50%,#0E3E6E);color:var(--w);position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-30%;right:-10%;width:600px;height:600px;background:radial-gradient(circle,rgba(25,118,210,.15),transparent 70%);pointer-events:none}
+.hero-in{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;padding:clamp(60px,8vw,100px) 0;position:relative;z-index:2}
+.hero-c{max-width:540px}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);padding:6px 16px;border-radius:100px;font-size:13px;color:var(--b3);margin-bottom:28px}
+.hero-badge .dot{width:6px;height:6px;background:var(--gd);border-radius:50%;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.hero h1{font-family:var(--fd);font-size:clamp(38px,5vw,58px);font-weight:700;line-height:1.1;letter-spacing:-.02em;margin-bottom:20px}
+.hero h1 em{font-style:normal;color:var(--gl)}
+.hero-sub{font-size:17px;line-height:1.7;color:rgba(255,255,255,.75);margin-bottom:36px;max-width:460px}
+.btn-g{display:inline-flex;align-items:center;gap:10px;background:var(--gd);color:var(--b9);padding:16px 36px;border-radius:8px;font-size:16px;font-weight:700;text-decoration:none;transition:all .25s;box-shadow:0 4px 20px rgba(229,168,50,.3)}
+.btn-g:hover{background:var(--gl);transform:translateY(-2px)}
+.btn-g .ico{stroke:var(--b9);width:18px;height:18px}
+.hero-trust{display:flex;gap:24px;margin-top:36px;flex-wrap:wrap}
+.ti{display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,.6)}
+.ti .ico{width:16px;height:16px;stroke:var(--gd)}
+.hero-img{display:flex;justify-content:center;align-items:center}
+.hero-prod{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:24px;padding:40px;position:relative}
+.ph{background:var(--b7);border-radius:12px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;color:rgba(255,255,255,.5);font-size:12px;font-weight:600;text-align:center;padding:12px}
+.ph .ico{width:32px;height:32px;stroke:rgba(255,255,255,.4)}
+/* Real product images */
+.prod-img{max-width:100%;height:auto;object-fit:contain;border-radius:8px}
+.prod-img.hero-product{width:220px;max-height:380px;filter:drop-shadow(0 20px 40px rgba(0,0,0,.3))}
+.prod-img.card-product{width:100px;height:120px;object-fit:contain}
+.prod-img.showcase-tall{width:100%;max-height:400px;object-fit:contain}
+.prod-img.showcase-sm{width:100%;max-height:160px;object-fit:contain}
+.logo-img{height:36px;width:auto}
+.logo-img.footer{height:30px}
+/* Transparent bg for images on colored backgrounds */
+.prod-img.on-dark{mix-blend-mode:screen}
+.prod-img.on-light{mix-blend-mode:multiply}
+.float-b{position:absolute;background:var(--w);border-radius:12px;padding:12px 18px;box-shadow:0 8px 32px rgba(0,0,0,.12);font-size:13px;font-weight:600;color:var(--g9);display:flex;align-items:center;gap:10px}
+.float-t{top:-16px;right:-20px}
+.float-bt{bottom:-12px;left:-20px}
+.fli{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center}
+.fli .ico{width:20px;height:20px}
+.fli.bl{background:var(--b1)}.fli.bl .ico{stroke:var(--b7)}
+.fli.gl{background:#FFF8E1}.fli.gl .ico{stroke:#E65100}
+/* Trust Bar */
+.tbar{background:var(--g0);border-bottom:1px solid var(--g2);padding:24px 0}
+.tbar-in{display:flex;justify-content:center;align-items:center;gap:clamp(24px,5vw,60px);flex-wrap:wrap}
+.tbi{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:600;color:var(--g8);white-space:nowrap}
+.tbic{width:40px;height:40px;background:var(--w);border:1px solid var(--g2);border-radius:10px;display:flex;align-items:center;justify-content:center}
+.tbic .ico{width:20px;height:20px;stroke:var(--b7)}
+/* Section Headers */
+.sh{max-width:600px;margin:0 auto 56px}
+.sl{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--b6);margin-bottom:12px}
+.sh h2{font-family:var(--fd);font-size:clamp(28px,3.5vw,40px);font-weight:700;letter-spacing:-.02em;margin-bottom:14px}
+.sh p{font-size:16px;color:var(--g6);line-height:1.7}
+/* Products */
+.pg{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.pc{background:var(--w);border:1px solid var(--g2);border-radius:16px;padding:36px 28px;text-align:center;position:relative;transition:all .3s}
+.pc:hover{border-color:var(--b4);box-shadow:0 12px 40px rgba(13,75,143,.08);transform:translateY(-4px)}
+.pc.ft{border-color:var(--b6);box-shadow:0 8px 32px rgba(13,75,143,.1)}
+.ptag{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--b7);color:var(--w);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:6px 18px;border-radius:100px;white-space:nowrap}
+.pci{height:140px;display:flex;align-items:center;justify-content:center;margin-bottom:24px}
+.pci .ph{width:100px;height:120px;border-radius:8px}
+.pn{font-family:var(--fd);font-size:22px;font-weight:700;margin-bottom:4px}
+.ps{font-size:14px;color:var(--g6);margin-bottom:20px}
+.pp{font-size:32px;font-weight:700;color:var(--b8);margin-bottom:4px}
+.pu{font-size:13px;color:var(--g4);margin-bottom:24px}
+.pb{display:block;width:100%;padding:14px;border-radius:8px;font-size:15px;font-weight:600;text-align:center;cursor:pointer;border:none;transition:all .2s}
+.pb.pr{background:var(--b7);color:var(--w)}.pb.pr:hover{background:var(--b8)}
+.pb.ol{background:transparent;color:var(--b7);border:2px solid var(--b7)}.pb.ol:hover{background:var(--b1)}
+/* Steps */
+.hiw{background:var(--g0)}
+.sg{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;position:relative}
+.sg::before{content:'';position:absolute;top:48px;left:16%;right:16%;height:2px;background:repeating-linear-gradient(90deg,var(--b3) 0,var(--b3) 8px,transparent 8px,transparent 16px)}
+.sc{text-align:center;position:relative;z-index:2}
+.sn{width:96px;height:96px;margin:0 auto 28px;background:var(--w);border:2px solid var(--b3);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-size:36px;font-weight:700;color:var(--b7);box-shadow:0 4px 20px rgba(13,75,143,.06)}
+.sc h3{font-size:18px;font-weight:700;margin-bottom:10px}
+.sc p{font-size:15px;color:var(--g6);line-height:1.6;max-width:280px;margin:0 auto}
+.hl{display:inline-flex;align-items:center;gap:6px;margin-top:48px;font-size:15px;font-weight:600;color:var(--b7);text-decoration:none;transition:gap .2s}
+.hl:hover{gap:10px}.hl .ico{width:18px;height:18px;stroke:var(--b7)}
+/* Standards */
+.stg{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.stc{background:var(--g0);border:1px solid var(--g2);border-radius:14px;padding:32px 24px;text-align:center;transition:all .3s}
+.stc:hover{border-color:var(--b3);transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,.04)}
+.stic{width:56px;height:56px;margin:0 auto 20px;background:var(--b1);border-radius:12px;display:flex;align-items:center;justify-content:center}
+.stic .ico{width:28px;height:28px;stroke:var(--b7)}
+.stc h3{font-size:16px;font-weight:700;margin-bottom:8px}
+.stc p{font-size:14px;color:var(--g6);line-height:1.6}
+/* Showcase */
+.shg{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.shi{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.shiw{background:var(--g0);border:1px solid var(--g2);border-radius:16px;padding:20px;display:flex;align-items:center;justify-content:center;min-height:180px}
+.shiw.tall{grid-row:span 2}
+.shiw .ph{width:100%;min-height:120px}
+.sht h2{font-family:var(--fd);font-size:clamp(26px,3vw,36px);font-weight:700;margin-bottom:18px;letter-spacing:-.02em}
+.sht p{font-size:16px;color:var(--g6);line-height:1.7;margin-bottom:28px}
+.cl{list-style:none;display:flex;flex-direction:column;gap:14px;margin-bottom:32px}
+.cl li{display:flex;align-items:center;gap:12px;font-size:15px;color:var(--g8);font-weight:500}
+.cl li .ico{width:20px;height:20px;stroke:var(--gn)}
+/* Features */
+.fg{display:grid;grid-template-columns:repeat(2,1fr);gap:32px}
+.fr{display:flex;gap:20px;align-items:flex-start;background:var(--w);border:1px solid var(--g2);border-radius:14px;padding:28px;transition:all .3s}
+.fr:hover{border-color:var(--b3);box-shadow:0 6px 24px rgba(0,0,0,.04)}
+.fic{width:48px;height:48px;background:var(--b1);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.fic .ico{width:24px;height:24px;stroke:var(--b7)}
+.fr h3{font-size:16px;font-weight:700;margin-bottom:6px}
+.fr p{font-size:14px;color:var(--g6);line-height:1.6}
+/* CTA Banner */
+.ctab{background:linear-gradient(135deg,var(--b9),var(--b8));color:var(--w);position:relative;overflow:hidden}
+.ctab::before{content:'';position:absolute;top:-50%;right:-10%;width:500px;height:500px;background:radial-gradient(circle,rgba(229,168,50,.1),transparent 70%);pointer-events:none}
+.ctai{display:flex;align-items:center;justify-content:space-between;gap:40px;position:relative;z-index:2}
+.ctac{max-width:560px}
+.ctac h2{font-family:var(--fd);font-size:clamp(28px,3.5vw,40px);font-weight:700;margin-bottom:14px;letter-spacing:-.02em}
+.ctac p{font-size:17px;color:rgba(255,255,255,.7);line-height:1.7;margin-bottom:32px}
+.ctabs{display:flex;gap:16px;flex-wrap:wrap}
+.bgh{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--w);padding:15px 32px;border:1.5px solid rgba(255,255,255,.25);border-radius:8px;font-size:15px;font-weight:600;text-decoration:none}
+.ctas{display:grid;grid-template-columns:1fr 1fr;gap:20px;min-width:280px}
+.sb{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:24px;text-align:center}
+.sbn{font-family:var(--fd);font-size:32px;font-weight:700;color:var(--gl);margin-bottom:4px}
+.sbl{font-size:13px;color:rgba(255,255,255,.55)}
+/* Disclaimer */
+.disc{background:#FFF8E1;border-top:1px solid #FFE082;border-bottom:1px solid #FFE082;padding:16px 0}
+.disci{display:flex;align-items:flex-start;gap:12px;font-size:13px;color:#5D4037;line-height:1.6}
+.disci .ico{width:18px;height:18px;stroke:#E65100;margin-top:2px}
+/* Footer */
+.ftr{background:var(--g9);color:rgba(255,255,255,.6);padding:60px 0 32px}
+.ftg{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:48px}
+.ftb p{font-size:14px;line-height:1.7;margin-top:14px;max-width:320px}
+.ftr h4{font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.85);margin-bottom:18px}
+.ftl{list-style:none}.ftl li{margin-bottom:10px}
+.ftl a{font-size:14px;color:rgba(255,255,255,.5);text-decoration:none;transition:color .2s}.ftl a:hover{color:var(--w)}
+.ftbt{border-top:1px solid rgba(255,255,255,.08);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;font-size:13px}
+.ftlg{display:flex;gap:24px}.ftlg a{color:rgba(255,255,255,.4);text-decoration:none}.ftlg a:hover{color:rgba(255,255,255,.7)}
+/* Responsive */
+@media(max-width:1024px){.hero-in{grid-template-columns:1fr;text-align:center}.hero-c{max-width:100%;margin:0 auto}.hero-sub{margin:0 auto 36px}.hero-trust{justify-content:center}.hero-img{display:none}.stg{grid-template-columns:repeat(2,1fr)}.ctai{flex-direction:column;text-align:center}.ctabs{justify-content:center}.shg{grid-template-columns:1fr}.ftg{grid-template-columns:1fr 1fr}.nav{display:none}}
+@media(max-width:768px){.pg{grid-template-columns:1fr;max-width:380px;margin:0 auto}.sg{grid-template-columns:1fr;max-width:340px;margin:0 auto}.sg::before{display:none}.stg{grid-template-columns:1fr}.fg{grid-template-columns:1fr}.ftg{grid-template-columns:1fr}.shi{grid-template-columns:1fr}.shiw.tall{grid-row:auto}}
+.fu{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}.fu.v{opacity:1;transform:translateY(0)}
+</style>
+</head>
+<body>
+
+<!-- SVG Icon Definitions (hidden) -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+  <symbol id="i-check-circle" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></symbol>
+  <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="8" r="7"/><path d="M8.21 13.89L7 23l5-3 5 3-1.21-9.12"/></symbol>
+  <symbol id="i-factory" viewBox="0 0 24 24"><path d="M2 20h20"/><path d="M5 20V8l4 4V8l4 4V4h6v16"/><path d="M15 10h2m-2 4h2"/></symbol>
+  <symbol id="i-beaker" viewBox="0 0 24 24"><path d="M9 3h6m-5 0v6.5L4 18.5a1 1 0 001 1.5h14a1 1 0 001-1.5L14 9.5V3"/><path d="M7 15h10"/></symbol>
+  <symbol id="i-map-pin" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-truck" viewBox="0 0 24 24"><path d="M1 3h15v13H1z"/><path d="M16 8h4l3 4v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></symbol>
+  <symbol id="i-droplet" viewBox="0 0 24 24"><path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z"/></symbol>
+  <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
+  <symbol id="i-clipboard" viewBox="0 0 24 24"><path d="M16 4h2a2 2 0 012 2v14a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/></symbol>
+  <symbol id="i-car" viewBox="0 0 24 24"><path d="M14 16H9m10 0h3v-3.15a1 1 0 00-.84-.99L16 11l-2.7-3.6a1 1 0 00-.8-.4H5.24a2 2 0 00-1.8 1.1l-1.83 3.66A3 3 0 001 13.56V16h2"/><circle cx="6.5" cy="16.5" r="2.5"/><circle cx="16.5" cy="16.5" r="2.5"/></symbol>
+  <symbol id="i-building" viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 22v-4h6v4m-6-16h.01M15 6h.01M9 10h.01M15 10h.01M9 14h.01M15 14h.01"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><path d="M9 22V12h6v10"/></symbol>
+  <symbol id="i-alert-tri" viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></symbol>
+  <symbol id="i-microscope" viewBox="0 0 24 24"><path d="M6 18h8"/><path d="M3 22h18"/><path d="M14 22a7 7 0 100-14h-1"/><path d="M9 14h2"/><path d="M9 12a2 2 0 01-2-2V6h6v4a2 2 0 01-2 2H9z"/><path d="M12 6V3a1 1 0 00-1-1H9a1 1 0 00-1 1v3"/></symbol>
+</svg>
+
+<!-- ANNOUNCEMENT BAR -->
+<div class="ann"><strong>Free shipping</strong> on all orders across Turkey · CE Certified · Results in 2 minutes</div>
+
+<!-- HEADER -->
+<header class="hdr"><div class="c hdr-in">
+  <a href="/" class="logo">
+    <img src="images/logo.png" alt="CROM TEST" class="logo-img">
+    <span class="logo-div"></span>
+    <span class="logo-txt">Alko<span>Safe</span></span>
+  </a>
+  <nav class="nav">
+    <a href="/en/how-it-works/">How It Works</a>
+    <a href="/en/certifications/">Certifications</a>
+    <a href="/en/about/">About</a>
+    <a href="/en/contact/">Contact</a>
+    <a href="/tr/" style="font-size:13px;color:var(--g6);border:1px solid var(--g2);padding:6px 12px;border-radius:4px;text-decoration:none">TR</a>
+    <a href="#buy" class="nav-cta">Buy Now</a>
+  </nav>
+</div></header>
+
+<!-- HERO -->
+<section class="hero"><div class="c"><div class="hero-in">
+  <div class="hero-c fu">
+    <div class="hero-badge"><span class="dot"></span>CE Certified · ISO 13485 · Made in Turkey</div>
+    <h1>Know Before<br>You <em>Drive.</em></h1>
+    <p class="hero-sub">AlkoSafe detects alcohol in your saliva in 2 minutes. Engineered with Swiss materials and British know-how, manufactured in Turkey to European CE standards.</p>
+    <a href="#buy" class="btn-g">Shop AlkoSafe <svg class="ico"><use href="#i-arrow"/></svg></a>
+    <div class="hero-trust">
+      <div class="ti"><svg class="ico ico-sm"><use href="#i-shield"/></svg>99.7% Sensitivity</div>
+      <div class="ti"><svg class="ico ico-sm"><use href="#i-clock"/></svg>2-Minute Result</div>
+      <div class="ti"><svg class="ico ico-sm"><use href="#i-check-circle"/></svg>No Device Needed</div>
+    </div>
+  </div>
+  <div class="hero-img fu">
+    <div class="hero-prod">
+      <img src="images/product-front.png" alt="AlkoSafe CromTest Alcohol Test Kit" class="prod-img hero-product">
+      <div class="float-b float-t"><div class="fli bl"><svg class="ico"><use href="#i-clock"/></svg></div><div><div style="font-size:12px;color:var(--g6)">Result in</div>2 Minutes</div></div>
+      <div class="float-b float-bt"><div class="fli gl"><svg class="ico"><use href="#i-microscope"/></svg></div><div><div style="font-size:12px;color:var(--g6)">Detection from</div>0.2 Promil</div></div>
+    </div>
+  </div>
+</div></div></section>
+
+<!-- TRUST BAR -->
+<div class="tbar"><div class="c"><div class="tbar-in">
+  <div class="tbi"><div class="tbic"><svg class="ico"><use href="#i-award"/></svg></div>CE Certified</div>
+  <div class="tbi"><div class="tbic"><svg class="ico"><use href="#i-factory"/></svg></div>ISO 13485:2016</div>
+  <div class="tbi"><div class="tbic"><svg class="ico"><use href="#i-beaker"/></svg></div>Merck &amp; Sartorius</div>
+  <div class="tbi"><div class="tbic"><svg class="ico"><use href="#i-map-pin"/></svg></div>Made in Turkey</div>
+  <div class="tbi"><div class="tbic"><svg class="ico"><use href="#i-truck"/></svg></div>Free Shipping</div>
+</div></div></div>
+
+<!-- PRODUCTS -->
+<section id="buy" class="sp"><div class="c">
+  <div class="sh tc fu"><div class="sl">Choose Your Pack</div><h2>One Test. Three Pack Sizes.</h2><p>Choose the right pack for your needs — shipping included on all orders across Turkey.</p></div>
+  <div class="pg">
+    <div class="pc fu">
+      <div class="pci"><img src="images/product-front.png" alt="AlkoSafe 5-Pack" class="prod-img card-product"></div>
+      <div class="pn">AlkoSafe 5</div><div class="ps">5 Test Strips</div>
+      <div class="pp">₺499</div><div class="pu">₺99.80 per test</div>
+      <button class="pb ol">Add to Cart</button>
+    </div>
+    <div class="pc ft fu">
+      <div class="ptag">Most Popular</div>
+      <div class="pci"><img src="images/product-front.png" alt="AlkoSafe 10-Pack" class="prod-img card-product"></div>
+      <div class="pn">AlkoSafe 10</div><div class="ps">10 Test Strips</div>
+      <div class="pp">₺899</div><div class="pu">₺89.90 per test</div>
+      <button class="pb pr">Add to Cart</button>
+    </div>
+    <div class="pc fu">
+      <div class="pci"><img src="images/product-front.png" alt="AlkoSafe 20-Pack" class="prod-img card-product"></div>
+      <div class="pn">AlkoSafe 20</div><div class="ps">20 Test Strips · Best Value</div>
+      <div class="pp">₺1,540</div><div class="pu">₺77.00 per test</div>
+      <button class="pb ol">Add to Cart</button>
+    </div>
+  </div>
+</div></section>
+
+<!-- HOW IT WORKS -->
+<section class="hiw sp"><div class="c">
+  <div class="sh tc fu"><div class="sl">Simple &amp; Fast</div><h2>Ready in 3 Steps.</h2></div>
+  <div class="sg">
+    <div class="sc fu"><div class="sn">1</div><h3>Open</h3><p>Tear open the sealed foil pouch. Remove the test strip immediately before use.</p></div>
+    <div class="sc fu"><div class="sn">2</div><h3>Test</h3><p>Place the absorbent tip under your tongue. Hold for 2 minutes.</p></div>
+    <div class="sc fu"><div class="sn">3</div><h3>Read</h3><p>No colour change = clear. Any blue or purple = alcohol detected. Do not drive.</p></div>
+  </div>
+  <div class="tc"><a href="/en/how-it-works/" class="hl">Learn more about how AlkoSafe works <svg class="ico"><use href="#i-arrow"/></svg></a></div>
+</div></section>
+
+<!-- STANDARDS -->
+<section class="sp"><div class="c">
+  <div class="sh tc fu"><div class="sl">Quality &amp; Trust</div><h2>Built to a Higher Standard.</h2></div>
+  <div class="stg">
+    <div class="stc fu"><div class="stic"><svg class="ico ico-lg"><use href="#i-beaker"/></svg></div><h3>Swiss-Grade Membranes</h3><p>Nitrocellulose from Merck &amp; Sartorius — the same suppliers used in European hospital labs.</p></div>
+    <div class="stc fu"><div class="stic"><svg class="ico ico-lg"><use href="#i-award"/></svg></div><h3>CE Certified</h3><p>Meets European health, safety and environmental protection requirements for market placement.</p></div>
+    <div class="stc fu"><div class="stic"><svg class="ico ico-lg"><use href="#i-clipboard"/></svg></div><h3>ISO 13485:2016</h3><p>Manufactured under the international standard for medical device quality management systems.</p></div>
+    <div class="stc fu"><div class="stic"><svg class="ico ico-lg"><use href="#i-target"/></svg></div><h3>99.7% Sensitivity</h3><p>Clinically validated performance competitive with professional-grade screening instruments.</p></div>
+  </div>
+</div></section>
+
+<!-- SHOWCASE -->
+<section class="sp"><div class="c"><div class="shg">
+  <div class="shi fu">
+    <div class="shiw tall"><img src="images/product-front.png" alt="AlkoSafe Product Front View" class="prod-img showcase-tall"></div>
+    <div class="shiw"><img src="images/product-front-back.png" alt="AlkoSafe Front and Back" class="prod-img showcase-sm"></div>
+    <div class="shiw"><img src="images/custom-strips.png" alt="CromTest Custom Strips" class="prod-img showcase-sm"></div>
+  </div>
+  <div class="sht fu">
+    <div class="sl">AlkoSafe Key Features</div>
+    <h2>Everything You Need. Nothing You Don't.</h2>
+    <p>Unlike digital breathalysers that require calibration, batteries, and regular maintenance, AlkoSafe requires nothing more than the test strip itself.</p>
+    <ul class="cl">
+      <li><svg class="ico"><use href="#i-check"/></svg>Detects from 0.2 promil — Turkey's legal limit</li>
+      <li><svg class="ico"><use href="#i-check"/></svg>No device, no batteries, no calibration</li>
+      <li><svg class="ico"><use href="#i-check"/></svg>24-month shelf life at room temperature</li>
+      <li><svg class="ico"><use href="#i-check"/></svg>Compact — fits in wallet, glove compartment or first-aid kit</li>
+      <li><svg class="ico"><use href="#i-check"/></svg>Non-invasive saliva test — no blood, no urine</li>
+    </ul>
+    <a href="#buy" class="btn-g" style="font-size:15px;padding:14px 28px">Order Now <svg class="ico" style="width:16px;height:16px"><use href="#i-arrow"/></svg></a>
+  </div>
+</div></div></section>
+
+<!-- FEATURES -->
+<section class="sp" style="background:var(--g0)"><div class="c">
+  <div class="sh tc fu"><div class="sl">Why AlkoSafe</div><h2>Designed for Real Life.</h2></div>
+  <div class="fg">
+    <div class="fr fu"><div class="fic"><svg class="ico"><use href="#i-car"/></svg></div><div><h3>Before You Drive</h3><p>Morning after a night out? Test before you start the car. AlkoSafe gives you certainty when it matters most.</p></div></div>
+    <div class="fr fu"><div class="fic"><svg class="ico"><use href="#i-building"/></svg></div><div><h3>Workplace Screening</h3><p>Pre-shift alcohol screening for logistics, transport, and safety-critical environments. No training required.</p></div></div>
+    <div class="fr fu"><div class="fic"><svg class="ico"><use href="#i-home"/></svg></div><div><h3>At Home</h3><p>Keep strips in your medicine cabinet. A simple tool for families who want peace of mind.</p></div></div>
+    <div class="fr fu"><div class="fic"><svg class="ico"><use href="#i-truck"/></svg></div><div><h3>Fleet Management</h3><p>Cost-effective, hygienic, single-use screening for drivers. Custom bulk pricing for orders above 100 units.</p></div></div>
+  </div>
+</div></section>
+
+<!-- CTA BANNER -->
+<section class="ctab sp"><div class="c"><div class="ctai fu">
+  <div class="ctac">
+    <h2>Don't Guess. Test.</h2>
+    <p>AlkoSafe gives you a clear answer in 2 minutes. Protect yourself, your licence, and the people around you.</p>
+    <div class="ctabs">
+      <a href="#buy" class="btn-g">Shop AlkoSafe <svg class="ico" style="width:16px;height:16px"><use href="#i-arrow"/></svg></a>
+      <a href="/en/contact/" class="bgh">Bulk Orders? Contact Us</a>
+    </div>
+  </div>
+  <div class="ctas">
+    <div class="sb"><div class="sbn">99.7%</div><div class="sbl">Sensitivity</div></div>
+    <div class="sb"><div class="sbn">2 min</div><div class="sbl">Result Time</div></div>
+    <div class="sb"><div class="sbn">0.2‰</div><div class="sbl">Detection Threshold</div></div>
+    <div class="sb"><div class="sbn">24 mo</div><div class="sbl">Shelf Life</div></div>
+  </div>
+</div></div></section>
+
+<!-- DISCLAIMER -->
+<div class="disc"><div class="c"><div class="disci">
+  <svg class="ico" style="stroke:#E65100"><use href="#i-alert-tri"/></svg>
+  <span><strong>Important:</strong> AlkoSafe is a personal screening tool for individual decision-making. It is not a substitute for official law enforcement breathalyser or blood tests. A negative AlkoSafe result cannot be used to challenge a positive police test in court. If AlkoSafe shows any colour change, do not drive. Always wait at least 15 minutes after eating, drinking, or smoking before testing.</span>
+</div></div></div>
+
+<!-- FOOTER -->
+<footer class="ftr"><div class="c">
+  <div class="ftg">
+    <div class="ftb">
+      <a href="/" class="logo">
+        <img src="images/logo.png" alt="CROM TEST" class="logo-img footer" style="filter:brightness(0) invert(1)">
+        <span class="logo-div" style="background:rgba(255,255,255,.2)"></span>
+        <span class="logo-txt" style="color:white">Alko<span>Safe</span></span>
+      </a>
+      <p>A saliva alcohol test by CROM TEST. Swiss-grade materials. British know-how. Manufactured in Turkey to European CE standards.</p>
+    </div>
+    <div><h4>Product</h4><ul class="ftl"><li><a href="#buy">Buy AlkoSafe</a></li><li><a href="/en/how-it-works/">How It Works</a></li><li><a href="/en/certifications/">Certifications</a></li></ul></div>
+    <div><h4>Company</h4><ul class="ftl"><li><a href="/en/about/">About CROM TEST</a></li><li><a href="/en/contact/">Contact</a></li><li><a href="/tr/blog/">Blog (TR)</a></li></ul></div>
+    <div><h4>Support</h4><ul class="ftl"><li><a href="/en/shipping-returns/">Shipping &amp; Returns</a></li><li><a href="/en/faq/">FAQ</a></li><li><a href="mailto:info@alkosafe.com">info@alkosafe.com</a></li></ul></div>
+  </div>
+  <div class="ftbt">
+    <span>&copy; 2026 CROM TEST. All rights reserved.</span>
+    <div class="ftlg"><a href="/en/privacy-policy/">Privacy</a><a href="/en/terms-of-service/">Terms</a><a href="/en/cookie-policy/">Cookies</a><a href="/en/disclaimer/">Disclaimer</a></div>
+  </div>
+</div></footer>
+
+<script>
+const obs=new IntersectionObserver(e=>{e.forEach(en=>{if(en.isIntersecting)en.target.classList.add('v')})},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.fu').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
