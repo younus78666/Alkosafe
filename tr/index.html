@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AlkoSafe — Kullanmadan Once Bil</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
   --b9:#08243E;--b8:#10417A;--b7:#155091;--b6:#1A64B0;--b5:#2176CC;
@@ -13,7 +13,7 @@
   --gd:#E5A832;--gl:#F2CA6B;
   --w:#fff;--g0:#FAFBFC;--g1:#F1F3F5;--g2:#E9ECEF;--g4:#ADB5BD;--g6:#6C757D;--g8:#343A40;--g9:#1A1D21;
   --gn:#2E7D32;
-  --fd:'Playfair Display',Georgia,serif;--fb:'DM Sans',-apple-system,sans-serif;
+  --fd:'Orbitron',sans-serif;--fb:'Poppins',-apple-system,sans-serif;
   --mw:1200px;--sp:clamp(60px,8vw,110px);
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -35,10 +35,10 @@ img{max-width:100%;display:block}
 .hdr-in{display:flex;align-items:center;justify-content:space-between;height:72px}
 .logo{display:flex;align-items:center;gap:12px;text-decoration:none}
 .logo-div{width:1px;height:28px;background:var(--g2)}
-.logo-txt{font-size:18px;font-weight:700;color:var(--b8);letter-spacing:.02em}
+.logo-txt{font-family:var(--fd);font-size:17px;font-weight:700;color:var(--b8);letter-spacing:.04em}
 .logo-txt span{color:var(--gd)}
 .nav{display:flex;gap:28px;align-items:center}
-.nav a{font-size:14px;font-weight:500;color:var(--g8);text-decoration:none;transition:color .2s}
+.nav a{font-family:var(--fd);font-size:13px;font-weight:500;color:var(--g8);text-decoration:none;transition:color .2s;letter-spacing:.02em}
 .nav a:hover{color:var(--b6)}
 .nav-cta{background:var(--b7)!important;color:var(--w)!important;padding:10px 22px!important;border-radius:6px;font-weight:600!important}
 .lang-sw{display:flex;align-items:center;gap:2px;font-size:13px;font-weight:600;border:1px solid var(--g2);border-radius:6px;overflow:hidden}
@@ -168,7 +168,7 @@ img{max-width:100%;display:block}
 .ftr{background:var(--g9);color:rgba(255,255,255,.6);padding:60px 0 32px}
 .ftg{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:48px}
 .ftb p{font-size:14px;line-height:1.7;margin-top:14px;max-width:320px}
-.ftr h4{font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.85);margin-bottom:18px}
+.ftr h4{font-family:var(--fd);font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.85);margin-bottom:18px}
 .ftl{list-style:none}.ftl li{margin-bottom:10px}
 .ftl a{font-size:14px;color:rgba(255,255,255,.5);text-decoration:none;transition:color .2s}.ftl a:hover{color:var(--w)}
 .ftbt{border-top:1px solid rgba(255,255,255,.08);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;font-size:13px}
