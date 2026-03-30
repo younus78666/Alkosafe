@@ -74,14 +74,19 @@ img{max-width:100%;display:block}
 .pb{display:block;width:100%;padding:14px;border-radius:8px;font-size:15px;font-weight:600;text-align:center;cursor:pointer;border:none;transition:all .2s}
 .pb.pr{background:var(--b7);color:var(--w)}.pb.pr:hover{background:var(--b8)}
 .pb.ol{background:transparent;color:var(--b7);border:2px solid var(--b7)}.pb.ol:hover{background:var(--b1)}
-/* Steps */
-.hiw{background:var(--g0)}
-.sg{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;position:relative}
-.sg::before{content:'';position:absolute;top:48px;left:16%;right:16%;height:2px;background:repeating-linear-gradient(90deg,var(--b3) 0,var(--b3) 8px,transparent 8px,transparent 16px)}
-.sc{text-align:center;position:relative;z-index:2}
-.sn{width:96px;height:96px;margin:0 auto 28px;background:var(--w);border:2px solid var(--b3);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-size:36px;font-weight:700;color:var(--b7);box-shadow:0 4px 20px rgba(13,75,143,.06)}
-.sc h3{font-size:18px;font-weight:700;margin-bottom:10px}
-.sc p{font-size:15px;color:var(--g6);line-height:1.6;max-width:280px;margin:0 auto}
+/* Steps — Redesigned */
+.hiw{background:linear-gradient(180deg,var(--w) 0%,var(--g0) 100%)}
+.sg{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;position:relative}
+.sc{background:var(--w);border:1px solid var(--g2);border-radius:20px;padding:40px 28px 36px;text-align:center;position:relative;z-index:2;transition:all .35s}
+.sc:hover{border-color:var(--b4);box-shadow:0 16px 48px rgba(13,75,143,.08);transform:translateY(-6px)}
+.step-top{display:flex;align-items:center;justify-content:center;gap:16px;margin-bottom:24px}
+.sn{width:48px;height:48px;background:var(--b7);border-radius:12px;display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-size:20px;font-weight:700;color:var(--w);flex-shrink:0}
+.step-icon{width:56px;height:56px;background:var(--b1);border-radius:14px;display:flex;align-items:center;justify-content:center}
+.step-icon .ico{width:28px;height:28px;stroke:var(--b7)}
+.sc h3{font-size:20px;font-weight:700;margin-bottom:12px;color:var(--g9)}
+.sc p{font-size:15px;color:var(--g6);line-height:1.65;max-width:300px;margin:0 auto}
+.step-time{display:inline-flex;align-items:center;gap:6px;margin-top:16px;font-size:12px;font-weight:600;color:var(--b6);background:var(--b1);padding:6px 14px;border-radius:100px}
+.step-time .ico{width:14px;height:14px;stroke:var(--b6)}
 /* Standards */
 .stg{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
 .stc{background:var(--g0);border:1px solid var(--g2);border-radius:14px;padding:32px 24px;text-align:center;transition:all .3s}
@@ -198,17 +203,33 @@ img{max-width:100%;display:block}
 .check-item .ico{width:20px;height:20px;stroke:var(--gn);flex-shrink:0;margin-top:2px}
 
 /* How to use */
-.how-intro{max-width:700px;margin:0 auto 48px;text-align:center;font-size:16px;color:var(--g6);line-height:1.7}
-.result-table{max-width:700px;margin:40px auto 0;border-radius:12px;overflow:hidden;border:1px solid var(--g2)}
-.result-table table{width:100%;border-collapse:collapse}
-.result-table th{background:var(--b9);color:var(--w);padding:14px 20px;font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;text-align:left}
-.result-table td{padding:14px 20px;font-size:14px;border-bottom:1px solid var(--g2)}
-.result-table tr:last-child td{border-bottom:none}
-.result-table tr:nth-child(even){background:var(--g0)}
-.result-indicator{display:inline-block;width:12px;height:12px;border-radius:50%;margin-right:8px;vertical-align:middle}
-.ri-none{background:var(--g2);border:1px solid var(--g4)}
-.ri-light{background:#90CAF9;border:1px solid #42A5F5}
-.ri-strong{background:#7B1FA2;border:1px solid #6A1B9A}
+.how-intro{max-width:700px;margin:0 auto 56px;text-align:center;font-size:16px;color:var(--g6);line-height:1.7}
+/* Result Interpretation — Card Layout */
+.result-section{max-width:800px;margin:48px auto 0}
+.result-heading{text-align:center;font-size:16px;font-weight:700;color:var(--g9);margin-bottom:24px;letter-spacing:.02em}
+.result-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.result-card{border-radius:16px;padding:28px 24px;text-align:center;transition:all .3s;position:relative;overflow:hidden}
+.result-card:hover{transform:translateY(-4px)}
+.result-card.rc-safe{background:linear-gradient(135deg,#E8F5E9,#C8E6C9);border:1px solid #A5D6A7}
+.result-card.rc-warn{background:linear-gradient(135deg,#FFF8E1,#FFECB3);border:1px solid #FFE082}
+.result-card.rc-danger{background:linear-gradient(135deg,#FFEBEE,#FFCDD2);border:1px solid #EF9A9A}
+.result-swatch{width:48px;height:48px;border-radius:12px;margin:0 auto 16px;display:flex;align-items:center;justify-content:center}
+.rc-safe .result-swatch{background:var(--w);border:2px solid #C8E6C9}
+.rc-safe .result-swatch .ico{stroke:#4CAF50}
+.rc-warn .result-swatch{background:linear-gradient(135deg,#B3C6E6,#8FA8D6);border:2px solid #90A8CC}
+.rc-danger .result-swatch{background:linear-gradient(135deg,#5C6BC0,#7E57C2);border:2px solid #5C6BC0}
+.result-color{font-size:14px;font-weight:700;margin-bottom:6px}
+.rc-safe .result-color{color:#2E7D32}
+.rc-warn .result-color{color:#E65100}
+.rc-danger .result-color{color:#C62828}
+.result-meaning{font-size:13px;line-height:1.5}
+.rc-safe .result-meaning{color:#388E3C}
+.rc-warn .result-meaning{color:#BF360C}
+.rc-danger .result-meaning{color:#B71C1C}
+.result-badge{display:inline-block;margin-top:12px;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:4px 12px;border-radius:100px}
+.rc-safe .result-badge{background:rgba(46,125,50,.12);color:#2E7D32}
+.rc-warn .result-badge{background:rgba(230,81,0,.1);color:#E65100}
+.rc-danger .result-badge{background:rgba(198,40,40,.12);color:#C62828}
 
 /* Specs table */
 .specs-table{max-width:700px;margin:0 auto;border-radius:12px;overflow:hidden;border:1px solid var(--g2)}
@@ -254,8 +275,8 @@ img{max-width:100%;display:block}
 }
 @media(max-width:768px){
   .pg{grid-template-columns:1fr;max-width:380px;margin:0 auto}
-  .sg{grid-template-columns:1fr;max-width:340px;margin:0 auto}
-  .sg::before{display:none}
+  .sg{grid-template-columns:1fr;max-width:400px;margin:0 auto}
+  .result-cards{grid-template-columns:1fr;max-width:360px;margin:0 auto}
   .stg{grid-template-columns:1fr}
   .fg{grid-template-columns:1fr}
   .ftg{grid-template-columns:1fr}
@@ -432,43 +453,57 @@ img{max-width:100%;display:block}
   <p class="how-intro fu">AlkoSafe kullanimi 3 dakikadan az surer. Test etmeden once yemek yedikten, icecek ictikten veya sigara ictikten sonra 15 dakika bekleyin.</p>
   <div class="sg">
     <div class="sc fu">
-      <div class="sn">1</div>
+      <div class="step-top">
+        <div class="sn">1</div>
+        <div class="step-icon"><svg class="ico"><use href="#i-clipboard"/></svg></div>
+      </div>
       <h3>Hazirlik</h3>
       <p>Yemek, icecek veya sigara sonrasi en az 15 dakika bekleyin. Folyo posetten test seridini hemen kullanmadan once cikarin.</p>
+      <div class="step-time"><svg class="ico"><use href="#i-clock"/></svg>15 dk bekleme</div>
     </div>
     <div class="sc fu">
-      <div class="sn">2</div>
+      <div class="step-top">
+        <div class="sn">2</div>
+        <div class="step-icon"><svg class="ico"><use href="#i-droplet"/></svg></div>
+      </div>
       <h3>Test</h3>
       <p>Emici ucu dilinizin altina koyun. Tam olarak 2 dakika boyunca yerinde tutun. Seridi cignemeyinveya hareket ettirmeyin.</p>
+      <div class="step-time"><svg class="ico"><use href="#i-clock"/></svg>2 dk bekleyin</div>
     </div>
     <div class="sc fu">
-      <div class="sn">3</div>
+      <div class="step-top">
+        <div class="sn">3</div>
+        <div class="step-icon"><svg class="ico"><use href="#i-check-circle"/></svg></div>
+      </div>
       <h3>Sonucu Oku</h3>
       <p>Renk degisimi yok = esik deger uzerinde alkol tespit edilmedi. Mavi veya mor = 0.2 promil veya uzeri alkol tespit edildi.</p>
+      <div class="step-time"><svg class="ico"><use href="#i-clock"/></svg>Aninda okuma</div>
     </div>
   </div>
 
-  <!-- Result Table -->
-  <div class="result-table fu">
-    <table>
-      <thead>
-        <tr><th>Gozlem</th><th>Anlam</th></tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><span class="result-indicator ri-none"></span>Renk degisimi yok</td>
-          <td>0.2 promilin uzerinde alkol tespit edilmedi</td>
-        </tr>
-        <tr>
-          <td><span class="result-indicator ri-light"></span>Hafif mavi/mor</td>
-          <td>Sinirda — 15 dakika sonra tekrar test edin</td>
-        </tr>
-        <tr>
-          <td><span class="result-indicator ri-strong"></span>Belirgin mavi/mor</td>
-          <td>Alkol tespit edildi — arac kullanmayin</td>
-        </tr>
-      </tbody>
-    </table>
+  <!-- Result Interpretation — Visual Cards -->
+  <div class="result-section fu">
+    <h3 class="result-heading">Sonucunuzu Anlayin</h3>
+    <div class="result-cards">
+      <div class="result-card rc-safe">
+        <div class="result-swatch"><svg class="ico" style="width:24px;height:24px"><use href="#i-check"/></svg></div>
+        <div class="result-color">Renk Degisimi Yok</div>
+        <div class="result-meaning">0.2 promilin uzerinde alkol tespit edilmedi</div>
+        <span class="result-badge">Guvenli</span>
+      </div>
+      <div class="result-card rc-warn">
+        <div class="result-swatch"></div>
+        <div class="result-color">Hafif Mavi / Mor</div>
+        <div class="result-meaning">Sinirda — 15 dakika sonra tekrar test edin</div>
+        <span class="result-badge">Bekle ve tekrarla</span>
+      </div>
+      <div class="result-card rc-danger">
+        <div class="result-swatch"></div>
+        <div class="result-color">Belirgin Mavi / Mor</div>
+        <div class="result-meaning">Alkol tespit edildi — arac kullanmayin</div>
+        <span class="result-badge">Arac kullanmayin</span>
+      </div>
+    </div>
   </div>
 </div></section>
 
