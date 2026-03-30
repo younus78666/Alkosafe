@@ -49,114 +49,61 @@ img{max-width:100%;display:block}
 .lang-sw a{padding:6px 12px;text-decoration:none;color:var(--g6);transition:all .2s}
 .lang-sw a.active{background:var(--b7);color:var(--w)}
 .lang-sw a:hover:not(.active){background:var(--g1);color:var(--g8)}
-/* Logo & product images */
-.logo-img{height:36px;width:auto}
-.logo-img.footer{height:30px}
-.prod-img{max-width:100%;height:auto;object-fit:contain;border-radius:8px}
-/* Buttons */
-.btn-g{display:inline-flex;align-items:center;gap:10px;background:var(--gd);color:var(--b9);padding:16px 36px;border-radius:8px;font-size:16px;font-weight:700;text-decoration:none;transition:all .25s;box-shadow:0 4px 20px rgba(229,168,50,.3);border:none;cursor:pointer}
-.btn-g:hover{background:var(--gl);transform:translateY(-2px)}
-.btn-g .ico{stroke:var(--b9);width:18px;height:18px}
-.bgh{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--w);padding:15px 32px;border:1.5px solid rgba(255,255,255,.25);border-radius:8px;font-size:15px;font-weight:600;text-decoration:none}
-.ctabs{display:flex;gap:16px;flex-wrap:wrap}
 /* Section Headers */
 .sh{max-width:600px;margin:0 auto 56px}
 .sl{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--b6);margin-bottom:12px}
 .sh h2{font-family:var(--fd);font-size:clamp(28px,3.5vw,40px);font-weight:700;letter-spacing:-.02em;margin-bottom:14px}
 .sh p{font-size:16px;color:var(--g6);line-height:1.7}
-
-/* ===== PAGE HERO (white) ===== */
-.page-hero{padding:clamp(48px,6vw,80px) 0;text-align:center}
-.page-hero h1{font-family:var(--fd);font-size:clamp(32px,4vw,48px);font-weight:700;line-height:1.15;letter-spacing:-.02em;margin-bottom:16px;color:var(--g9)}
-.page-hero-sub{font-family:var(--fd);font-size:clamp(16px,2vw,20px);font-weight:400;color:var(--g6);margin-bottom:28px}
-.page-hero-intro{font-size:16px;color:var(--g8);line-height:1.8;max-width:760px;margin:0 auto}
-
-/* ===== CE MARK FEATURE PANEL ===== */
-.ce-shell{background:var(--w);border:1px solid var(--g2);border-radius:16px;padding:clamp(22px,3.8vw,36px);box-shadow:0 24px 60px rgba(8,36,62,.06)}
-.ce-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(320px,.85fr);gap:28px;align-items:start}
-.ce-copy{display:flex;flex-direction:column;gap:22px}
-.ce-intro{max-width:720px}
-.ce-kicker{display:inline-flex;align-items:center;gap:8px;background:rgba(26,100,176,.08);color:var(--b8);border:1px solid rgba(26,100,176,.12);border-radius:999px;padding:8px 14px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:18px}
-.ce-kicker::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--gd);box-shadow:0 0 0 6px rgba(229,168,50,.16)}
-.ce-lead{font-size:19px;line-height:1.72;color:var(--g9);max-width:620px}
-.ce-feature-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
-.ce-feature-card{background:var(--w);border:1px solid var(--g2);border-radius:16px;padding:18px;display:flex;gap:16px;transition:all .25s}
-.ce-feature-card:hover{border-color:var(--b4);box-shadow:0 14px 30px rgba(16,65,122,.08);transform:translateY(-2px)}
-.ce-feature-icon{width:48px;height:48px;background:var(--b1);border-radius:14px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.ce-feature-icon .ico{width:24px;height:24px;stroke:var(--b7)}
-.ce-feature-card h3{font-family:var(--fd);font-size:17px;font-weight:700;color:var(--g9);margin-bottom:6px}
-.ce-feature-card p{font-size:14px;color:var(--g6);line-height:1.7}
-.ce-note{display:flex;gap:14px;align-items:flex-start;background:rgba(8,36,62,.04);border:1px solid rgba(8,36,62,.08);border-radius:18px;padding:16px 18px}
-.ce-note .ico{width:20px;height:20px;stroke:var(--b7);margin-top:2px;flex-shrink:0}
-.ce-note p{font-size:14px;color:var(--g8);line-height:1.75}
-.ce-proof-card{position:relative;overflow:hidden;background:linear-gradient(155deg,#0d3f74,#1a64b0 58%,#42a5f5);color:var(--w);border-radius:28px;padding:30px;box-shadow:0 24px 48px rgba(16,65,122,.18);display:flex;flex-direction:column;height:fit-content}
-.ce-proof-card::before{content:'';position:absolute;top:-18%;right:-10%;width:280px;height:280px;background:radial-gradient(circle,rgba(255,255,255,.2),transparent 68%);pointer-events:none}
-.ce-proof-card::after{content:'';position:absolute;left:-12%;bottom:-25%;width:220px;height:220px;background:radial-gradient(circle,rgba(242,202,107,.18),transparent 70%);pointer-events:none}
-.ce-proof-badge{position:relative;z-index:1;display:inline-flex;align-self:flex-start;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:8px 14px;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.92);margin-bottom:22px}
-.ce-proof-icon{position:relative;z-index:1;width:108px;height:108px;border-radius:28px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;box-shadow:inset 0 1px 0 rgba(255,255,255,.16);margin-bottom:24px}
-.ce-proof-icon .ico{width:52px;height:52px;stroke:var(--w)}
-.ce-proof-title{position:relative;z-index:1;font-family:var(--fd);font-size:34px;font-weight:700;line-height:1.1;letter-spacing:-.02em;margin-bottom:12px}
-.ce-proof-copy{position:relative;z-index:1;font-size:15px;line-height:1.8;color:rgba(255,255,255,.8);max-width:320px}
-.ce-proof-divider{position:relative;z-index:1;height:1px;background:rgba(255,255,255,.18);margin:24px 0 20px}
-.ce-proof-list{position:relative;z-index:1;list-style:none;display:flex;flex-direction:column;gap:14px}
-.ce-proof-list li{display:flex;align-items:center;gap:12px;font-size:14px;font-weight:500;color:rgba(255,255,255,.94)}
-.ce-proof-list span{width:10px;height:10px;border-radius:50%;background:var(--gl);box-shadow:0 0 0 6px rgba(242,202,107,.14);flex-shrink:0}
-.ce-benefits{margin-top:26px;padding-top:24px;border-top:1px solid rgba(16,65,122,.1)}
-.ce-benefits-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:20px}
-.ce-benefits-head h3{font-family:var(--fd);font-size:24px;font-weight:700;color:var(--g9)}
-.ce-benefits-head p{max-width:420px;font-size:14px;color:var(--g6);line-height:1.7}
-.ce-points{list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
-.ce-points li{display:flex;align-items:flex-start;gap:14px;background:var(--w);border:1px solid var(--g2);border-radius:16px;padding:18px 20px}
-.ce-points li .ico{width:20px;height:20px;stroke:var(--gn);margin-top:2px;flex-shrink:0}
-.ce-point-copy{display:flex;flex-direction:column;gap:4px}
-.ce-point-copy strong{font-family:var(--fd);font-size:15px;font-weight:700;color:var(--g9)}
-.ce-point-copy span{font-size:14px;color:var(--g6);line-height:1.7}
-
-/* ===== ISO PRACTICE GRID ===== */
-.iso-text{max-width:800px;margin:0 auto 48px}
-.iso-text p{font-size:16px;color:var(--g8);line-height:1.8;margin-bottom:20px}
-.iso-text p:last-child{margin-bottom:0}
-.iso-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.iso-card{background:var(--w);border:1px solid var(--g2);border-radius:16px;padding:32px 24px;text-align:center;transition:all .3s}
-.iso-card:hover{border-color:var(--b4);box-shadow:0 8px 32px rgba(13,75,143,.06);transform:translateY(-4px)}
-.iso-icon{width:52px;height:52px;margin:0 auto 18px;background:var(--b1);border-radius:12px;display:flex;align-items:center;justify-content:center}
-.iso-icon .ico{width:26px;height:26px;stroke:var(--b7)}
-.iso-card h3{font-size:16px;font-weight:700;margin-bottom:8px;color:var(--g9)}
-.iso-card p{font-size:13px;color:var(--g6);line-height:1.6}
-
-/* ===== RAW MATERIALS ===== */
-.mat-text{max-width:800px;margin:0 auto}
-.mat-text p{font-size:16px;color:var(--g8);line-height:1.8;margin-bottom:20px}
-.mat-text p:last-child{margin-bottom:0}
-
-/* ===== DOWNLOAD CARDS ===== */
-.dl-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:32px}
-.dl-card{background:var(--w);border:1px solid var(--g2);border-radius:16px;padding:36px 28px;text-align:center;transition:all .3s;text-decoration:none;color:inherit;display:block}
-.dl-card:hover{border-color:var(--b4);box-shadow:0 12px 40px rgba(13,75,143,.08);transform:translateY(-4px)}
-.dl-icon{width:56px;height:56px;margin:0 auto 18px;background:var(--b1);border-radius:14px;display:flex;align-items:center;justify-content:center}
-.dl-icon .ico{width:28px;height:28px;stroke:var(--b7)}
-.dl-card h3{font-size:16px;font-weight:700;margin-bottom:6px;color:var(--g9)}
-.dl-card p{font-size:13px;color:var(--g6)}
-.dl-note{text-align:center;font-size:14px;color:var(--g6);line-height:1.6}
-.dl-note a{color:var(--b6);font-weight:600;text-decoration:none}
+/* Checklist */
+.cl{list-style:none;display:flex;flex-direction:column;gap:14px;margin-bottom:32px}
+.cl li{display:flex;align-items:center;gap:12px;font-size:15px;color:var(--g8);font-weight:500}
+.cl li .ico{width:20px;height:20px;stroke:var(--gn)}
+/* Body text block */
+.what-text{max-width:800px;margin:0 auto}
+.what-text p{font-size:16px;color:var(--g6);line-height:1.7;margin-bottom:20px}
+.what-text p:last-child{margin-bottom:0}
+/* Icon cards grid (3x2) */
+.icg{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
+.icc{background:var(--w);border:1px solid var(--g2);border-radius:16px;padding:32px 24px;text-align:center;transition:all .3s}
+.icc:hover{border-color:var(--b4);box-shadow:0 8px 32px rgba(13,75,143,.06);transform:translateY(-4px)}
+.icc-i{width:52px;height:52px;margin:0 auto 20px;background:var(--b1);border-radius:12px;display:flex;align-items:center;justify-content:center}
+.icc-i .ico{width:26px;height:26px;stroke:var(--b7)}
+.icc h4{font-size:15px;font-weight:700;margin-bottom:8px}
+.icc p{font-size:13px;color:var(--g6);line-height:1.6}
+/* Product image card */
+.img-card{max-width:400px;margin:48px auto 0;background:var(--w);border:1px solid var(--g2);border-radius:16px;padding:32px;display:flex;align-items:center;justify-content:center}
+.img-card img{max-width:100%;height:auto;object-fit:contain;border-radius:8px}
+/* Download cards */
+.dlg{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.dlc{background:var(--w);border:1px solid var(--g2);border-radius:16px;padding:32px 24px;text-align:center;transition:all .3s;text-decoration:none;color:var(--g9);display:block;cursor:pointer}
+.dlc:hover{border-color:var(--b4);box-shadow:0 8px 32px rgba(13,75,143,.06);transform:translateY(-4px)}
+.dlc-i{width:52px;height:52px;margin:0 auto 20px;background:var(--b1);border-radius:12px;display:flex;align-items:center;justify-content:center}
+.dlc-i .ico{width:26px;height:26px;stroke:var(--b7)}
+.dlc h4{font-size:15px;font-weight:700;margin-bottom:8px}
+.dlc span{font-size:13px;color:var(--b6);font-weight:600}
+.dl-note{text-align:center;margin-top:32px;font-size:14px;color:var(--g6)}
+.dl-note a{color:var(--b6);text-decoration:none;font-weight:600}
 .dl-note a:hover{text-decoration:underline}
-
-/* ===== CTA BANNER ===== */
+/* CTA Banner */
 .ctab{background:linear-gradient(135deg,var(--b9),var(--b8));color:var(--w);position:relative;overflow:hidden}
 .ctab::before{content:'';position:absolute;top:-50%;right:-10%;width:500px;height:500px;background:radial-gradient(circle,rgba(229,168,50,.1),transparent 70%);pointer-events:none}
 .ctai{display:flex;align-items:center;justify-content:space-between;gap:40px;position:relative;z-index:2}
 .ctac{max-width:560px}
 .ctac h2{font-family:var(--fd);font-size:clamp(28px,3.5vw,40px);font-weight:700;margin-bottom:14px;letter-spacing:-.02em}
 .ctac p{font-size:17px;color:rgba(255,255,255,.7);line-height:1.7;margin-bottom:32px}
+.ctabs{display:flex;gap:16px;flex-wrap:wrap}
+.btn-g{display:inline-flex;align-items:center;gap:10px;background:var(--gd);color:var(--b9);padding:16px 36px;border-radius:8px;font-size:16px;font-weight:700;text-decoration:none;transition:all .25s;box-shadow:0 4px 20px rgba(229,168,50,.3)}
+.btn-g:hover{background:var(--gl);transform:translateY(-2px)}
+.btn-g .ico{stroke:var(--b9);width:18px;height:18px}
+.bgh{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--w);padding:15px 32px;border:1.5px solid rgba(255,255,255,.25);border-radius:8px;font-size:15px;font-weight:600;text-decoration:none}
 .ctas{display:grid;grid-template-columns:1fr 1fr;gap:20px;min-width:280px}
 .sb{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:24px;text-align:center}
 .sbn{font-family:var(--fd);font-size:32px;font-weight:700;color:var(--gl);margin-bottom:4px}
 .sbl{font-size:13px;color:rgba(255,255,255,.55)}
-
 /* Disclaimer */
 .disc{background:#FFF8E1;border-top:1px solid #FFE082;border-bottom:1px solid #FFE082;padding:16px 0}
 .disci{display:flex;align-items:flex-start;gap:12px;font-size:13px;color:#5D4037;line-height:1.6}
-.disci .ico{width:18px;height:18px;stroke:#E65100;margin-top:2px;flex-shrink:0}
+.disci .ico{width:18px;height:18px;stroke:#E65100;margin-top:2px}
 /* Footer */
 .ftr{background:var(--g9);color:rgba(255,255,255,.6);padding:60px 0 32px}
 .ftg{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:48px}
@@ -166,15 +113,10 @@ img{max-width:100%;display:block}
 .ftl a{font-size:14px;color:rgba(255,255,255,.5);text-decoration:none;transition:color .2s}.ftl a:hover{color:var(--w)}
 .ftbt{border-top:1px solid rgba(255,255,255,.08);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;font-size:13px}
 .ftlg{display:flex;gap:24px}.ftlg a{color:rgba(255,255,255,.4);text-decoration:none}.ftlg a:hover{color:rgba(255,255,255,.7)}
-
-/* Mobile Menu */
+/* Mob Toggle */
 .mob-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px}
 .mob-toggle .ico{width:24px;height:24px;stroke:var(--g8)}
-
-/* Responsive */
 /* Off-Canvas Menu */
-.mob-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px}
-.mob-toggle .ico{width:24px;height:24px;stroke:var(--g8)}
 .oc-overlay{position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:199;opacity:0;visibility:hidden;transition:all .3s}
 .oc-overlay.open{opacity:1;visibility:visible}
 .oc-panel{position:fixed;top:0;right:0;width:300px;height:100%;background:var(--w);z-index:200;transform:translateX(100%);transition:transform .3s ease;box-shadow:-4px 0 24px rgba(0,0,0,.1);display:flex;flex-direction:column;overflow-y:auto}
@@ -196,27 +138,11 @@ img{max-width:100%;display:block}
 .oc-cta{display:block;width:100%;padding:14px;background:var(--gd);color:var(--b9);font-family:var(--fd);font-size:15px;font-weight:700;text-align:center;text-decoration:none;border-radius:8px;letter-spacing:.02em;transition:background .2s}
 .oc-cta:hover{background:var(--gl)}
 body.oc-open{overflow:hidden}
-@media(max-width:1024px){
-  .ce-grid{grid-template-columns:1fr}
-  .ce-feature-grid{grid-template-columns:1fr}
-  .ce-benefits-head{flex-direction:column;align-items:flex-start}
-  .ce-points{grid-template-columns:1fr}
-  .iso-grid{grid-template-columns:repeat(2,1fr)}
-  .ctai{flex-direction:column;text-align:center}
-  .ctabs{justify-content:center}
-  .ftg{grid-template-columns:1fr 1fr}
-  .nav{display:none}
-  .mob-toggle{display:block}
-}
-@media(max-width:768px){
-  .ce-shell{padding:24px}
-  .ce-lead{font-size:18px}
-  .ce-proof-title{font-size:30px}
-  .iso-grid{grid-template-columns:1fr}
-  .dl-grid{grid-template-columns:1fr;max-width:400px;margin:0 auto 32px}
-  .ftg{grid-template-columns:1fr}
-  .ctas{grid-template-columns:1fr 1fr;min-width:auto}
-}
+.logo-img{height:36px;width:auto}
+.logo-img.footer{height:30px}
+/* Responsive */
+@media(max-width:1024px){.icg{grid-template-columns:repeat(2,1fr)}.dlg{grid-template-columns:repeat(2,1fr)}.ctai{flex-direction:column;text-align:center}.ctabs{justify-content:center}.ftg{grid-template-columns:1fr 1fr}.nav{display:none}.mob-toggle{display:block}}
+@media(max-width:768px){.icg{grid-template-columns:1fr}.dlg{grid-template-columns:1fr}.ftg{grid-template-columns:1fr}}
 .fu{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}.fu.v{opacity:1;transform:translateY(0)}
 </style>
 </head>
@@ -226,27 +152,18 @@ body.oc-open{overflow:hidden}
 <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
   <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></symbol>
   <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></symbol>
-  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
-  <symbol id="i-check-circle" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></symbol>
   <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></symbol>
   <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="8" r="7"/><path d="M8.21 13.89L7 23l5-3 5 3-1.21-9.12"/></symbol>
-  <symbol id="i-factory" viewBox="0 0 24 24"><path d="M2 20h20"/><path d="M5 20V8l4 4V8l4 4V4h6v16"/><path d="M15 10h2m-2 4h2"/></symbol>
   <symbol id="i-beaker" viewBox="0 0 24 24"><path d="M9 3h6m-5 0v6.5L4 18.5a1 1 0 001 1.5h14a1 1 0 001-1.5L14 9.5V3"/><path d="M7 15h10"/></symbol>
-  <symbol id="i-map-pin" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></symbol>
-  <symbol id="i-truck" viewBox="0 0 24 24"><path d="M1 3h15v13H1z"/><path d="M16 8h4l3 4v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></symbol>
-  <symbol id="i-droplet" viewBox="0 0 24 24"><path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z"/></symbol>
-  <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
   <symbol id="i-clipboard" viewBox="0 0 24 24"><path d="M16 4h2a2 2 0 012 2v14a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/></symbol>
+  <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
   <symbol id="i-alert-tri" viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></symbol>
-  <symbol id="i-menu" viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></symbol>
-  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></symbol>
   <symbol id="i-eye" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></symbol>
-  <symbol id="i-layers" viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></symbol>
-  <symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><path d="M7 10l5 5 5-5"/><path d="M12 15V3"/></symbol>
 </svg>
 
 <!-- ANNOUNCEMENT BAR -->
-<div class="ann"><strong>Free shipping</strong> on all orders across Turkey &middot; CE Certified &middot; Results in 2 minutes</div>
+<div class="ann"><strong>Free shipping</strong> on all orders across Turkey · CE Certified · Results in 2 minutes</div>
 
 <!-- HEADER -->
 <header class="hdr"><div class="c hdr-in">
@@ -256,230 +173,148 @@ body.oc-open{overflow:hidden}
     <span class="logo-txt">Alko<span>Safe</span></span>
   </a>
   <nav class="nav">
-    <a href="/en/how-it-works.html">How It Works</a>
-    <a href="/en/compliance.html">Certifications</a>
+    <a href="/en/how-it-works/">How It Works</a>
+    <a href="/en/compliance/">Certifications</a>
     <a href="/en/about/">About</a>
     <a href="/en/contact/">Contact</a>
-    <div class="lang-sw">
-      <a href="/en/compliance.html" class="active">EN</a>
-      <a href="/tr/sertifikalar.html">TR</a>
-    </div>
-    <a href="/en/product/alkosafe-saliva-alcohol-test.html" class="nav-cta">Buy Now</a>
+    <div class="lang-sw"><a href="/en/" class="active">EN</a><a href="/tr/">TR</a></div>
+    <a href="/en/shop" class="nav-cta">Buy Now</a>
   </nav>
-  <button class="mob-toggle" onclick="openMenu()" aria-label="Open menu"><svg class="ico" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
-  <button class="mob-toggle" aria-label="Open menu" onclick="document.querySelector('.nav').style.display=document.querySelector('.nav').style.display==='flex'?'none':'flex'">
-    <svg class="ico"><use href="#i-menu"/></svg>
+  <button class="mob-toggle" onclick="openMenu()" aria-label="Open menu">
+    <svg class="ico" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
   </button>
 </div></header>
 
-<!-- SECTION 1: HERO INTRO (white) -->
-<section class="page-hero"><div class="c">
-  <div class="fu">
-    <h1>AlkoSafe Certifications &amp; Quality Standards</h1>
-    <p class="page-hero-intro">AlkoSafe is manufactured to international quality standards backed by independent certification. This page explains what each certification means, why it matters for a product you rely on for personal safety decisions, and how to verify our claims.</p>
+<!-- SECTION 1: PAGE INTRO (white) -->
+<section class="sp"><div class="c">
+  <div class="sh tc fu">
+    <div class="sl">Certifications</div>
+    <h2>AlkoSafe Certifications &amp; Quality Standards</h2>
+    <p>AlkoSafe is manufactured to international quality standards backed by independent certification. This page explains what each certification means and how to verify our claims.</p>
   </div>
 </div></section>
 
-<!-- SECTION 2: CE MARK (gray) -->
+<!-- SECTION 2: CE MARK (gray bg) -->
 <section class="sp" style="background:var(--g0)"><div class="c">
   <div class="sh tc fu">
     <div class="sl">Certification</div>
-    <h2>CE Mark and European Conformity</h2>
-    <p>What this certification covers, and what it actually tells you as a buyer.</p>
+    <h2>CE Mark — European Conformity</h2>
   </div>
-
-  <div class="ce-shell fu">
-    <div class="ce-grid">
-      <div class="ce-copy">
-        <div class="ce-intro">
-          <div class="ce-kicker">Recognised in Europe and Turkey</div>
-          <p class="ce-lead">The CE Mark confirms that AlkoSafe meets the health, safety, and environmental requirements needed to be sold in the European Union and in markets that recognise European standards.</p>
-        </div>
-
-        <div class="ce-feature-grid">
-          <article class="ce-feature-card">
-            <div class="ce-feature-icon"><svg class="ico"><use href="#i-shield"/></svg></div>
-            <div>
-              <h3>Safety and performance reviewed</h3>
-              <p>AlkoSafe is assessed against the applicable product requirements before it is placed on the market.</p>
-            </div>
-          </article>
-          <article class="ce-feature-card">
-            <div class="ce-feature-icon"><svg class="ico"><use href="#i-layers"/></svg></div>
-            <div>
-              <h3>Documented manufacturing basis</h3>
-              <p>Technical documentation is maintained so regulatory authorities can inspect the product basis when required.</p>
-            </div>
-          </article>
-          <article class="ce-feature-card">
-            <div class="ce-feature-icon"><svg class="ico"><use href="#i-map-pin"/></svg></div>
-            <div>
-              <h3>Legal market access</h3>
-              <p>CE conformity allows AlkoSafe to be sold in EU countries and in Turkey, where European standards are recognised.</p>
-            </div>
-          </article>
-          <article class="ce-feature-card">
-            <div class="ce-feature-icon"><svg class="ico"><use href="#i-clipboard"/></svg></div>
-            <div>
-              <h3>Clear manufacturer accountability</h3>
-              <p>The declaration sits with the manufacturer, which carries legal responsibility for compliance and product claims.</p>
-            </div>
-          </article>
-        </div>
-
-        <div class="ce-note">
-          <svg class="ico"><use href="#i-alert-tri"/></svg>
-          <p>CE marking is not a third-party quality award. It is a manufacturer declaration backed by technical documentation and open to regulatory inspection.</p>
-        </div>
-      </div>
-
-      <aside class="ce-proof-card">
-        <div class="ce-proof-badge">Manufacturer Declaration</div>
-        <div class="ce-proof-icon">
-          <svg class="ico"><use href="#i-award"/></svg>
-        </div>
-        <div class="ce-proof-title">CE Certified</div>
-        <p class="ce-proof-copy">Placed on the market under European conformity requirements, with supporting documentation maintained by the manufacturer.</p>
-        <div class="ce-proof-divider"></div>
-        <ul class="ce-proof-list">
-          <li><span></span>Technical file maintained</li>
-          <li><span></span>Regulatory inspection possible</li>
-          <li><span></span>Legal accountability accepted</li>
-        </ul>
-      </aside>
-    </div>
-
-    <div class="ce-benefits">
-      <div class="ce-benefits-head">
-        <h3>What CE Mark means for you</h3>
-        <p>These are the practical buyer outcomes behind the label, not just the compliance language.</p>
-      </div>
-      <ul class="ce-points">
-        <li>
-          <svg class="ico"><use href="#i-check"/></svg>
-          <div class="ce-point-copy">
-            <strong>Defined safety standard</strong>
-            <span>The product is assessed against the applicable European safety and performance requirements.</span>
-          </div>
-        </li>
-        <li>
-          <svg class="ico"><use href="#i-check"/></svg>
-          <div class="ce-point-copy">
-            <strong>Documentation exists</strong>
-            <span>Technical documentation is created, maintained, and available when authorities request review.</span>
-          </div>
-        </li>
-        <li>
-          <svg class="ico"><use href="#i-check"/></svg>
-          <div class="ce-point-copy">
-            <strong>Manufacturer is accountable</strong>
-            <span>Compliance is attached to the manufacturer, not left as an unverified marketing claim.</span>
-          </div>
-        </li>
-        <li>
-          <svg class="ico"><use href="#i-check"/></svg>
-          <div class="ce-point-copy">
-            <strong>Sale is legally supported</strong>
-            <span>The product can be placed on the market in Turkey and across Europe where CE standards apply.</span>
-          </div>
-        </li>
-      </ul>
-    </div>
+  <div class="what-text tc fu">
+    <p>The CE Mark is the manufacturer's declaration that AlkoSafe meets the health, safety, and environmental protection requirements of applicable European directives. CE marking allows a product to be placed on the market in the EU and Turkey.</p>
+    <p>For AlkoSafe, CE marking means the product has been evaluated for safety and performance, the manufacturing processes meet European standards, and technical documentation is maintained for regulatory inspection.</p>
+  </div>
+  <div class="what-text fu" style="margin-top:48px">
+    <h3 style="font-family:var(--fd);font-size:18px;font-weight:700;margin-bottom:20px">What CE Mark means for you</h3>
+    <ul class="cl">
+      <li><svg class="ico"><use href="#i-check"/></svg>Product assessed against European safety and performance standards</li>
+      <li><svg class="ico"><use href="#i-check"/></svg>Technical documentation exists and is maintained</li>
+      <li><svg class="ico"><use href="#i-check"/></svg>Manufacturer accepts legal accountability</li>
+      <li><svg class="ico"><use href="#i-check"/></svg>Product legally sold in Turkey and European markets</li>
+      <li><svg class="ico"><use href="#i-check"/></svg>Regulatory authorities can request inspection at any time</li>
+    </ul>
   </div>
 </div></section>
+
 <!-- SECTION 3: ISO 13485 (white) -->
 <section class="sp"><div class="c">
-  <div class="sh tc fu"><div class="sl">Quality Standard</div><h2>ISO 13485:2016 — Medical Device Quality Management</h2></div>
-
-  <div class="iso-text fu">
-    <p>ISO 13485:2016 is the international standard for quality management systems in medical device manufacturing. It is widely recognised as the most demanding quality framework applicable to device manufacturers — more stringent than general ISO 9001.</p>
-    <p>An ISO 13485:2016 certified manufacturer has demonstrated that their quality management system consistently meets customer requirements and applicable regulatory requirements. For CROM TEST — the manufacturer of AlkoSafe — this means every stage of the production process operates under documented, audited quality controls.</p>
+  <div class="sh tc fu">
+    <div class="sl">Quality Standard</div>
+    <h2>ISO 13485:2016</h2>
   </div>
-
-  <h3 style="font-family:var(--fd);font-size:20px;font-weight:700;margin-bottom:28px;color:var(--g9);text-align:center" class="fu">What ISO 13485 means in practice</h3>
-  <div class="iso-grid fu">
-    <div class="iso-card">
-      <div class="iso-icon"><svg class="ico"><use href="#i-clipboard"/></svg></div>
-      <h3>Batch Quality Controls</h3>
-      <p>Every production batch manufactured under documented controls</p>
+  <div class="what-text tc fu">
+    <p>ISO 13485:2016 is the internationally recognised standard for quality management systems in the medical device industry. It specifies requirements for a quality management system where an organisation needs to demonstrate its ability to provide medical devices and related services that consistently meet customer and applicable regulatory requirements.</p>
+    <p>AlkoSafe is manufactured under an ISO 13485:2016 certified quality management system. This means every stage — from raw material sourcing to final packaging — is controlled, documented, and auditable.</p>
+  </div>
+  <div class="icg fu">
+    <div class="icc">
+      <div class="icc-i"><svg class="ico ico-lg"><use href="#i-clipboard"/></svg></div>
+      <h4>Batch Controls</h4>
+      <p>Every batch under documented quality controls</p>
     </div>
-    <div class="iso-card">
-      <div class="iso-icon"><svg class="ico"><use href="#i-beaker"/></svg></div>
-      <h3>Qualified Suppliers</h3>
-      <p>Raw material suppliers (Merck, Sartorius) are qualified and monitored</p>
+    <div class="icc">
+      <div class="icc-i"><svg class="ico ico-lg"><use href="#i-beaker"/></svg></div>
+      <h4>Qualified Suppliers</h4>
+      <p>Merck &amp; Sartorius qualified and monitored</p>
     </div>
-    <div class="iso-card">
-      <div class="iso-icon"><svg class="ico"><use href="#i-search"/></svg></div>
-      <h3>Full Traceability</h3>
-      <p>Every batch traced from raw material to final product</p>
+    <div class="icc">
+      <div class="icc-i"><svg class="ico ico-lg"><use href="#i-eye"/></svg></div>
+      <h4>Full Traceability</h4>
+      <p>Every batch traced from raw material to product</p>
     </div>
-    <div class="iso-card">
-      <div class="iso-icon"><svg class="ico"><use href="#i-shield"/></svg></div>
-      <h3>Non-Conformance Management</h3>
-      <p>Issues recorded, investigated, and corrected</p>
+    <div class="icc">
+      <div class="icc-i"><svg class="ico ico-lg"><use href="#i-shield"/></svg></div>
+      <h4>Non-Conformance</h4>
+      <p>Issues recorded, investigated, corrected</p>
     </div>
-    <div class="iso-card">
-      <div class="iso-icon"><svg class="ico"><use href="#i-eye"/></svg></div>
-      <h3>External Audits</h3>
-      <p>Quality system audited by an accredited external body</p>
+    <div class="icc">
+      <div class="icc-i"><svg class="ico ico-lg"><use href="#i-award"/></svg></div>
+      <h4>External Audits</h4>
+      <p>Audited by accredited external body</p>
     </div>
-    <div class="iso-card">
-      <div class="iso-icon"><svg class="ico"><use href="#i-target"/></svg></div>
-      <h3>Post-Market Surveillance</h3>
-      <p>Ongoing monitoring of product performance</p>
+    <div class="icc">
+      <div class="icc-i"><svg class="ico ico-lg"><use href="#i-target"/></svg></div>
+      <h4>Post-Market</h4>
+      <p>Ongoing product performance monitoring</p>
     </div>
   </div>
 </div></section>
 
-<!-- SECTION 4: RAW MATERIALS (gray) -->
+<!-- SECTION 4: RAW MATERIALS (gray bg) -->
 <section class="sp" style="background:var(--g0)"><div class="c">
-  <div class="sh tc fu"><div class="sl">Materials</div><h2>Swiss &amp; German-Grade Raw Materials</h2></div>
-
-  <div class="mat-text fu">
-    <p>AlkoSafe's performance is directly dependent on the quality of its core materials. The nitrocellulose membrane — the functional heart of the test — is sourced exclusively from Merck and Sartorius, two of the world's leading suppliers headquartered in Germany and Switzerland respectively.</p>
-    <p>These are the same suppliers whose materials are used in hospital diagnostic laboratories across Europe. The choice of premium membrane material directly impacts sensitivity, specificity, and consistency across production batches.</p>
+  <div class="sh tc fu">
+    <div class="sl">Materials</div>
+    <h2>Swiss &amp; German-Grade Materials</h2>
+  </div>
+  <div class="what-text tc fu">
+    <p>The core reactive membrane in every AlkoSafe strip is nitrocellulose sourced from Sartorius (Germany) and treated with reagents from Merck (Switzerland/Germany). These are the same suppliers used in European hospital-grade diagnostic devices.</p>
+    <p>By using the same raw materials as professional laboratory tests, AlkoSafe achieves clinical-grade sensitivity in a consumer-friendly format. Every incoming material batch is tested and documented before production begins.</p>
+  </div>
+  <div class="img-card fu">
+    <img src="/images/product-front.png" alt="AlkoSafe product with Swiss and German-grade materials">
   </div>
 </div></section>
 
-<!-- SECTION 5: CERTIFICATE DOWNLOADS (white) -->
+<!-- SECTION 5: DOWNLOADS (white) -->
 <section class="sp"><div class="c">
-  <div class="sh tc fu"><div class="sl">Downloads</div><h2>Certificate Downloads</h2></div>
-
-  <div class="dl-grid fu">
-    <a href="#" class="dl-card">
-      <div class="dl-icon"><svg class="ico"><use href="#i-clipboard"/></svg></div>
-      <h3>CE Declaration of Conformity</h3>
-      <p>PDF</p>
-    </a>
-    <a href="#" class="dl-card">
-      <div class="dl-icon"><svg class="ico"><use href="#i-award"/></svg></div>
-      <h3>ISO 13485:2016 Certificate</h3>
-      <p>PDF</p>
-    </a>
-    <a href="#" class="dl-card">
-      <div class="dl-icon"><svg class="ico"><use href="#i-beaker"/></svg></div>
-      <h3>Product Technical Sheet</h3>
-      <p>PDF</p>
-    </a>
+  <div class="sh tc fu">
+    <div class="sl">Downloads</div>
+    <h2>Certificate Downloads</h2>
   </div>
-
-  <p class="dl-note fu">Questions about AlkoSafe certifications? Contact our quality team at <a href="mailto:info@alkosafe.com">info@alkosafe.com</a></p>
+  <div class="dlg fu">
+    <div class="dlc">
+      <div class="dlc-i"><svg class="ico ico-lg"><use href="#i-clipboard"/></svg></div>
+      <h4>CE Declaration of Conformity</h4>
+      <span>Download PDF</span>
+    </div>
+    <div class="dlc">
+      <div class="dlc-i"><svg class="ico ico-lg"><use href="#i-award"/></svg></div>
+      <h4>ISO 13485:2016 Certificate</h4>
+      <span>Download PDF</span>
+    </div>
+    <div class="dlc">
+      <div class="dlc-i"><svg class="ico ico-lg"><use href="#i-beaker"/></svg></div>
+      <h4>Product Technical Sheet</h4>
+      <span>Download PDF</span>
+    </div>
+  </div>
+  <p class="dl-note fu">Questions? Contact <a href="mailto:info@alkosafe.com">info@alkosafe.com</a></p>
 </div></section>
 
-<!-- SECTION 6: CTA BANNER (dark blue) -->
+<!-- CTA BANNER -->
 <section class="ctab sp"><div class="c"><div class="ctai fu">
   <div class="ctac">
     <h2>Don't Guess. Test.</h2>
     <p>AlkoSafe gives you a clear answer in 2 minutes. Protect yourself, your licence, and the people around you.</p>
     <div class="ctabs">
-      <a href="/en/product/alkosafe-saliva-alcohol-test.html" class="btn-g">Shop AlkoSafe <svg class="ico" style="width:16px;height:16px"><use href="#i-arrow"/></svg></a>
+      <a href="/en/shop" class="btn-g">Shop AlkoSafe <svg class="ico" style="width:16px;height:16px"><use href="#i-arrow"/></svg></a>
       <a href="/en/contact/" class="bgh">Bulk Orders? Contact Us</a>
     </div>
   </div>
   <div class="ctas">
     <div class="sb"><div class="sbn">99.7%</div><div class="sbl">Sensitivity</div></div>
     <div class="sb"><div class="sbn">2 min</div><div class="sbl">Result Time</div></div>
-    <div class="sb"><div class="sbn">0.2&#8240;</div><div class="sbl">Threshold</div></div>
+    <div class="sb"><div class="sbn">0.2&#8240;</div><div class="sbl">Detection Threshold</div></div>
     <div class="sb"><div class="sbn">24 mo</div><div class="sbl">Shelf Life</div></div>
   </div>
 </div></div></section>
@@ -501,7 +336,7 @@ body.oc-open{overflow:hidden}
       </a>
       <p>A saliva alcohol test by CROM TEST. Swiss-grade materials. British know-how. Manufactured in Turkey to European CE standards.</p>
     </div>
-    <div><h4>Product</h4><ul class="ftl"><li><a href="/en/product/alkosafe-saliva-alcohol-test.html">Buy AlkoSafe</a></li><li><a href="/en/how-it-works.html">How It Works</a></li><li><a href="/en/compliance.html">Certifications</a></li></ul></div>
+    <div><h4>Product</h4><ul class="ftl"><li><a href="/en/shop">Buy AlkoSafe</a></li><li><a href="/en/how-it-works/">How It Works</a></li><li><a href="/en/compliance/">Certifications</a></li></ul></div>
     <div><h4>Company</h4><ul class="ftl"><li><a href="/en/about/">About CROM TEST</a></li><li><a href="/en/contact/">Contact</a></li><li><a href="/tr/blog/">Blog (TR)</a></li></ul></div>
     <div><h4>Support</h4><ul class="ftl"><li><a href="/en/shipping-returns/">Shipping &amp; Returns</a></li><li><a href="/en/faq/">FAQ</a></li><li><a href="mailto:info@alkosafe.com">info@alkosafe.com</a></li></ul></div>
   </div>
@@ -511,16 +346,14 @@ body.oc-open{overflow:hidden}
   </div>
 </div></footer>
 
-<script>
-/* Fade-up animation observer */
-const obs=new IntersectionObserver(e=>{e.forEach(en=>{if(en.isIntersecting)en.target.classList.add('v')})},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
-document.querySelectorAll('.fu').forEach(el=>obs.observe(el));
-</script>
 <!-- Off-Canvas Menu -->
 <div class="oc-overlay" id="oc-overlay" onclick="closeMenu()"></div>
 <div class="oc-panel" id="oc-panel">
   <div class="oc-header">
-    <div class="oc-logo"><img src="/images/logo.png" alt="CROM TEST"><span>Alko<em>Safe</em></span></div>
+    <div class="oc-logo">
+      <img src="/images/logo.png" alt="CROM TEST">
+      <span>Alko<em>Safe</em></span>
+    </div>
     <button class="oc-close" onclick="closeMenu()"><svg class="ico" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
   </div>
   <nav class="oc-nav">
@@ -534,5 +367,12 @@ document.querySelectorAll('.fu').forEach(el=>obs.observe(el));
     <a href="/en/shop" class="oc-cta">Buy Now</a>
   </div>
 </div>
+
+<script>
+function openMenu(){document.getElementById('oc-overlay').classList.add('open');document.getElementById('oc-panel').classList.add('open');document.body.classList.add('oc-open')}
+function closeMenu(){document.getElementById('oc-overlay').classList.remove('open');document.getElementById('oc-panel').classList.remove('open');document.body.classList.remove('oc-open')}
+const obs=new IntersectionObserver(e=>{e.forEach(en=>{if(en.isIntersecting)en.target.classList.add('v')})},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.fu').forEach(el=>obs.observe(el));
+</script>
 </body>
 </html>
