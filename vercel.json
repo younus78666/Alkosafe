@@ -1,10 +1,5 @@
 {
-  "buildCommand": "",
-  "outputDirectory": ".",
   "cleanUrls": true,
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/alkosafe-homepage.html" }
-  ],
   "headers": [
     {
       "source": "/images/(.*)",
