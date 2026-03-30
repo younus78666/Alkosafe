@@ -75,7 +75,7 @@ img{max-width:100%;display:block}
 .pb.pr{background:var(--b7);color:var(--w)}.pb.pr:hover{background:var(--b8)}
 .pb.ol{background:transparent;color:var(--b7);border:2px solid var(--b7)}.pb.ol:hover{background:var(--b1)}
 /* Steps — Redesigned */
-.hiw{background:linear-gradient(180deg,var(--w) 0%,var(--g0) 100%)}
+.hiw{background:var(--w)}
 .sg{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;position:relative}
 .sc{background:var(--w);border:1px solid var(--g2);border-radius:20px;padding:40px 28px 36px;text-align:center;position:relative;z-index:2;transition:all .35s}
 .sc:hover{border-color:var(--b4);box-shadow:0 16px 48px rgba(13,75,143,.08);transform:translateY(-6px)}
@@ -190,14 +190,19 @@ img{max-width:100%;display:block}
 .prod-disc{font-size:12px;color:var(--g6);line-height:1.6;padding:12px 16px;background:var(--g0);border-radius:8px;border-left:3px solid var(--gd)}
 
 /* What is section */
-.what-section{background:var(--g0)}
+.what-section{background:var(--w)}
 .what-content{max-width:800px;margin:0 auto}
 .what-content p{font-size:16px;color:var(--g8);line-height:1.8;margin-bottom:20px}
 
-/* Checklist section */
-.check-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;max-width:900px;margin:0 auto}
-.check-item{display:flex;align-items:flex-start;gap:12px;font-size:15px;color:var(--g8);line-height:1.5;padding:12px 16px;background:var(--w);border:1px solid var(--g2);border-radius:10px}
-.check-item .ico{width:20px;height:20px;stroke:var(--gn);flex-shrink:0;margin-top:2px}
+/* Features — Icon Card Grid */
+.features-section{background:var(--g0)}
+.features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:1000px;margin:0 auto}
+.feat-card{background:var(--w);border:1px solid var(--g2);border-radius:16px;padding:28px 24px;transition:all .3s}
+.feat-card:hover{border-color:var(--b4);box-shadow:0 8px 32px rgba(13,75,143,.06);transform:translateY(-4px)}
+.feat-card-icon{width:44px;height:44px;background:var(--b1);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.feat-card-icon .ico{width:22px;height:22px;stroke:var(--b7)}
+.feat-card h4{font-size:15px;font-weight:700;color:var(--g9);margin-bottom:6px}
+.feat-card p{font-size:13px;color:var(--g6);line-height:1.55}
 
 /* How to use */
 .how-intro{max-width:700px;margin:0 auto 56px;text-align:center;font-size:16px;color:var(--g6);line-height:1.7}
@@ -279,7 +284,7 @@ img{max-width:100%;display:block}
   .ftg{grid-template-columns:1fr}
   .shi{grid-template-columns:1fr}
   .shiw.tall{grid-row:auto}
-  .check-grid{grid-template-columns:1fr}
+  .features-grid{grid-template-columns:1fr}
   .gallery-main{min-height:280px;padding:20px}
 }
 .fu{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}.fu.v{opacity:1;transform:translateY(0)}
@@ -426,21 +431,54 @@ img{max-width:100%;display:block}
 </div></section>
 
 <!-- SECTION 3: Temel Ozellikler -->
-<section class="sp"><div class="c">
+<section class="features-section sp"><div class="c">
   <div class="sh tc fu"><div class="sl">Ozellikler</div><h2>Temel Ozellikler</h2></div>
-  <div class="check-grid fu">
-    <div class="check-item"><svg class="ico"><use href="#i-check"/></svg><span>0.2 promil (0.02% BAK) alkolu tespit eder — Turkiye'nin yasal surculuk siniri</span></div>
-    <div class="check-item"><svg class="ico"><use href="#i-check"/></svg><span>2 dakikada sonuc — cihaz, pil veya kalibrasyon gerekmez</span></div>
-    <div class="check-item"><svg class="ico"><use href="#i-check"/></svg><span>Enzimatik tespit teknolojisi (Alkol Oksidaz) — klinik olarak dogrulanmis</span></div>
-    <div class="check-item"><svg class="ico"><use href="#i-check"/></svg><span>%99,7 hassasiyet / %99,5 ozgunluk</span></div>
-    <div class="check-item"><svg class="ico"><use href="#i-check"/></svg><span>Merck ve Sartorius'tan nitroseluloz membranlar (Isvicre / Almanya)</span></div>
-    <div class="check-item"><svg class="ico"><use href="#i-check"/></svg><span>CE sertifikali — Avrupa guvenlik standartlarina uygun</span></div>
-    <div class="check-item"><svg class="ico"><use href="#i-check"/></svg><span>ISO 13485:2016 kalite yonetimiyle uretilmistir</span></div>
-    <div class="check-item"><svg class="ico"><use href="#i-check"/></svg><span>Tek tek folyo muhurlu posetler — oda sicakliginda 24 ay raf omru</span></div>
-    <div class="check-item"><svg class="ico"><use href="#i-check"/></svg><span>Non-invaziv tukuruk testi — kan, idrar veya uzman gerekmez</span></div>
-    <div class="check-item"><svg class="ico"><use href="#i-check"/></svg><span>3 adimli prosedur — egitim olmadan herkes kullanabilir</span></div>
-    <div class="check-item"><svg class="ico"><use href="#i-check"/></svg><span>Kompakt ve tasinabilir — cuzdan, torpido veya ilk yardim cantasina sigacak kadar kucuk</span></div>
-    <div class="check-item"><svg class="ico"><use href="#i-check"/></svg><span>Tum Turkiye siparislerinde ucretsiz kargo</span></div>
+  <div class="features-grid fu">
+    <div class="feat-card">
+      <div class="feat-card-icon"><svg class="ico"><use href="#i-target"/></svg></div>
+      <h4>0.2 Promil Tespit</h4>
+      <p>0.2 promil (0.02% BAK) alkolu tespit eder — Turkiye'nin yasal surculuk siniri.</p>
+    </div>
+    <div class="feat-card">
+      <div class="feat-card-icon"><svg class="ico"><use href="#i-clock"/></svg></div>
+      <h4>2 Dakikada Sonuc</h4>
+      <p>Cihaz, pil veya kalibrasyon gerekmez. Sadece test seridi yeterli.</p>
+    </div>
+    <div class="feat-card">
+      <div class="feat-card-icon"><svg class="ico"><use href="#i-microscope"/></svg></div>
+      <h4>Enzimatik Tespit</h4>
+      <p>Alkol Oksidaz teknolojisi — klinik olarak dogrulanmis, laboratuvar duzeyinde hassasiyet.</p>
+    </div>
+    <div class="feat-card">
+      <div class="feat-card-icon"><svg class="ico"><use href="#i-shield"/></svg></div>
+      <h4>%99,7 Hassasiyet</h4>
+      <p>Klinik dogrulama calismalarinda %99,7 hassasiyet ve %99,5 ozgunluk.</p>
+    </div>
+    <div class="feat-card">
+      <div class="feat-card-icon"><svg class="ico"><use href="#i-beaker"/></svg></div>
+      <h4>Isvicre Kalitesinde</h4>
+      <p>Merck ve Sartorius'tan nitroseluloz membranlar (Isvicre / Almanya).</p>
+    </div>
+    <div class="feat-card">
+      <div class="feat-card-icon"><svg class="ico"><use href="#i-award"/></svg></div>
+      <h4>CE Sertifikali</h4>
+      <p>Avrupa guvenlik standartlarina uygun. ISO 13485:2016 kalite yonetimi.</p>
+    </div>
+    <div class="feat-card">
+      <div class="feat-card-icon"><svg class="ico"><use href="#i-clipboard"/></svg></div>
+      <h4>24 Ay Raf Omru</h4>
+      <p>Tek tek folyo muhurlu posetler. Oda sicakliginda saklayin.</p>
+    </div>
+    <div class="feat-card">
+      <div class="feat-card-icon"><svg class="ico"><use href="#i-droplet"/></svg></div>
+      <h4>Non-Invaziv Test</h4>
+      <p>Tukuruk bazli — kan, idrar veya uzman gerekmez.</p>
+    </div>
+    <div class="feat-card">
+      <div class="feat-card-icon"><svg class="ico"><use href="#i-truck"/></svg></div>
+      <h4>Ucretsiz Kargo</h4>
+      <p>Kompakt, tasinabilir ve tum Turkiye siparislerinde ucretsiz kargo.</p>
+    </div>
   </div>
 </div></section>
 
@@ -472,7 +510,7 @@ img{max-width:100%;display:block}
 </div></section>
 
 <!-- SECTION 5: Teknik Ozellikler -->
-<section class="sp"><div class="c">
+<section class="sp" style="background:var(--g0)"><div class="c">
   <div class="sh tc fu"><div class="sl">Teknik Bilgi</div><h2>Teknik Ozellikler</h2></div>
   <div class="specs-table fu">
     <table>
@@ -494,7 +532,7 @@ img{max-width:100%;display:block}
 </div></section>
 
 <!-- SECTION 6: SSS -->
-<section class="sp" style="background:var(--g0)"><div class="c">
+<section class="sp"><div class="c">
   <div class="sh tc fu"><div class="sl">Sikca Sorulan Sorular</div><h2>SSS</h2></div>
   <div class="faq-list fu">
 

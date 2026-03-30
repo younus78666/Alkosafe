@@ -134,18 +134,23 @@ img{max-width:100%;display:block}
 .prod-disc strong{color:var(--g8)}
 
 /* What Is Section */
-.what-section{background:var(--g0)}
+.what-section{background:var(--w)}
 .what-text{max-width:800px;margin:0 auto}
 .what-text p{font-size:16px;color:var(--g8);line-height:1.8;margin-bottom:20px}
 .what-text p:last-child{margin-bottom:0}
 
-/* Features Checklist */
-.features-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px 40px;max-width:900px;margin:0 auto}
-.feat-item{display:flex;align-items:flex-start;gap:12px;font-size:15px;color:var(--g8);line-height:1.5}
-.feat-item .ico{width:20px;height:20px;stroke:var(--gn);flex-shrink:0;margin-top:2px}
+/* Features — Icon Card Grid */
+.features-section{background:var(--g0)}
+.features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:1000px;margin:0 auto}
+.feat-card{background:var(--w);border:1px solid var(--g2);border-radius:16px;padding:28px 24px;transition:all .3s}
+.feat-card:hover{border-color:var(--b4);box-shadow:0 8px 32px rgba(13,75,143,.06);transform:translateY(-4px)}
+.feat-card-icon{width:44px;height:44px;background:var(--b1);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.feat-card-icon .ico{width:22px;height:22px;stroke:var(--b7)}
+.feat-card h4{font-size:15px;font-weight:700;color:var(--g9);margin-bottom:6px}
+.feat-card p{font-size:13px;color:var(--g6);line-height:1.55}
 
-/* How To Use — Redesigned */
-.steps-section{background:linear-gradient(180deg,var(--w) 0%,var(--g0) 100%)}
+/* How To Use */
+.steps-section{background:var(--w)}
 .steps-intro{text-align:center;font-size:16px;color:var(--g6);max-width:600px;margin:0 auto 56px;line-height:1.7}
 .steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;position:relative;margin-bottom:56px}
 .step-card{background:var(--w);border:1px solid var(--g2);border-radius:20px;padding:40px 28px 36px;text-align:center;position:relative;z-index:2;transition:all .35s}
@@ -229,7 +234,7 @@ img{max-width:100%;display:block}
 @media(max-width:1024px){
   .prod-hero-in{grid-template-columns:1fr;gap:36px}
   .gallery-main{min-height:300px}
-  .features-grid{grid-template-columns:1fr}
+  .features-grid{grid-template-columns:repeat(2,1fr)}
   .ctai{flex-direction:column;text-align:center}
   .ftg{grid-template-columns:1fr 1fr}
   .nav{display:none}
@@ -393,21 +398,54 @@ img{max-width:100%;display:block}
 </div></section>
 
 <!-- SECTION 3: KEY FEATURES -->
-<section class="sp"><div class="c">
+<section class="features-section sp"><div class="c">
   <div class="sh tc fu"><div class="sl">Key Features</div><h2>Everything You Need to Know.</h2></div>
   <div class="features-grid fu">
-    <div class="feat-item"><svg class="ico"><use href="#i-check"/></svg><span>Detects alcohol from 0.2 promil (0.02% BAC) — Turkey's legal driving limit</span></div>
-    <div class="feat-item"><svg class="ico"><use href="#i-check"/></svg><span>Results in 2 minutes — no device, no batteries, no calibration required</span></div>
-    <div class="feat-item"><svg class="ico"><use href="#i-check"/></svg><span>Enzymatic detection technology (Alcohol Oxidase) — clinically validated</span></div>
-    <div class="feat-item"><svg class="ico"><use href="#i-check"/></svg><span>99.7% sensitivity / 99.5% specificity</span></div>
-    <div class="feat-item"><svg class="ico"><use href="#i-check"/></svg><span>Nitrocellulose membranes from Merck and Sartorius (Switzerland / Germany)</span></div>
-    <div class="feat-item"><svg class="ico"><use href="#i-check"/></svg><span>CE certified — compliant with European safety standards</span></div>
-    <div class="feat-item"><svg class="ico"><use href="#i-check"/></svg><span>Manufactured under ISO 13485:2016 quality management</span></div>
-    <div class="feat-item"><svg class="ico"><use href="#i-check"/></svg><span>Individually sealed foil pouches — 24-month shelf life at room temperature</span></div>
-    <div class="feat-item"><svg class="ico"><use href="#i-check"/></svg><span>Non-invasive saliva test — no blood, no urine, no specialist required</span></div>
-    <div class="feat-item"><svg class="ico"><use href="#i-check"/></svg><span>3-step procedure — anyone can use it without training</span></div>
-    <div class="feat-item"><svg class="ico"><use href="#i-check"/></svg><span>Compact and portable — fits in a wallet, glove compartment, or first-aid kit</span></div>
-    <div class="feat-item"><svg class="ico"><use href="#i-check"/></svg><span>Free shipping on all orders across Turkey</span></div>
+    <div class="feat-card">
+      <div class="feat-card-icon"><svg class="ico"><use href="#i-target"/></svg></div>
+      <h4>0.2 Promil Detection</h4>
+      <p>Detects alcohol from 0.2 promil (0.02% BAC) — Turkey's legal driving limit.</p>
+    </div>
+    <div class="feat-card">
+      <div class="feat-card-icon"><svg class="ico"><use href="#i-clock"/></svg></div>
+      <h4>2-Minute Results</h4>
+      <p>No device, no batteries, no calibration required. Just the strip.</p>
+    </div>
+    <div class="feat-card">
+      <div class="feat-card-icon"><svg class="ico"><use href="#i-microscope"/></svg></div>
+      <h4>Enzymatic Detection</h4>
+      <p>Alcohol Oxidase technology — clinically validated and lab-grade accurate.</p>
+    </div>
+    <div class="feat-card">
+      <div class="feat-card-icon"><svg class="ico"><use href="#i-shield"/></svg></div>
+      <h4>99.7% Sensitivity</h4>
+      <p>99.7% sensitivity and 99.5% specificity in clinical validation studies.</p>
+    </div>
+    <div class="feat-card">
+      <div class="feat-card-icon"><svg class="ico"><use href="#i-beaker"/></svg></div>
+      <h4>Swiss-Grade Materials</h4>
+      <p>Nitrocellulose membranes from Merck and Sartorius (Switzerland / Germany).</p>
+    </div>
+    <div class="feat-card">
+      <div class="feat-card-icon"><svg class="ico"><use href="#i-award"/></svg></div>
+      <h4>CE Certified</h4>
+      <p>Compliant with European safety standards. ISO 13485:2016 quality management.</p>
+    </div>
+    <div class="feat-card">
+      <div class="feat-card-icon"><svg class="ico"><use href="#i-clipboard"/></svg></div>
+      <h4>24-Month Shelf Life</h4>
+      <p>Individually sealed foil pouches. Store at room temperature.</p>
+    </div>
+    <div class="feat-card">
+      <div class="feat-card-icon"><svg class="ico"><use href="#i-droplet"/></svg></div>
+      <h4>Non-Invasive Test</h4>
+      <p>Saliva-based — no blood, no urine, no specialist required.</p>
+    </div>
+    <div class="feat-card">
+      <div class="feat-card-icon"><svg class="ico"><use href="#i-truck"/></svg></div>
+      <h4>Free Shipping</h4>
+      <p>Compact, portable, and shipped free on all orders across Turkey.</p>
+    </div>
   </div>
 </div></section>
 
@@ -439,7 +477,7 @@ img{max-width:100%;display:block}
 </div></section>
 
 <!-- SECTION 5: TECHNICAL SPECIFICATIONS -->
-<section class="sp"><div class="c">
+<section class="sp" style="background:var(--g0)"><div class="c">
   <div class="sh tc fu"><div class="sl">Specifications</div><h2>Technical Specifications</h2></div>
   <div class="specs-table fu">
     <table>
@@ -461,7 +499,7 @@ img{max-width:100%;display:block}
 </div></section>
 
 <!-- SECTION 6: FAQ -->
-<section class="sp" style="background:var(--g0)"><div class="c">
+<section class="sp"><div class="c">
   <div class="sh tc fu"><div class="sl">FAQ</div><h2>Frequently Asked Questions</h2></div>
   <div class="faq-list fu">
 
