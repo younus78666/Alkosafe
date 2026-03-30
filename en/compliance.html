@@ -72,20 +72,46 @@ img{max-width:100%;display:block}
 .page-hero-sub{font-family:var(--fd);font-size:clamp(16px,2vw,20px);font-weight:400;color:var(--g6);margin-bottom:28px}
 .page-hero-intro{font-size:16px;color:var(--g8);line-height:1.8;max-width:760px;margin:0 auto}
 
-/* ===== CE MARK TWO-COLUMN ===== */
-.cert-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;margin-bottom:48px}
-.cert-text p{font-size:16px;color:var(--g8);line-height:1.8;margin-bottom:20px}
-.cert-text p:last-child{margin-bottom:0}
-.cert-badge{display:flex;align-items:center;justify-content:center;background:var(--b1);border:2px solid var(--b3);border-radius:24px;padding:48px;min-height:320px}
-.cert-badge-inner{text-align:center}
-.cert-badge-icon{width:120px;height:120px;margin:0 auto 20px;background:var(--w);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 32px rgba(21,80,145,.12)}
-.cert-badge-icon .ico{width:56px;height:56px;stroke:var(--b7)}
-.cert-badge-label{font-family:var(--fd);font-size:22px;font-weight:700;color:var(--b8)}
-
-/* ===== CHECKLIST ===== */
-.checklist{list-style:none;display:flex;flex-direction:column;gap:14px;margin-top:36px;max-width:640px}
-.checklist li{display:flex;align-items:center;gap:12px;font-size:15px;color:var(--g8);font-weight:500}
-.checklist li .ico{width:20px;height:20px;stroke:var(--gn)}
+/* ===== CE MARK FEATURE PANEL ===== */
+.ce-shell{background:linear-gradient(180deg,rgba(255,255,255,.95),rgba(227,242,253,.72));border:1px solid rgba(66,165,245,.24);border-radius:32px;padding:clamp(22px,3.8vw,36px);box-shadow:0 24px 60px rgba(8,36,62,.06)}
+.ce-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(320px,.85fr);gap:28px;align-items:start}
+.ce-copy{display:flex;flex-direction:column;gap:22px}
+.ce-intro{max-width:720px}
+.ce-kicker{display:inline-flex;align-items:center;gap:8px;background:rgba(26,100,176,.08);color:var(--b8);border:1px solid rgba(26,100,176,.12);border-radius:999px;padding:8px 14px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:18px}
+.ce-kicker::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--gd);box-shadow:0 0 0 6px rgba(229,168,50,.16)}
+.ce-lead{font-size:19px;line-height:1.72;color:var(--g9);max-width:620px}
+.ce-feature-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.ce-feature-card{background:rgba(255,255,255,.86);border:1px solid rgba(144,202,249,.55);border-radius:20px;padding:18px;display:flex;gap:16px;transition:all .25s}
+.ce-feature-card:hover{border-color:var(--b4);box-shadow:0 14px 30px rgba(16,65,122,.08);transform:translateY(-2px)}
+.ce-feature-icon{width:48px;height:48px;background:var(--b1);border-radius:14px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ce-feature-icon .ico{width:24px;height:24px;stroke:var(--b7)}
+.ce-feature-card h3{font-family:var(--fd);font-size:17px;font-weight:700;color:var(--g9);margin-bottom:6px}
+.ce-feature-card p{font-size:14px;color:var(--g6);line-height:1.7}
+.ce-note{display:flex;gap:14px;align-items:flex-start;background:rgba(8,36,62,.04);border:1px solid rgba(8,36,62,.08);border-radius:18px;padding:16px 18px}
+.ce-note .ico{width:20px;height:20px;stroke:var(--b7);margin-top:2px;flex-shrink:0}
+.ce-note p{font-size:14px;color:var(--g8);line-height:1.75}
+.ce-proof-card{position:relative;overflow:hidden;background:linear-gradient(155deg,#0d3f74,#1a64b0 58%,#42a5f5);color:var(--w);border-radius:28px;padding:30px;box-shadow:0 24px 48px rgba(16,65,122,.18);display:flex;flex-direction:column;height:fit-content}
+.ce-proof-card::before{content:'';position:absolute;top:-18%;right:-10%;width:280px;height:280px;background:radial-gradient(circle,rgba(255,255,255,.2),transparent 68%);pointer-events:none}
+.ce-proof-card::after{content:'';position:absolute;left:-12%;bottom:-25%;width:220px;height:220px;background:radial-gradient(circle,rgba(242,202,107,.18),transparent 70%);pointer-events:none}
+.ce-proof-badge{position:relative;z-index:1;display:inline-flex;align-self:flex-start;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:8px 14px;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.92);margin-bottom:22px}
+.ce-proof-icon{position:relative;z-index:1;width:108px;height:108px;border-radius:28px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;box-shadow:inset 0 1px 0 rgba(255,255,255,.16);margin-bottom:24px}
+.ce-proof-icon .ico{width:52px;height:52px;stroke:var(--w)}
+.ce-proof-title{position:relative;z-index:1;font-family:var(--fd);font-size:34px;font-weight:700;line-height:1.1;letter-spacing:-.02em;margin-bottom:12px}
+.ce-proof-copy{position:relative;z-index:1;font-size:15px;line-height:1.8;color:rgba(255,255,255,.8);max-width:320px}
+.ce-proof-divider{position:relative;z-index:1;height:1px;background:rgba(255,255,255,.18);margin:24px 0 20px}
+.ce-proof-list{position:relative;z-index:1;list-style:none;display:flex;flex-direction:column;gap:14px}
+.ce-proof-list li{display:flex;align-items:center;gap:12px;font-size:14px;font-weight:500;color:rgba(255,255,255,.94)}
+.ce-proof-list span{width:10px;height:10px;border-radius:50%;background:var(--gl);box-shadow:0 0 0 6px rgba(242,202,107,.14);flex-shrink:0}
+.ce-benefits{margin-top:26px;padding-top:24px;border-top:1px solid rgba(16,65,122,.1)}
+.ce-benefits-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:20px}
+.ce-benefits-head h3{font-family:var(--fd);font-size:24px;font-weight:700;color:var(--g9)}
+.ce-benefits-head p{max-width:420px;font-size:14px;color:var(--g6);line-height:1.7}
+.ce-points{list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.ce-points li{display:flex;align-items:flex-start;gap:14px;background:rgba(255,255,255,.82);border:1px solid rgba(144,202,249,.45);border-radius:18px;padding:18px 20px}
+.ce-points li .ico{width:20px;height:20px;stroke:var(--gn);margin-top:2px;flex-shrink:0}
+.ce-point-copy{display:flex;flex-direction:column;gap:4px}
+.ce-point-copy strong{font-family:var(--fd);font-size:15px;font-weight:700;color:var(--g9)}
+.ce-point-copy span{font-size:14px;color:var(--g6);line-height:1.7}
 
 /* ===== ISO PRACTICE GRID ===== */
 .iso-text{max-width:800px;margin:0 auto 48px}
@@ -147,9 +173,35 @@ img{max-width:100%;display:block}
 .mob-toggle .ico{width:24px;height:24px;stroke:var(--g8)}
 
 /* Responsive */
+/* Off-Canvas Menu */
+.mob-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px}
+.mob-toggle .ico{width:24px;height:24px;stroke:var(--g8)}
+.oc-overlay{position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:199;opacity:0;visibility:hidden;transition:all .3s}
+.oc-overlay.open{opacity:1;visibility:visible}
+.oc-panel{position:fixed;top:0;right:0;width:300px;height:100%;background:var(--w);z-index:200;transform:translateX(100%);transition:transform .3s ease;box-shadow:-4px 0 24px rgba(0,0,0,.1);display:flex;flex-direction:column;overflow-y:auto}
+.oc-panel.open{transform:translateX(0)}
+.oc-header{display:flex;align-items:center;justify-content:space-between;padding:20px 24px;border-bottom:1px solid var(--g2)}
+.oc-logo{display:flex;align-items:center;gap:10px}
+.oc-logo img{height:28px}
+.oc-logo span{font-family:var(--fd);font-size:15px;font-weight:700;color:var(--b8)}
+.oc-logo span em{font-style:normal;color:var(--gd)}
+.oc-close{background:none;border:none;cursor:pointer;padding:8px}
+.oc-close .ico{width:24px;height:24px;stroke:var(--g8)}
+.oc-nav{display:flex;flex-direction:column;padding:16px 0}
+.oc-nav a{display:block;padding:14px 24px;font-family:var(--fd);font-size:14px;font-weight:500;color:var(--g8);text-decoration:none;border-bottom:1px solid var(--g1);transition:background .2s;letter-spacing:.02em}
+.oc-nav a:hover{background:var(--g0);color:var(--b6)}
+.oc-footer{padding:20px 24px;margin-top:auto;border-top:1px solid var(--g2)}
+.oc-lang{display:flex;gap:2px;margin-bottom:16px;font-size:13px;font-weight:600;border:1px solid var(--g2);border-radius:6px;overflow:hidden}
+.oc-lang a{flex:1;text-align:center;padding:8px;text-decoration:none;color:var(--g6);transition:all .2s}
+.oc-lang a.active{background:var(--b7);color:var(--w)}
+.oc-cta{display:block;width:100%;padding:14px;background:var(--gd);color:var(--b9);font-family:var(--fd);font-size:15px;font-weight:700;text-align:center;text-decoration:none;border-radius:8px;letter-spacing:.02em;transition:background .2s}
+.oc-cta:hover{background:var(--gl)}
+body.oc-open{overflow:hidden}
 @media(max-width:1024px){
-  .cert-grid{grid-template-columns:1fr;gap:32px}
-  .cert-badge{order:-1;min-height:200px;padding:32px}
+  .ce-grid{grid-template-columns:1fr}
+  .ce-feature-grid{grid-template-columns:1fr}
+  .ce-benefits-head{flex-direction:column;align-items:flex-start}
+  .ce-points{grid-template-columns:1fr}
   .iso-grid{grid-template-columns:repeat(2,1fr)}
   .ctai{flex-direction:column;text-align:center}
   .ctabs{justify-content:center}
@@ -158,6 +210,9 @@ img{max-width:100%;display:block}
   .mob-toggle{display:block}
 }
 @media(max-width:768px){
+  .ce-shell{padding:24px}
+  .ce-lead{font-size:18px}
+  .ce-proof-title{font-size:30px}
   .iso-grid{grid-template-columns:1fr}
   .dl-grid{grid-template-columns:1fr;max-width:400px;margin:0 auto 32px}
   .ftg{grid-template-columns:1fr}
@@ -213,6 +268,7 @@ img{max-width:100%;display:block}
     </div>
     <a href="/en/product/alkosafe-saliva-alcohol-test.html" class="nav-cta">Buy Now</a>
   </nav>
+  <button class="mob-toggle" onclick="openMenu()" aria-label="Open menu"><svg class="ico" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
   <button class="mob-toggle" aria-label="Open menu" onclick="document.querySelector('.nav').style.display=document.querySelector('.nav').style.display==='flex'?'none':'flex'">
     <svg class="ico"><use href="#i-menu"/></svg>
   </button>
@@ -228,36 +284,111 @@ img{max-width:100%;display:block}
 
 <!-- SECTION 2: CE MARK (gray) -->
 <section class="sp" style="background:var(--g0)"><div class="c">
-  <div class="sh tc fu"><div class="sl">Certification</div><h2>CE Mark — European Conformity</h2></div>
+  <div class="sh tc fu">
+    <div class="sl">Certification</div>
+    <h2>CE Mark and European Conformity</h2>
+    <p>What this certification covers, and what it actually tells you as a buyer.</p>
+  </div>
 
-  <div class="cert-grid fu">
-    <div class="cert-text">
-      <p>The CE Mark is the manufacturer's declaration that AlkoSafe meets the health, safety, and environmental protection requirements of applicable European directives. CE marking allows a product to be placed on the market in European Union countries and countries that recognise European standards — including Turkey.</p>
-      <p>For AlkoSafe, CE marking means the product has been evaluated for safety and performance, the manufacturing processes meet European standards, and technical documentation is maintained and available for regulatory inspection.</p>
-      <p>CE marking is not a quality endorsement from a third party — it is a self-declaration by the manufacturer backed by technical documentation. It creates legal accountability: if a CE-marked product causes harm due to non-compliance, the manufacturer bears full legal responsibility.</p>
-    </div>
-    <div class="cert-badge">
-      <div class="cert-badge-inner">
-        <div class="cert-badge-icon">
+  <div class="ce-shell fu">
+    <div class="ce-grid">
+      <div class="ce-copy">
+        <div class="ce-intro">
+          <div class="ce-kicker">Recognised in Europe and Turkey</div>
+          <p class="ce-lead">The CE Mark confirms that AlkoSafe meets the health, safety, and environmental requirements needed to be sold in the European Union and in markets that recognise European standards.</p>
+        </div>
+
+        <div class="ce-feature-grid">
+          <article class="ce-feature-card">
+            <div class="ce-feature-icon"><svg class="ico"><use href="#i-shield"/></svg></div>
+            <div>
+              <h3>Safety and performance reviewed</h3>
+              <p>AlkoSafe is assessed against the applicable product requirements before it is placed on the market.</p>
+            </div>
+          </article>
+          <article class="ce-feature-card">
+            <div class="ce-feature-icon"><svg class="ico"><use href="#i-layers"/></svg></div>
+            <div>
+              <h3>Documented manufacturing basis</h3>
+              <p>Technical documentation is maintained so regulatory authorities can inspect the product basis when required.</p>
+            </div>
+          </article>
+          <article class="ce-feature-card">
+            <div class="ce-feature-icon"><svg class="ico"><use href="#i-map-pin"/></svg></div>
+            <div>
+              <h3>Legal market access</h3>
+              <p>CE conformity allows AlkoSafe to be sold in EU countries and in Turkey, where European standards are recognised.</p>
+            </div>
+          </article>
+          <article class="ce-feature-card">
+            <div class="ce-feature-icon"><svg class="ico"><use href="#i-clipboard"/></svg></div>
+            <div>
+              <h3>Clear manufacturer accountability</h3>
+              <p>The declaration sits with the manufacturer, which carries legal responsibility for compliance and product claims.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="ce-note">
+          <svg class="ico"><use href="#i-alert-tri"/></svg>
+          <p>CE marking is not a third-party quality award. It is a manufacturer declaration backed by technical documentation and open to regulatory inspection.</p>
+        </div>
+      </div>
+
+      <aside class="ce-proof-card">
+        <div class="ce-proof-badge">Manufacturer Declaration</div>
+        <div class="ce-proof-icon">
           <svg class="ico"><use href="#i-award"/></svg>
         </div>
-        <div class="cert-badge-label">CE Certified</div>
+        <div class="ce-proof-title">CE Certified</div>
+        <p class="ce-proof-copy">Placed on the market under European conformity requirements, with supporting documentation maintained by the manufacturer.</p>
+        <div class="ce-proof-divider"></div>
+        <ul class="ce-proof-list">
+          <li><span></span>Technical file maintained</li>
+          <li><span></span>Regulatory inspection possible</li>
+          <li><span></span>Legal accountability accepted</li>
+        </ul>
+      </aside>
+    </div>
+
+    <div class="ce-benefits">
+      <div class="ce-benefits-head">
+        <h3>What CE Mark means for you</h3>
+        <p>These are the practical buyer outcomes behind the label, not just the compliance language.</p>
       </div>
+      <ul class="ce-points">
+        <li>
+          <svg class="ico"><use href="#i-check"/></svg>
+          <div class="ce-point-copy">
+            <strong>Defined safety standard</strong>
+            <span>The product is assessed against the applicable European safety and performance requirements.</span>
+          </div>
+        </li>
+        <li>
+          <svg class="ico"><use href="#i-check"/></svg>
+          <div class="ce-point-copy">
+            <strong>Documentation exists</strong>
+            <span>Technical documentation is created, maintained, and available when authorities request review.</span>
+          </div>
+        </li>
+        <li>
+          <svg class="ico"><use href="#i-check"/></svg>
+          <div class="ce-point-copy">
+            <strong>Manufacturer is accountable</strong>
+            <span>Compliance is attached to the manufacturer, not left as an unverified marketing claim.</span>
+          </div>
+        </li>
+        <li>
+          <svg class="ico"><use href="#i-check"/></svg>
+          <div class="ce-point-copy">
+            <strong>Sale is legally supported</strong>
+            <span>The product can be placed on the market in Turkey and across Europe where CE standards apply.</span>
+          </div>
+        </li>
+      </ul>
     </div>
   </div>
-
-  <div class="fu">
-    <h3 style="font-family:var(--fd);font-size:20px;font-weight:700;margin-bottom:20px;color:var(--g9)">What CE Mark means for you</h3>
-    <ul class="checklist">
-      <li><svg class="ico"><use href="#i-check"/></svg>Product assessed against European safety and performance standards</li>
-      <li><svg class="ico"><use href="#i-check"/></svg>Technical documentation exists and is maintained</li>
-      <li><svg class="ico"><use href="#i-check"/></svg>Manufacturer accepts legal accountability</li>
-      <li><svg class="ico"><use href="#i-check"/></svg>Product can be legally sold in Turkey and European markets</li>
-      <li><svg class="ico"><use href="#i-check"/></svg>Regulatory authorities can request inspection at any time</li>
-    </ul>
-  </div>
 </div></section>
-
 <!-- SECTION 3: ISO 13485 (white) -->
 <section class="sp"><div class="c">
   <div class="sh tc fu"><div class="sl">Quality Standard</div><h2>ISO 13485:2016 — Medical Device Quality Management</h2></div>
@@ -387,5 +518,23 @@ img{max-width:100%;display:block}
 const obs=new IntersectionObserver(e=>{e.forEach(en=>{if(en.isIntersecting)en.target.classList.add('v')})},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
 document.querySelectorAll('.fu').forEach(el=>obs.observe(el));
 </script>
+<!-- Off-Canvas Menu -->
+<div class="oc-overlay" id="oc-overlay" onclick="closeMenu()"></div>
+<div class="oc-panel" id="oc-panel">
+  <div class="oc-header">
+    <div class="oc-logo"><img src="/images/logo.png" alt="CROM TEST"><span>Alko<em>Safe</em></span></div>
+    <button class="oc-close" onclick="closeMenu()"><svg class="ico" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+  </div>
+  <nav class="oc-nav">
+    <a href="/en/how-it-works/">How It Works</a>
+    <a href="/en/compliance/">Certifications</a>
+    <a href="/en/about/">About</a>
+    <a href="/en/contact/">Contact</a>
+  </nav>
+  <div class="oc-footer">
+    <div class="oc-lang"><a href="/en/" class="active">EN</a><a href="/tr/">TR</a></div>
+    <a href="/en/shop" class="oc-cta">Buy Now</a>
+  </div>
+</div>
 </body>
 </html>

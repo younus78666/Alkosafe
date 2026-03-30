@@ -82,7 +82,32 @@ a:hover{color:var(--b8)}
 .eligible-yes{color:var(--gn);font-weight:600}
 .eligible-no{color:#C62828;font-weight:600}
 /* Responsive */
-@media(max-width:1024px){.ftg{grid-template-columns:1fr 1fr}.nav{display:none}}
+/* Off-Canvas Menu */
+.mob-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px}
+.mob-toggle .ico{width:24px;height:24px;stroke:var(--g8)}
+.oc-overlay{position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:199;opacity:0;visibility:hidden;transition:all .3s}
+.oc-overlay.open{opacity:1;visibility:visible}
+.oc-panel{position:fixed;top:0;right:0;width:300px;height:100%;background:var(--w);z-index:200;transform:translateX(100%);transition:transform .3s ease;box-shadow:-4px 0 24px rgba(0,0,0,.1);display:flex;flex-direction:column;overflow-y:auto}
+.oc-panel.open{transform:translateX(0)}
+.oc-header{display:flex;align-items:center;justify-content:space-between;padding:20px 24px;border-bottom:1px solid var(--g2)}
+.oc-logo{display:flex;align-items:center;gap:10px}
+.oc-logo img{height:28px}
+.oc-logo span{font-family:var(--fd);font-size:15px;font-weight:700;color:var(--b8)}
+.oc-logo span em{font-style:normal;color:var(--gd)}
+.oc-close{background:none;border:none;cursor:pointer;padding:8px}
+.oc-close .ico{width:24px;height:24px;stroke:var(--g8)}
+.oc-nav{display:flex;flex-direction:column;padding:16px 0}
+.oc-nav a{display:block;padding:14px 24px;font-family:var(--fd);font-size:14px;font-weight:500;color:var(--g8);text-decoration:none;border-bottom:1px solid var(--g1);transition:background .2s;letter-spacing:.02em}
+.oc-nav a:hover{background:var(--g0);color:var(--b6)}
+.oc-footer{padding:20px 24px;margin-top:auto;border-top:1px solid var(--g2)}
+.oc-lang{display:flex;gap:2px;margin-bottom:16px;font-size:13px;font-weight:600;border:1px solid var(--g2);border-radius:6px;overflow:hidden}
+.oc-lang a{flex:1;text-align:center;padding:8px;text-decoration:none;color:var(--g6);transition:all .2s}
+.oc-lang a.active{background:var(--b7);color:var(--w)}
+.oc-cta{display:block;width:100%;padding:14px;background:var(--gd);color:var(--b9);font-family:var(--fd);font-size:15px;font-weight:700;text-align:center;text-decoration:none;border-radius:8px;letter-spacing:.02em;transition:background .2s}
+.oc-cta:hover{background:var(--gl)}
+body.oc-open{overflow:hidden}
+@media(max-width:1024px){.ftg{grid-template-columns:1fr 1fr}.nav{display:none}
+  .mob-toggle{display:block}}
 @media(max-width:768px){.ftg{grid-template-columns:1fr}.legal-table{font-size:13px}.legal-table th,.legal-table td{padding:10px 12px}}
 .fu{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}.fu.v{opacity:1;transform:translateY(0)}
 </style>
@@ -113,6 +138,7 @@ a:hover{color:var(--b8)}
     <div class="lang-sw"><a href="/en/" class="active">EN</a><a href="/tr/">TR</a></div>
     <a href="/#buy" class="nav-cta">Buy Now</a>
   </nav>
+  <button class="mob-toggle" onclick="openMenu()" aria-label="Open menu"><svg class="ico" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
 </div></header>
 
 <!-- HERO -->
@@ -222,5 +248,23 @@ a:hover{color:var(--b8)}
 const obs=new IntersectionObserver(e=>{e.forEach(en=>{if(en.isIntersecting)en.target.classList.add('v')})},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
 document.querySelectorAll('.fu').forEach(el=>obs.observe(el));
 </script>
+<!-- Off-Canvas Menu -->
+<div class="oc-overlay" id="oc-overlay" onclick="closeMenu()"></div>
+<div class="oc-panel" id="oc-panel">
+  <div class="oc-header">
+    <div class="oc-logo"><img src="/images/logo.png" alt="CROM TEST"><span>Alko<em>Safe</em></span></div>
+    <button class="oc-close" onclick="closeMenu()"><svg class="ico" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+  </div>
+  <nav class="oc-nav">
+    <a href="/en/how-it-works/">How It Works</a>
+    <a href="/en/compliance/">Certifications</a>
+    <a href="/en/about/">About</a>
+    <a href="/en/contact/">Contact</a>
+  </nav>
+  <div class="oc-footer">
+    <div class="oc-lang"><a href="/en/" class="active">EN</a><a href="/tr/">TR</a></div>
+    <a href="/en/shop" class="oc-cta">Buy Now</a>
+  </div>
+</div>
 </body>
 </html>

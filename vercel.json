@@ -36,7 +36,9 @@
     { "source": "/en/shipping-policy", "destination": "/en/shipping-policy.html" },
     { "source": "/en/shipping-policy/", "destination": "/en/shipping-policy.html" },
     { "source": "/en/disclaimer", "destination": "/en/disclaimer.html" },
-    { "source": "/en/disclaimer/", "destination": "/en/disclaimer.html" }
+    { "source": "/en/disclaimer/", "destination": "/en/disclaimer.html" },
+    { "source": "/en/shop", "destination": "/en/shop.html" },
+    { "source": "/en/shop/", "destination": "/en/shop.html" }
   ],
   "headers": [
     {

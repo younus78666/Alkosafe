@@ -59,12 +59,13 @@ img{max-width:100%;display:block}
 .ti{display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,.6)}
 .ti .ico{width:16px;height:16px;stroke:var(--gd)}
 .hero-img{display:flex;justify-content:center;align-items:center}
-.hero-prod{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:24px;padding:40px;position:relative}
+.hero-prod{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:24px;padding:32px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;align-items:stretch;max-width:420px}
 .ph{background:var(--b7);border-radius:12px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;color:rgba(255,255,255,.5);font-size:12px;font-weight:600;text-align:center;padding:12px}
 .ph .ico{width:32px;height:32px;stroke:rgba(255,255,255,.4)}
 /* Real product images */
 .prod-img{max-width:100%;height:auto;object-fit:contain;border-radius:8px}
 .prod-img.hero-product{width:220px;max-height:380px;filter:drop-shadow(0 20px 40px rgba(0,0,0,.3))}
+.hero-prod .hero-product{grid-column:1/-1;justify-self:center}
 .prod-img.card-product{width:100px;height:120px;object-fit:contain}
 .prod-img.showcase-tall{width:100%;max-height:400px;object-fit:contain}
 .prod-img.showcase-sm{width:100%;max-height:160px;object-fit:contain}
@@ -73,9 +74,8 @@ img{max-width:100%;display:block}
 /* Transparent bg for images on colored backgrounds */
 .prod-img.on-dark{mix-blend-mode:screen}
 .prod-img.on-light{mix-blend-mode:multiply}
-.float-b{position:absolute;background:var(--w);border-radius:12px;padding:12px 18px;box-shadow:0 8px 32px rgba(0,0,0,.12);font-size:13px;font-weight:600;color:var(--g9);display:flex;align-items:center;gap:10px}
-.float-t{top:-16px;right:-20px}
-.float-bt{bottom:-12px;left:-20px}
+.float-b{background:var(--w);border-radius:16px;padding:14px 16px;box-shadow:0 8px 32px rgba(0,0,0,.12);font-size:13px;font-weight:600;color:var(--g9);display:flex;align-items:center;gap:10px;min-width:0}
+.float-t,.float-bt{position:static}
 .fli{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center}
 .fli .ico{width:20px;height:20px}
 .fli.bl{background:var(--b1)}.fli.bl .ico{stroke:var(--b7)}

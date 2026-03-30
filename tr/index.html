@@ -63,12 +63,13 @@ img{max-width:100%;display:block}
 .ti{display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,.6)}
 .ti .ico{width:16px;height:16px;stroke:var(--gd)}
 .hero-img{display:flex;justify-content:center;align-items:center}
-.hero-prod{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:24px;padding:40px;position:relative}
+.hero-prod{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:24px;padding:32px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;align-items:stretch;max-width:420px}
 .ph{background:var(--b7);border-radius:12px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;color:rgba(255,255,255,.5);font-size:12px;font-weight:600;text-align:center;padding:12px}
 .ph .ico{width:32px;height:32px;stroke:rgba(255,255,255,.4)}
 /* Real product images */
 .prod-img{max-width:100%;height:auto;object-fit:contain;border-radius:8px}
 .prod-img.hero-product{width:220px;max-height:380px;filter:drop-shadow(0 20px 40px rgba(0,0,0,.3))}
+.hero-prod .hero-product{grid-column:1/-1;justify-self:center}
 .prod-img.card-product{width:100px;height:120px;object-fit:contain}
 .prod-img.showcase-tall{width:100%;max-height:400px;object-fit:contain}
 .prod-img.showcase-sm{width:100%;max-height:160px;object-fit:contain}
@@ -77,9 +78,8 @@ img{max-width:100%;display:block}
 /* Transparent bg for images on colored backgrounds */
 .prod-img.on-dark{mix-blend-mode:screen}
 .prod-img.on-light{mix-blend-mode:multiply}
-.float-b{position:absolute;background:var(--w);border-radius:12px;padding:12px 18px;box-shadow:0 8px 32px rgba(0,0,0,.12);font-size:13px;font-weight:600;color:var(--g9);display:flex;align-items:center;gap:10px}
-.float-t{top:-16px;right:-20px}
-.float-bt{bottom:-12px;left:-20px}
+.float-b{background:var(--w);border-radius:16px;padding:14px 16px;box-shadow:0 8px 32px rgba(0,0,0,.12);font-size:13px;font-weight:600;color:var(--g9);display:flex;align-items:center;gap:10px;min-width:0}
+.float-t,.float-bt{position:static}
 .fli{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center}
 .fli .ico{width:20px;height:20px}
 .fli.bl{background:var(--b1)}.fli.bl .ico{stroke:var(--b7)}
@@ -176,7 +176,32 @@ img{max-width:100%;display:block}
 .ftbt{border-top:1px solid rgba(255,255,255,.08);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;font-size:13px}
 .ftlg{display:flex;gap:24px}.ftlg a{color:rgba(255,255,255,.4);text-decoration:none}.ftlg a:hover{color:rgba(255,255,255,.7)}
 /* Responsive */
-@media(max-width:1024px){.hero-in{grid-template-columns:1fr;text-align:center}.hero-c{max-width:100%;margin:0 auto}.hero-sub{margin:0 auto 36px}.hero-trust{justify-content:center}.hero-img{display:none}.stg{grid-template-columns:repeat(2,1fr)}.ctai{flex-direction:column;text-align:center}.ctabs{justify-content:center}.shg{grid-template-columns:1fr}.ftg{grid-template-columns:1fr 1fr}.nav{display:none}}
+/* Off-Canvas Menu */
+.mob-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px}
+.mob-toggle .ico{width:24px;height:24px;stroke:var(--g8)}
+.oc-overlay{position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:199;opacity:0;visibility:hidden;transition:all .3s}
+.oc-overlay.open{opacity:1;visibility:visible}
+.oc-panel{position:fixed;top:0;right:0;width:300px;height:100%;background:var(--w);z-index:200;transform:translateX(100%);transition:transform .3s ease;box-shadow:-4px 0 24px rgba(0,0,0,.1);display:flex;flex-direction:column;overflow-y:auto}
+.oc-panel.open{transform:translateX(0)}
+.oc-header{display:flex;align-items:center;justify-content:space-between;padding:20px 24px;border-bottom:1px solid var(--g2)}
+.oc-logo{display:flex;align-items:center;gap:10px}
+.oc-logo img{height:28px}
+.oc-logo span{font-family:var(--fd);font-size:15px;font-weight:700;color:var(--b8)}
+.oc-logo span em{font-style:normal;color:var(--gd)}
+.oc-close{background:none;border:none;cursor:pointer;padding:8px}
+.oc-close .ico{width:24px;height:24px;stroke:var(--g8)}
+.oc-nav{display:flex;flex-direction:column;padding:16px 0}
+.oc-nav a{display:block;padding:14px 24px;font-family:var(--fd);font-size:14px;font-weight:500;color:var(--g8);text-decoration:none;border-bottom:1px solid var(--g1);transition:background .2s;letter-spacing:.02em}
+.oc-nav a:hover{background:var(--g0);color:var(--b6)}
+.oc-footer{padding:20px 24px;margin-top:auto;border-top:1px solid var(--g2)}
+.oc-lang{display:flex;gap:2px;margin-bottom:16px;font-size:13px;font-weight:600;border:1px solid var(--g2);border-radius:6px;overflow:hidden}
+.oc-lang a{flex:1;text-align:center;padding:8px;text-decoration:none;color:var(--g6);transition:all .2s}
+.oc-lang a.active{background:var(--b7);color:var(--w)}
+.oc-cta{display:block;width:100%;padding:14px;background:var(--gd);color:var(--b9);font-family:var(--fd);font-size:15px;font-weight:700;text-align:center;text-decoration:none;border-radius:8px;letter-spacing:.02em;transition:background .2s}
+.oc-cta:hover{background:var(--gl)}
+body.oc-open{overflow:hidden}
+@media(max-width:1024px){.hero-in{grid-template-columns:1fr;text-align:center}.hero-c{max-width:100%;margin:0 auto}.hero-sub{margin:0 auto 36px}.hero-trust{justify-content:center}.hero-img{display:none}.stg{grid-template-columns:repeat(2,1fr)}.ctai{flex-direction:column;text-align:center}.ctabs{justify-content:center}.shg{grid-template-columns:1fr}.ftg{grid-template-columns:1fr 1fr}.nav{display:none}
+  .mob-toggle{display:block}}
 @media(max-width:768px){.pg{grid-template-columns:1fr;max-width:380px;margin:0 auto}.sg{grid-template-columns:1fr;max-width:400px;margin:0 auto}.stg{grid-template-columns:1fr}.fg{grid-template-columns:1fr}.ftg{grid-template-columns:1fr}.shi{grid-template-columns:1fr}.shiw.tall{grid-row:auto}}
 .fu{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}.fu.v{opacity:1;transform:translateY(0)}
 </style>
@@ -223,6 +248,7 @@ img{max-width:100%;display:block}
     <div class="lang-sw"><a href="/en/">EN</a><a href="/tr/" class="active">TR</a></div>
     <a href="#buy" class="nav-cta">Hemen Al</a>
   </nav>
+  <button class="mob-toggle" onclick="openMenu()" aria-label="Open menu"><svg class="ico" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
 </div></header>
 
 <!-- HERO -->
@@ -387,5 +413,23 @@ img{max-width:100%;display:block}
 const obs=new IntersectionObserver(e=>{e.forEach(en=>{if(en.isIntersecting)en.target.classList.add('v')})},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
 document.querySelectorAll('.fu').forEach(el=>obs.observe(el));
 </script>
+<!-- Off-Canvas Menu -->
+<div class="oc-overlay" id="oc-overlay" onclick="closeMenu()"></div>
+<div class="oc-panel" id="oc-panel">
+  <div class="oc-header">
+    <div class="oc-logo"><img src="/images/logo.png" alt="CROM TEST"><span>Alko<em>Safe</em></span></div>
+    <button class="oc-close" onclick="closeMenu()"><svg class="ico" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+  </div>
+  <nav class="oc-nav">
+    <a href="/tr/nasil-calisir/">Nasil Calisir</a>
+    <a href="/tr/sertifikalar/">Sertifikalar</a>
+    <a href="/tr/hakkimizda/">Hakkimizda</a>
+    <a href="/tr/iletisim/">Iletisim</a>
+  </nav>
+  <div class="oc-footer">
+    <div class="oc-lang"><a href="/en/">EN</a><a href="/tr/" class="active">TR</a></div>
+    <a href="/en/shop" class="oc-cta">Hemen Al</a>
+  </div>
+</div>
 </body>
 </html>

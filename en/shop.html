@@ -3,11 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact AlkoSafe — Get in Touch</title>
-<meta name="description" content="Contact the AlkoSafe team for product questions, bulk orders, or trade enquiries. We respond within 1 business day.">
-<meta name="robots" content="noindex">
-<link rel="alternate" hreflang="en" href="/en/contact.html">
-<link rel="alternate" hreflang="tr" href="/tr/iletisim.html">
+<title>Shop AlkoSafe — Buy Alcohol Test Strips</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -41,8 +37,6 @@ img{max-width:100%;display:block}
 .logo-div{width:1px;height:28px;background:var(--g2)}
 .logo-txt{font-family:var(--fd);font-size:17px;font-weight:700;color:var(--b8);letter-spacing:.04em}
 .logo-txt span{color:var(--gd)}
-.logo-img{height:36px;width:auto}
-.logo-img.footer{height:30px}
 .nav{display:flex;gap:28px;align-items:center}
 .nav a{font-family:var(--fd);font-size:13px;font-weight:500;color:var(--g8);text-decoration:none;transition:color .2s;letter-spacing:.02em}
 .nav a:hover{color:var(--b6)}
@@ -51,49 +45,49 @@ img{max-width:100%;display:block}
 .lang-sw a{padding:6px 12px;text-decoration:none;color:var(--g6);transition:all .2s}
 .lang-sw a.active{background:var(--b7);color:var(--w)}
 .lang-sw a:hover:not(.active){background:var(--g1);color:var(--g8)}
+.logo-img{height:36px;width:auto}
+.logo-img.footer{height:30px}
+/* Mob toggle */
+.mob-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px}
+.mob-toggle .ico{width:24px;height:24px;stroke:var(--g8)}
+/* Shop Hero */
+.shop-hero{padding:clamp(48px,6vw,80px) 0;text-align:center}
+.shop-hero h1{font-family:var(--fd);font-size:clamp(32px,4vw,48px);font-weight:700;letter-spacing:-.02em;margin-bottom:14px}
+.shop-hero p{font-size:17px;color:var(--g6);line-height:1.7;max-width:520px;margin:0 auto}
+/* Products */
+.pg{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.pc{background:var(--w);border:1px solid var(--g2);border-radius:16px;padding:36px 28px;text-align:center;position:relative;transition:all .3s}
+.pc:hover{border-color:var(--b4);box-shadow:0 12px 40px rgba(13,75,143,.08);transform:translateY(-4px)}
+.pc.ft{border-color:var(--b6);box-shadow:0 8px 32px rgba(13,75,143,.1)}
+.ptag{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--b7);color:var(--w);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:6px 18px;border-radius:100px;white-space:nowrap}
+.pci{height:140px;display:flex;align-items:center;justify-content:center;margin-bottom:24px}
+.prod-img.card-product{width:100px;height:120px;object-fit:contain}
+.pn{font-family:var(--fd);font-size:22px;font-weight:700;margin-bottom:4px}
+.ps{font-size:14px;color:var(--g6);margin-bottom:20px}
+.pp{font-size:32px;font-weight:700;color:var(--b8);margin-bottom:4px}
+.pu{font-size:13px;color:var(--g4);margin-bottom:24px}
+.pb{display:block;width:100%;padding:14px;border-radius:8px;font-size:15px;font-weight:600;text-align:center;cursor:pointer;border:none;transition:all .2s;text-decoration:none}
+.pb.pr{background:var(--b7);color:var(--w)}.pb.pr:hover{background:var(--b8)}
+.pb.ol{background:transparent;color:var(--b7);border:2px solid var(--b7)}.pb.ol:hover{background:var(--b1)}
+/* Trust Bar */
+.tbar{background:var(--g0);border-bottom:1px solid var(--g2);padding:24px 0}
+.tbar-in{display:flex;justify-content:center;align-items:center;gap:clamp(24px,5vw,60px);flex-wrap:wrap}
+.tbi{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:600;color:var(--g8);white-space:nowrap}
+.tbic{width:40px;height:40px;background:var(--w);border:1px solid var(--g2);border-radius:10px;display:flex;align-items:center;justify-content:center}
+.tbic .ico{width:20px;height:20px;stroke:var(--b7)}
 /* Section Headers */
 .sh{max-width:600px;margin:0 auto 56px}
 .sl{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--b6);margin-bottom:12px}
 .sh h2{font-family:var(--fd);font-size:clamp(28px,3.5vw,40px);font-weight:700;letter-spacing:-.02em;margin-bottom:14px}
 .sh p{font-size:16px;color:var(--g6);line-height:1.7}
-/* Hero - Contact */
-.ct-hero{background:var(--w);padding:clamp(48px,6vw,80px) 0 clamp(40px,5vw,60px)}
-.ct-hero h1{font-family:var(--fd);font-size:clamp(34px,4.5vw,52px);font-weight:700;letter-spacing:-.02em;margin-bottom:16px;color:var(--g9)}
-.ct-hero p{font-size:17px;color:var(--g6);line-height:1.7;max-width:620px;margin:0 auto}
-/* Contact Section */
-.ct-sec{background:var(--g0);border-top:1px solid var(--g2);border-bottom:1px solid var(--g2)}
-.ct-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:start}
-/* Form */
-.ct-form-wrap{background:var(--w);border:1px solid var(--g2);border-radius:16px;padding:36px}
-.ct-form-wrap h2{font-family:var(--fd);font-size:22px;font-weight:700;margin-bottom:28px;color:var(--g9)}
-.fm-group{margin-bottom:20px}
-.fm-group label{display:block;font-size:13px;font-weight:600;color:var(--g8);margin-bottom:6px;letter-spacing:.02em}
-.fm-group label .req{color:#D32F2F;margin-left:2px}
-.fm-input,.fm-select,.fm-textarea{width:100%;font-family:var(--fb);font-size:15px;color:var(--g9);background:var(--w);border:1.5px solid var(--g2);border-radius:8px;padding:12px 16px;transition:border-color .2s,box-shadow .2s;outline:none}
-.fm-input::placeholder,.fm-textarea::placeholder{color:var(--g4)}
-.fm-input:focus,.fm-select:focus,.fm-textarea:focus{border-color:var(--b5);box-shadow:0 0 0 3px rgba(33,118,204,.12)}
-.fm-select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23ADB5BD' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:40px;cursor:pointer}
-.fm-textarea{min-height:120px;resize:vertical;line-height:1.6}
-.fm-check{display:flex;align-items:flex-start;gap:10px;margin-bottom:28px}
-.fm-check input[type="checkbox"]{width:18px;height:18px;margin-top:2px;accent-color:var(--b7);cursor:pointer;flex-shrink:0}
-.fm-check label{font-size:13px;color:var(--g6);line-height:1.5;cursor:pointer}
-.fm-check label a{color:var(--b6);text-decoration:underline}
-.fm-submit{display:inline-flex;align-items:center;gap:10px;background:var(--b7);color:var(--w);padding:14px 36px;border-radius:8px;font-family:var(--fb);font-size:15px;font-weight:600;border:none;cursor:pointer;transition:all .25s;letter-spacing:.02em}
-.fm-submit:hover{background:var(--b8);transform:translateY(-2px);box-shadow:0 4px 16px rgba(21,80,145,.25)}
-.fm-submit .ico{width:18px;height:18px;stroke:var(--w)}
-/* Info Cards */
-.ct-info{display:flex;flex-direction:column;gap:16px}
-.ct-card{background:var(--w);border:1px solid var(--g2);border-radius:14px;padding:24px;display:flex;align-items:flex-start;gap:16px;transition:all .3s}
-.ct-card:hover{border-color:var(--b4);box-shadow:0 6px 24px rgba(0,0,0,.04)}
-.ct-card-ico{width:48px;height:48px;background:var(--b1);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.ct-card-ico .ico{width:22px;height:22px;stroke:var(--b7)}
-.ct-card h3{font-family:var(--fd);font-size:15px;font-weight:700;margin-bottom:4px;color:var(--g9)}
-.ct-card p{font-size:14px;color:var(--g6);line-height:1.6}
-.ct-card a{color:var(--b6);text-decoration:none;font-weight:500}
-.ct-card a:hover{text-decoration:underline}
-/* Bulk Orders */
-.bulk-note{display:inline-block;background:var(--b1);border:1px solid var(--b3);border-radius:10px;padding:14px 24px;font-size:14px;color:var(--b8);line-height:1.6;margin-top:20px}
-.bulk-note .ico{width:16px;height:16px;stroke:var(--b7);vertical-align:-2px;margin-right:6px}
+/* Features Grid */
+.feat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.feat-card{background:var(--w);border:1px solid var(--g2);border-radius:16px;padding:32px 24px;text-align:center;transition:all .3s}
+.feat-card:hover{border-color:var(--b4);box-shadow:0 8px 32px rgba(13,75,143,.06);transform:translateY(-4px)}
+.feat-ic{width:52px;height:52px;margin:0 auto 20px;background:var(--b1);border-radius:12px;display:flex;align-items:center;justify-content:center}
+.feat-ic .ico{width:26px;height:26px;stroke:var(--b7)}
+.feat-card h3{font-size:15px;font-weight:700;margin-bottom:8px}
+.feat-card p{font-size:13px;color:var(--g6);line-height:1.6}
 /* CTA Banner */
 .ctab{background:linear-gradient(135deg,var(--b9),var(--b8));color:var(--w);position:relative;overflow:hidden}
 .ctab::before{content:'';position:absolute;top:-50%;right:-10%;width:500px;height:500px;background:radial-gradient(circle,rgba(229,168,50,.1),transparent 70%);pointer-events:none}
@@ -123,10 +117,7 @@ img{max-width:100%;display:block}
 .ftl a{font-size:14px;color:rgba(255,255,255,.5);text-decoration:none;transition:color .2s}.ftl a:hover{color:var(--w)}
 .ftbt{border-top:1px solid rgba(255,255,255,.08);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;font-size:13px}
 .ftlg{display:flex;gap:24px}.ftlg a{color:rgba(255,255,255,.4);text-decoration:none}.ftlg a:hover{color:rgba(255,255,255,.7)}
-/* Responsive */
 /* Off-Canvas Menu */
-.mob-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px}
-.mob-toggle .ico{width:24px;height:24px;stroke:var(--g8)}
 .oc-overlay{position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:199;opacity:0;visibility:hidden;transition:all .3s}
 .oc-overlay.open{opacity:1;visibility:visible}
 .oc-panel{position:fixed;top:0;right:0;width:300px;height:100%;background:var(--w);z-index:200;transform:translateX(100%);transition:transform .3s ease;box-shadow:-4px 0 24px rgba(0,0,0,.1);display:flex;flex-direction:column;overflow-y:auto}
@@ -148,9 +139,9 @@ img{max-width:100%;display:block}
 .oc-cta{display:block;width:100%;padding:14px;background:var(--gd);color:var(--b9);font-family:var(--fd);font-size:15px;font-weight:700;text-align:center;text-decoration:none;border-radius:8px;letter-spacing:.02em;transition:background .2s}
 .oc-cta:hover{background:var(--gl)}
 body.oc-open{overflow:hidden}
-@media(max-width:1024px){.ct-grid{grid-template-columns:1fr}.ct-info{display:grid;grid-template-columns:1fr 1fr;gap:16px}.ctai{flex-direction:column;text-align:center}.ctabs{justify-content:center}.ftg{grid-template-columns:1fr 1fr}.nav{display:none}
-  .mob-toggle{display:block}}
-@media(max-width:768px){.ct-info{grid-template-columns:1fr}.ftg{grid-template-columns:1fr}.ctas{grid-template-columns:1fr}}
+/* Responsive */
+@media(max-width:1024px){.nav{display:none}.mob-toggle{display:block}.ctai{flex-direction:column;text-align:center}.ctabs{justify-content:center}.ftg{grid-template-columns:1fr 1fr}.feat-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:768px){.pg{grid-template-columns:1fr;max-width:380px;margin:0 auto}.ftg{grid-template-columns:1fr}.feat-grid{grid-template-columns:1fr}}
 .fu{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}.fu.v{opacity:1;transform:translateY(0)}
 </style>
 </head>
@@ -162,13 +153,14 @@ body.oc-open{overflow:hidden}
   <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></symbol>
   <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
   <symbol id="i-check-circle" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></symbol>
-  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></symbol>
+  <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="8" r="7"/><path d="M8.21 13.89L7 23l5-3 5 3-1.21-9.12"/></symbol>
+  <symbol id="i-factory" viewBox="0 0 24 24"><path d="M2 20h20"/><path d="M5 20V8l4 4V8l4 4V4h6v16"/><path d="M15 10h2m-2 4h2"/></symbol>
+  <symbol id="i-beaker" viewBox="0 0 24 24"><path d="M9 3h6m-5 0v6.5L4 18.5a1 1 0 001 1.5h14a1 1 0 001-1.5L14 9.5V3"/><path d="M7 15h10"/></symbol>
   <symbol id="i-map-pin" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></symbol>
-  <symbol id="i-building" viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 22v-4h6v4m-6-16h.01M15 6h.01M9 10h.01M15 10h.01M9 14h.01M15 14h.01"/></symbol>
+  <symbol id="i-truck" viewBox="0 0 24 24"><path d="M1 3h15v13H1z"/><path d="M16 8h4l3 4v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></symbol>
+  <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
   <symbol id="i-alert-tri" viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></symbol>
-  <symbol id="i-send" viewBox="0 0 24 24"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4z"/></symbol>
-  <symbol id="i-mail" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></symbol>
-  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4m0-4h.01"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
 </svg>
 
 <!-- ANNOUNCEMENT BAR -->
@@ -186,102 +178,78 @@ body.oc-open{overflow:hidden}
     <a href="/en/compliance/">Certifications</a>
     <a href="/en/about/">About</a>
     <a href="/en/contact/">Contact</a>
-    <div class="lang-sw"><a href="/en/contact.html" class="active">EN</a><a href="/tr/iletisim.html">TR</a></div>
-    <a href="/#buy" class="nav-cta">Buy Now</a>
+    <div class="lang-sw"><a href="/en/" class="active">EN</a><a href="#">TR</a></div>
+    <a href="/en/shop" class="nav-cta">Buy Now</a>
   </nav>
-  <button class="mob-toggle" onclick="openMenu()" aria-label="Open menu"><svg class="ico" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
+  <button class="mob-toggle" onclick="openMenu()" aria-label="Open menu">
+    <svg class="ico" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+  </button>
 </div></header>
 
-<!-- HERO — Contact -->
-<section class="ct-hero"><div class="c tc">
-  <h1 class="fu">Contact Us</h1>
-  <p class="fu">Have a question about AlkoSafe? Need a bulk quote for your workplace or fleet? We typically respond within 1 business day.</p>
+<!-- SHOP HERO -->
+<section class="shop-hero"><div class="c">
+  <h1 class="fu">Shop AlkoSafe</h1>
+  <p class="fu">Choose your pack size. Free shipping on all orders across Turkey.</p>
 </div></section>
 
-<!-- CONTACT FORM + INFO -->
-<section class="ct-sec sp"><div class="c">
-  <div class="ct-grid">
-
-    <!-- LEFT — Form -->
-    <div class="ct-form-wrap fu">
-      <h2>Send Us a Message</h2>
-      <form action="#" method="post" novalidate>
-        <div class="fm-group">
-          <label for="ct-name">Full Name <span class="req">*</span></label>
-          <input type="text" id="ct-name" name="name" class="fm-input" placeholder="Your full name" required>
-        </div>
-        <div class="fm-group">
-          <label for="ct-email">Email Address <span class="req">*</span></label>
-          <input type="email" id="ct-email" name="email" class="fm-input" placeholder="you@example.com" required>
-        </div>
-        <div class="fm-group">
-          <label for="ct-phone">Phone Number <span style="font-weight:400;color:var(--g4)">(optional)</span></label>
-          <input type="tel" id="ct-phone" name="phone" class="fm-input" placeholder="+90 5XX XXX XX XX">
-        </div>
-        <div class="fm-group">
-          <label for="ct-subject">Subject</label>
-          <select id="ct-subject" name="subject" class="fm-select">
-            <option value="" disabled selected>Select a subject</option>
-            <option value="product-question">Product Question</option>
-            <option value="bulk-order">Bulk Order</option>
-            <option value="distributor-enquiry">Distributor Enquiry</option>
-            <option value="other">Other</option>
-          </select>
-        </div>
-        <div class="fm-group">
-          <label for="ct-message">Message <span class="req">*</span></label>
-          <textarea id="ct-message" name="message" class="fm-textarea" placeholder="How can we help you?" required></textarea>
-        </div>
-        <div class="fm-check">
-          <input type="checkbox" id="ct-gdpr" name="gdpr" required>
-          <label for="ct-gdpr">I agree to the processing of my personal data in accordance with the <a href="/en/privacy-policy/">Privacy Policy</a></label>
-        </div>
-        <button type="submit" class="fm-submit">Send Message <svg class="ico"><use href="#i-send"/></svg></button>
-      </form>
+<!-- PRODUCT CARDS -->
+<section style="background:var(--g0);padding:clamp(48px,6vw,80px) 0"><div class="c">
+  <div class="pg">
+    <div class="pc fu">
+      <div class="pci"><img src="/images/product-front.png" alt="AlkoSafe 5-Pack" class="prod-img card-product"></div>
+      <div class="pn">AlkoSafe 5</div><div class="ps">5 Test Strips</div>
+      <div class="pp">&#8378;580</div><div class="pu">&#8378;116 per test</div>
+      <button class="pb ol">Add to Cart</button>
     </div>
-
-    <!-- RIGHT — Info Cards -->
-    <div class="ct-info">
-      <div class="ct-card fu">
-        <div class="ct-card-ico"><svg class="ico"><use href="#i-map-pin"/></svg></div>
-        <div>
-          <h3>Email</h3>
-          <p><a href="mailto:info@alkosafe.com">info@alkosafe.com</a></p>
-        </div>
-      </div>
-      <div class="ct-card fu">
-        <div class="ct-card-ico"><svg class="ico"><use href="#i-clock"/></svg></div>
-        <div>
-          <h3>Business Hours</h3>
-          <p>Monday – Friday, 09:00 – 18:00<br>(Turkey Time, UTC+3)</p>
-        </div>
-      </div>
-      <div class="ct-card fu">
-        <div class="ct-card-ico"><svg class="ico"><use href="#i-check-circle"/></svg></div>
-        <div>
-          <h3>Response Time</h3>
-          <p>Within 1 business day</p>
-        </div>
-      </div>
-      <div class="ct-card fu">
-        <div class="ct-card-ico"><svg class="ico"><use href="#i-building"/></svg></div>
-        <div>
-          <h3>Languages</h3>
-          <p>Turkish and English</p>
-        </div>
-      </div>
+    <div class="pc ft fu">
+      <div class="ptag">Most Popular</div>
+      <div class="pci"><img src="/images/product-front.png" alt="AlkoSafe 10-Pack" class="prod-img card-product"></div>
+      <div class="pn">AlkoSafe 10</div><div class="ps">10 Test Strips</div>
+      <div class="pp">&#8378;980</div><div class="pu">&#8378;98 per test</div>
+      <button class="pb pr">Add to Cart</button>
     </div>
-
+    <div class="pc fu">
+      <div class="pci"><img src="/images/product-front.png" alt="AlkoSafe 20-Pack" class="prod-img card-product"></div>
+      <div class="pn">AlkoSafe 20</div><div class="ps">20 Test Strips · Best Value</div>
+      <div class="pp">&#8378;1,550</div><div class="pu">&#8378;77 per test</div>
+      <button class="pb ol">Add to Cart</button>
+    </div>
   </div>
 </div></section>
 
-<!-- BULK ORDERS -->
+<!-- TRUST BAR -->
+<div class="tbar"><div class="c"><div class="tbar-in">
+  <div class="tbi"><div class="tbic"><svg class="ico"><use href="#i-award"/></svg></div>CE Certified</div>
+  <div class="tbi"><div class="tbic"><svg class="ico"><use href="#i-factory"/></svg></div>ISO 13485</div>
+  <div class="tbi"><div class="tbic"><svg class="ico"><use href="#i-beaker"/></svg></div>Merck &amp; Sartorius</div>
+  <div class="tbi"><div class="tbic"><svg class="ico"><use href="#i-map-pin"/></svg></div>Made in Turkey</div>
+  <div class="tbi"><div class="tbic"><svg class="ico"><use href="#i-truck"/></svg></div>Free Shipping</div>
+</div></div></div>
+
+<!-- FEATURES -->
 <section class="sp"><div class="c">
-  <div class="sh tc fu">
-    <div class="sl">Corporate</div>
-    <h2>Bulk &amp; Corporate Orders</h2>
-    <p>For workplace alcohol testing programmes, logistics fleets, event management, or distributor enquiries, contact us directly by email or phone. We offer custom pricing for orders above 100 units.</p>
-    <div class="bulk-note"><svg class="ico ico-sm"><use href="#i-info"/></svg>Please include your company name, estimated monthly volume, and delivery location in your message.</div>
+  <div class="sh tc fu"><div class="sl">Why AlkoSafe</div><h2>What You Get.</h2></div>
+  <div class="feat-grid">
+    <div class="feat-card fu">
+      <div class="feat-ic"><svg class="ico ico-lg"><use href="#i-clock"/></svg></div>
+      <h3>2-Minute Results</h3>
+      <p>Place the strip under your tongue. Read in 2 minutes. No device, no calibration, no waiting.</p>
+    </div>
+    <div class="feat-card fu">
+      <div class="feat-ic"><svg class="ico ico-lg"><use href="#i-target"/></svg></div>
+      <h3>99.7% Sensitivity</h3>
+      <p>Clinically validated performance competitive with professional-grade screening instruments.</p>
+    </div>
+    <div class="feat-card fu">
+      <div class="feat-ic"><svg class="ico ico-lg"><use href="#i-calendar"/></svg></div>
+      <h3>24-Month Shelf Life</h3>
+      <p>Store at room temperature. Each strip stays sealed and ready to use for a full two years.</p>
+    </div>
+    <div class="feat-card fu">
+      <div class="feat-ic"><svg class="ico ico-lg"><use href="#i-truck"/></svg></div>
+      <h3>Free Shipping</h3>
+      <p>Every order ships free across Turkey. Discreet packaging with fast delivery to your door.</p>
+    </div>
   </div>
 </div></section>
 
@@ -291,14 +259,14 @@ body.oc-open{overflow:hidden}
     <h2>Don't Guess. Test.</h2>
     <p>AlkoSafe gives you a clear answer in 2 minutes. Protect yourself, your licence, and the people around you.</p>
     <div class="ctabs">
-      <a href="/#buy" class="btn-g">Shop AlkoSafe <svg class="ico" style="width:16px;height:16px"><use href="#i-arrow"/></svg></a>
-      <a href="mailto:info@alkosafe.com" class="bgh">Email Us Directly</a>
+      <a href="#" class="btn-g" onclick="window.scrollTo({top:0,behavior:'smooth'});return false">Shop Now <svg class="ico" style="width:16px;height:16px"><use href="#i-arrow"/></svg></a>
+      <a href="/en/contact/" class="bgh">Bulk Orders? Contact Us</a>
     </div>
   </div>
   <div class="ctas">
     <div class="sb"><div class="sbn">99.7%</div><div class="sbl">Sensitivity</div></div>
     <div class="sb"><div class="sbn">2 min</div><div class="sbl">Result Time</div></div>
-    <div class="sb"><div class="sbn">0.2‰</div><div class="sbl">Detection Threshold</div></div>
+    <div class="sb"><div class="sbn">0.2&#8240;</div><div class="sbl">Detection Threshold</div></div>
     <div class="sb"><div class="sbn">24 mo</div><div class="sbl">Shelf Life</div></div>
   </div>
 </div></div></section>
@@ -320,7 +288,7 @@ body.oc-open{overflow:hidden}
       </a>
       <p>A saliva alcohol test by CROM TEST. Swiss-grade materials. British know-how. Manufactured in Turkey to European CE standards.</p>
     </div>
-    <div><h4>Product</h4><ul class="ftl"><li><a href="/#buy">Buy AlkoSafe</a></li><li><a href="/en/how-it-works/">How It Works</a></li><li><a href="/en/compliance/">Certifications</a></li></ul></div>
+    <div><h4>Product</h4><ul class="ftl"><li><a href="/en/shop">Buy AlkoSafe</a></li><li><a href="/en/how-it-works/">How It Works</a></li><li><a href="/en/compliance/">Certifications</a></li></ul></div>
     <div><h4>Company</h4><ul class="ftl"><li><a href="/en/about/">About CROM TEST</a></li><li><a href="/en/contact/">Contact</a></li><li><a href="/tr/blog/">Blog (TR)</a></li></ul></div>
     <div><h4>Support</h4><ul class="ftl"><li><a href="/en/shipping-returns/">Shipping &amp; Returns</a></li><li><a href="/en/faq/">FAQ</a></li><li><a href="mailto:info@alkosafe.com">info@alkosafe.com</a></li></ul></div>
   </div>
@@ -330,15 +298,14 @@ body.oc-open{overflow:hidden}
   </div>
 </div></footer>
 
-<script>
-const obs=new IntersectionObserver(e=>{e.forEach(en=>{if(en.isIntersecting)en.target.classList.add('v')})},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
-document.querySelectorAll('.fu').forEach(el=>obs.observe(el));
-</script>
 <!-- Off-Canvas Menu -->
 <div class="oc-overlay" id="oc-overlay" onclick="closeMenu()"></div>
 <div class="oc-panel" id="oc-panel">
   <div class="oc-header">
-    <div class="oc-logo"><img src="/images/logo.png" alt="CROM TEST"><span>Alko<em>Safe</em></span></div>
+    <div class="oc-logo">
+      <img src="/images/logo.png" alt="CROM TEST">
+      <span>Alko<em>Safe</em></span>
+    </div>
     <button class="oc-close" onclick="closeMenu()"><svg class="ico" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
   </div>
   <nav class="oc-nav">
@@ -352,5 +319,12 @@ document.querySelectorAll('.fu').forEach(el=>obs.observe(el));
     <a href="/en/shop" class="oc-cta">Buy Now</a>
   </div>
 </div>
+
+<script>
+function openMenu(){document.getElementById('oc-overlay').classList.add('open');document.getElementById('oc-panel').classList.add('open');document.body.classList.add('oc-open')}
+function closeMenu(){document.getElementById('oc-overlay').classList.remove('open');document.getElementById('oc-panel').classList.remove('open');document.body.classList.remove('oc-open')}
+const obs=new IntersectionObserver(e=>{e.forEach(en=>{if(en.isIntersecting)en.target.classList.add('v')})},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.fu').forEach(el=>obs.observe(el));
+</script>
 </body>
 </html>
