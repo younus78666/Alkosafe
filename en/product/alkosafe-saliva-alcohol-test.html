@@ -150,10 +150,7 @@ img{max-width:100%;display:block}
 .steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;position:relative;margin-bottom:56px}
 .step-card{background:var(--w);border:1px solid var(--g2);border-radius:20px;padding:40px 28px 36px;text-align:center;position:relative;z-index:2;transition:all .35s}
 .step-card:hover{border-color:var(--b4);box-shadow:0 16px 48px rgba(13,75,143,.08);transform:translateY(-6px)}
-.step-top{display:flex;align-items:center;justify-content:center;gap:16px;margin-bottom:24px}
-.step-num{width:48px;height:48px;background:var(--b7);border-radius:12px;display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-size:20px;font-weight:700;color:var(--w);flex-shrink:0}
-.step-icon{width:56px;height:56px;background:var(--b1);border-radius:14px;display:flex;align-items:center;justify-content:center}
-.step-icon .ico{width:28px;height:28px;stroke:var(--b7)}
+.step-num{width:64px;height:64px;margin:0 auto 24px;background:var(--b7);border-radius:16px;display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-size:28px;font-weight:700;color:var(--w)}
 .step-card h3{font-size:20px;font-weight:700;margin-bottom:12px;color:var(--g9)}
 .step-card p{font-size:15px;color:var(--g6);line-height:1.65;max-width:300px;margin:0 auto}
 .step-time{display:inline-flex;align-items:center;gap:6px;margin-top:16px;font-size:12px;font-weight:600;color:var(--b6);background:var(--b1);padding:6px 14px;border-radius:100px}
@@ -419,61 +416,26 @@ img{max-width:100%;display:block}
   <div class="sh tc fu"><div class="sl">How to Use</div><h2>How to Use AlkoSafe</h2></div>
   <p class="steps-intro fu">Using AlkoSafe takes under 3 minutes. Wait 15 minutes after eating, drinking, or smoking before testing.</p>
   <div class="steps-grid">
-    <div class="step-card fu" style="position:relative">
-      <div class="step-top">
-        <div class="step-num">1</div>
-        <div class="step-icon"><svg class="ico"><use href="#i-clipboard"/></svg></div>
-      </div>
+    <div class="step-card fu">
+      <div class="step-num">1</div>
       <h3>Prepare</h3>
       <p>Wait at least 15 minutes after eating, drinking, or smoking. Open the foil pouch and remove the strip immediately before use.</p>
       <div class="step-time"><svg class="ico"><use href="#i-clock"/></svg>15 min wait</div>
-      <div class="step-connector" style="display:none"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
     </div>
-    <div class="step-card fu" style="position:relative">
-      <div class="step-top">
-        <div class="step-num">2</div>
-        <div class="step-icon"><svg class="ico"><use href="#i-droplet"/></svg></div>
-      </div>
+    <div class="step-card fu">
+      <div class="step-num">2</div>
       <h3>Test</h3>
       <p>Place the absorbent end under your tongue. Hold in place for exactly 2 minutes. Do not chew or move the strip.</p>
       <div class="step-time"><svg class="ico"><use href="#i-clock"/></svg>2 min hold</div>
-      <div class="step-connector" style="display:none"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
     </div>
     <div class="step-card fu">
-      <div class="step-top">
-        <div class="step-num">3</div>
-        <div class="step-icon"><svg class="ico"><use href="#i-check-circle"/></svg></div>
-      </div>
+      <div class="step-num">3</div>
       <h3>Read the Result</h3>
       <p>No colour change = no alcohol detected above threshold. Blue or purple = alcohol detected at or above 0.2 promil.</p>
       <div class="step-time"><svg class="ico"><use href="#i-clock"/></svg>Instant read</div>
     </div>
   </div>
 
-  <!-- Result Interpretation — Visual Cards -->
-  <div class="result-section fu">
-    <h3 class="result-heading">Understanding Your Result</h3>
-    <div class="result-cards">
-      <div class="result-card rc-safe">
-        <div class="result-swatch"><svg class="ico" style="width:24px;height:24px"><use href="#i-check"/></svg></div>
-        <div class="result-color">No Colour Change</div>
-        <div class="result-meaning">Alcohol not detected above 0.2 promil</div>
-        <span class="result-badge">Clear to drive</span>
-      </div>
-      <div class="result-card rc-warn">
-        <div class="result-swatch"></div>
-        <div class="result-color">Faint Blue / Purple</div>
-        <div class="result-meaning">Borderline — retest after 15 minutes</div>
-        <span class="result-badge">Wait &amp; retest</span>
-      </div>
-      <div class="result-card rc-danger">
-        <div class="result-swatch"></div>
-        <div class="result-color">Clear Blue / Purple</div>
-        <div class="result-meaning">Alcohol detected — do not drive</div>
-        <span class="result-badge">Do not drive</span>
-      </div>
-    </div>
-  </div>
 </div></section>
 
 <!-- SECTION 5: TECHNICAL SPECIFICATIONS -->

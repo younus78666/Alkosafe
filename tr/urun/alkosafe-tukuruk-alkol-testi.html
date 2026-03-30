@@ -79,10 +79,7 @@ img{max-width:100%;display:block}
 .sg{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;position:relative}
 .sc{background:var(--w);border:1px solid var(--g2);border-radius:20px;padding:40px 28px 36px;text-align:center;position:relative;z-index:2;transition:all .35s}
 .sc:hover{border-color:var(--b4);box-shadow:0 16px 48px rgba(13,75,143,.08);transform:translateY(-6px)}
-.step-top{display:flex;align-items:center;justify-content:center;gap:16px;margin-bottom:24px}
-.sn{width:48px;height:48px;background:var(--b7);border-radius:12px;display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-size:20px;font-weight:700;color:var(--w);flex-shrink:0}
-.step-icon{width:56px;height:56px;background:var(--b1);border-radius:14px;display:flex;align-items:center;justify-content:center}
-.step-icon .ico{width:28px;height:28px;stroke:var(--b7)}
+.sn{width:64px;height:64px;margin:0 auto 24px;background:var(--b7);border-radius:16px;display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-size:28px;font-weight:700;color:var(--w)}
 .sc h3{font-size:20px;font-weight:700;margin-bottom:12px;color:var(--g9)}
 .sc p{font-size:15px;color:var(--g6);line-height:1.65;max-width:300px;margin:0 auto}
 .step-time{display:inline-flex;align-items:center;gap:6px;margin-top:16px;font-size:12px;font-weight:600;color:var(--b6);background:var(--b1);padding:6px 14px;border-radius:100px}
@@ -453,58 +450,25 @@ img{max-width:100%;display:block}
   <p class="how-intro fu">AlkoSafe kullanimi 3 dakikadan az surer. Test etmeden once yemek yedikten, icecek ictikten veya sigara ictikten sonra 15 dakika bekleyin.</p>
   <div class="sg">
     <div class="sc fu">
-      <div class="step-top">
-        <div class="sn">1</div>
-        <div class="step-icon"><svg class="ico"><use href="#i-clipboard"/></svg></div>
-      </div>
+      <div class="sn">1</div>
       <h3>Hazirlik</h3>
       <p>Yemek, icecek veya sigara sonrasi en az 15 dakika bekleyin. Folyo posetten test seridini hemen kullanmadan once cikarin.</p>
       <div class="step-time"><svg class="ico"><use href="#i-clock"/></svg>15 dk bekleme</div>
     </div>
     <div class="sc fu">
-      <div class="step-top">
-        <div class="sn">2</div>
-        <div class="step-icon"><svg class="ico"><use href="#i-droplet"/></svg></div>
-      </div>
+      <div class="sn">2</div>
       <h3>Test</h3>
       <p>Emici ucu dilinizin altina koyun. Tam olarak 2 dakika boyunca yerinde tutun. Seridi cignemeyinveya hareket ettirmeyin.</p>
       <div class="step-time"><svg class="ico"><use href="#i-clock"/></svg>2 dk bekleyin</div>
     </div>
     <div class="sc fu">
-      <div class="step-top">
-        <div class="sn">3</div>
-        <div class="step-icon"><svg class="ico"><use href="#i-check-circle"/></svg></div>
-      </div>
+      <div class="sn">3</div>
       <h3>Sonucu Oku</h3>
       <p>Renk degisimi yok = esik deger uzerinde alkol tespit edilmedi. Mavi veya mor = 0.2 promil veya uzeri alkol tespit edildi.</p>
       <div class="step-time"><svg class="ico"><use href="#i-clock"/></svg>Aninda okuma</div>
     </div>
   </div>
 
-  <!-- Result Interpretation — Visual Cards -->
-  <div class="result-section fu">
-    <h3 class="result-heading">Sonucunuzu Anlayin</h3>
-    <div class="result-cards">
-      <div class="result-card rc-safe">
-        <div class="result-swatch"><svg class="ico" style="width:24px;height:24px"><use href="#i-check"/></svg></div>
-        <div class="result-color">Renk Degisimi Yok</div>
-        <div class="result-meaning">0.2 promilin uzerinde alkol tespit edilmedi</div>
-        <span class="result-badge">Guvenli</span>
-      </div>
-      <div class="result-card rc-warn">
-        <div class="result-swatch"></div>
-        <div class="result-color">Hafif Mavi / Mor</div>
-        <div class="result-meaning">Sinirda — 15 dakika sonra tekrar test edin</div>
-        <span class="result-badge">Bekle ve tekrarla</span>
-      </div>
-      <div class="result-card rc-danger">
-        <div class="result-swatch"></div>
-        <div class="result-color">Belirgin Mavi / Mor</div>
-        <div class="result-meaning">Alkol tespit edildi — arac kullanmayin</div>
-        <span class="result-badge">Arac kullanmayin</span>
-      </div>
-    </div>
-  </div>
 </div></section>
 
 <!-- SECTION 5: Teknik Ozellikler -->
