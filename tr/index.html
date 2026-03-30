@@ -112,22 +112,24 @@ img{max-width:100%;display:block}
 .pb.ol{background:transparent;color:var(--b7);border:2px solid var(--b7)}.pb.ol:hover{background:var(--b1)}
 /* Steps */
 .hiw{background:var(--g0)}
-.sg{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;position:relative}
-.sg::before{content:'';position:absolute;top:48px;left:16%;right:16%;height:2px;background:repeating-linear-gradient(90deg,var(--b3) 0,var(--b3) 8px,transparent 8px,transparent 16px)}
-.sc{text-align:center;position:relative;z-index:2}
-.sn{width:96px;height:96px;margin:0 auto 28px;background:var(--w);border:2px solid var(--b3);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-size:36px;font-weight:700;color:var(--b7);box-shadow:0 4px 20px rgba(13,75,143,.06)}
-.sc h3{font-size:18px;font-weight:700;margin-bottom:10px}
-.sc p{font-size:15px;color:var(--g6);line-height:1.6;max-width:280px;margin:0 auto}
+.sg{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;position:relative}
+.sc{background:var(--w);border:1px solid var(--g2);border-radius:20px;padding:40px 28px 36px;text-align:center;position:relative;z-index:2;transition:all .35s}
+.sc:hover{border-color:var(--b4);box-shadow:0 16px 48px rgba(13,75,143,.08);transform:translateY(-6px)}
+.sn{width:64px;height:64px;margin:0 auto 24px;background:var(--b7);border-radius:16px;display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-size:28px;font-weight:700;color:var(--w)}
+.sc h3{font-size:20px;font-weight:700;margin-bottom:12px;color:var(--g9)}
+.sc p{font-size:15px;color:var(--g6);line-height:1.65;max-width:300px;margin:0 auto}
+.step-time{display:inline-flex;align-items:center;gap:6px;margin-top:16px;font-size:12px;font-weight:600;color:var(--b6);background:var(--b1);padding:6px 14px;border-radius:100px}
+.step-time .ico{width:14px;height:14px;stroke:var(--b6)}
 .hl{display:inline-flex;align-items:center;gap:6px;margin-top:48px;font-size:15px;font-weight:600;color:var(--b7);text-decoration:none;transition:gap .2s}
 .hl:hover{gap:10px}.hl .ico{width:18px;height:18px;stroke:var(--b7)}
 /* Standards */
-.stg{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-.stc{background:var(--g0);border:1px solid var(--g2);border-radius:14px;padding:32px 24px;text-align:center;transition:all .3s}
-.stc:hover{border-color:var(--b3);transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,.04)}
-.stic{width:56px;height:56px;margin:0 auto 20px;background:var(--b1);border-radius:12px;display:flex;align-items:center;justify-content:center}
-.stic .ico{width:28px;height:28px;stroke:var(--b7)}
-.stc h3{font-size:16px;font-weight:700;margin-bottom:8px}
-.stc p{font-size:14px;color:var(--g6);line-height:1.6}
+.stg{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.stc{background:var(--w);border:1px solid var(--g2);border-radius:16px;padding:32px 24px;text-align:center;transition:all .3s}
+.stc:hover{border-color:var(--b4);box-shadow:0 8px 32px rgba(13,75,143,.06);transform:translateY(-4px)}
+.stic{width:52px;height:52px;margin:0 auto 20px;background:var(--b1);border-radius:12px;display:flex;align-items:center;justify-content:center}
+.stic .ico{width:26px;height:26px;stroke:var(--b7)}
+.stc h3{font-size:15px;font-weight:700;margin-bottom:8px}
+.stc p{font-size:13px;color:var(--g6);line-height:1.6}
 /* Showcase */
 .shg{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
 .shi{display:grid;grid-template-columns:1fr 1fr;gap:16px}
@@ -175,7 +177,7 @@ img{max-width:100%;display:block}
 .ftlg{display:flex;gap:24px}.ftlg a{color:rgba(255,255,255,.4);text-decoration:none}.ftlg a:hover{color:rgba(255,255,255,.7)}
 /* Responsive */
 @media(max-width:1024px){.hero-in{grid-template-columns:1fr;text-align:center}.hero-c{max-width:100%;margin:0 auto}.hero-sub{margin:0 auto 36px}.hero-trust{justify-content:center}.hero-img{display:none}.stg{grid-template-columns:repeat(2,1fr)}.ctai{flex-direction:column;text-align:center}.ctabs{justify-content:center}.shg{grid-template-columns:1fr}.ftg{grid-template-columns:1fr 1fr}.nav{display:none}}
-@media(max-width:768px){.pg{grid-template-columns:1fr;max-width:380px;margin:0 auto}.sg{grid-template-columns:1fr;max-width:340px;margin:0 auto}.sg::before{display:none}.stg{grid-template-columns:1fr}.fg{grid-template-columns:1fr}.ftg{grid-template-columns:1fr}.shi{grid-template-columns:1fr}.shiw.tall{grid-row:auto}}
+@media(max-width:768px){.pg{grid-template-columns:1fr;max-width:380px;margin:0 auto}.sg{grid-template-columns:1fr;max-width:400px;margin:0 auto}.stg{grid-template-columns:1fr}.fg{grid-template-columns:1fr}.ftg{grid-template-columns:1fr}.shi{grid-template-columns:1fr}.shiw.tall{grid-row:auto}}
 .fu{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}.fu.v{opacity:1;transform:translateY(0)}
 </style>
 </head>
@@ -285,9 +287,9 @@ img{max-width:100%;display:block}
 <section class="hiw sp"><div class="c">
   <div class="sh tc fu"><div class="sl">Basit ve Hizli</div><h2>3 Adimda Hazir.</h2></div>
   <div class="sg">
-    <div class="sc fu"><div class="sn">1</div><h3>Ac</h3><p>Muhurlu folyo poseti yirtin. Test seridini kullanmadan hemen once cikarin.</p></div>
-    <div class="sc fu"><div class="sn">2</div><h3>Test Et</h3><p>Emici ucu dilinizin altina yerlestirin. 2 dakika bekleyin.</p></div>
-    <div class="sc fu"><div class="sn">3</div><h3>Oku</h3><p>Renk degisimi yok = temiz. Mavi veya mor = alkol tespit edildi. Arac kullanmayin.</p></div>
+    <div class="sc fu"><div class="sn">1</div><h3>Ac</h3><p>Muhurlu folyo poseti yirtin. Test seridini kullanmadan hemen once cikarin.</p><div class="step-time"><svg class="ico"><use href="#i-clock"/></svg>Kullanmadan once</div></div>
+    <div class="sc fu"><div class="sn">2</div><h3>Test Et</h3><p>Emici ucu dilinizin altina yerlestirin. 2 dakika bekleyin.</p><div class="step-time"><svg class="ico"><use href="#i-clock"/></svg>2 dk bekleyin</div></div>
+    <div class="sc fu"><div class="sn">3</div><h3>Oku</h3><p>Renk degisimi yok = temiz. Mavi veya mor = alkol tespit edildi. Arac kullanmayin.</p><div class="step-time"><svg class="ico"><use href="#i-clock"/></svg>Aninda okuma</div></div>
   </div>
   <div class="tc"><a href="/tr/nasil-calisir/" class="hl">AlkoSafe'nin nasil calistigini ogrenmek icin <svg class="ico"><use href="#i-arrow"/></svg></a></div>
 </div></section>
@@ -304,7 +306,7 @@ img{max-width:100%;display:block}
 </div></section>
 
 <!-- SHOWCASE -->
-<section class="sp"><div class="c"><div class="shg">
+<section class="sp" style="background:var(--g0)"><div class="c"><div class="shg">
   <div class="shi fu">
     <div class="shiw tall"><img src="/images/product-front.png" alt="AlkoSafe Urun On Gorunum" class="prod-img showcase-tall"></div>
     <div class="shiw"><img src="/images/product-front-back.png" alt="AlkoSafe On ve Arka" class="prod-img showcase-sm"></div>
@@ -326,7 +328,7 @@ img{max-width:100%;display:block}
 </div></div></section>
 
 <!-- FEATURES -->
-<section class="sp" style="background:var(--g0)"><div class="c">
+<section class="sp"><div class="c">
   <div class="sh tc fu"><div class="sl">Neden AlkoSafe</div><h2>Gercek Hayat Icin Tasarlandi.</h2></div>
   <div class="fg">
     <div class="fr fu"><div class="fic"><svg class="ico"><use href="#i-car"/></svg></div><div><h3>Arac Kullanmadan Once</h3><p>Gece disaridan sonra sabah? Arabaya binmeden once test edin.</p></div></div>
