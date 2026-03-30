@@ -1,5 +1,13 @@
 {
   "cleanUrls": true,
+  "rewrites": [
+    { "source": "/en/", "destination": "/index.html" },
+    { "source": "/en", "destination": "/index.html" },
+    { "source": "/tr/", "destination": "/tr/index.html" },
+    { "source": "/tr", "destination": "/tr/index.html" },
+    { "source": "/en/product/alkosafe-saliva-alcohol-test", "destination": "/en/product/alkosafe-saliva-alcohol-test.html" },
+    { "source": "/tr/urun/alkosafe-tukuruk-alkol-testi", "destination": "/tr/urun/alkosafe-tukuruk-alkol-testi.html" }
+  ],
   "headers": [
     {
       "source": "/images/(.*)",
