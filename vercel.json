@@ -24,7 +24,19 @@
     { "source": "/en/contact", "destination": "/en/contact.html" },
     { "source": "/en/contact/", "destination": "/en/contact.html" },
     { "source": "/tr/iletisim", "destination": "/tr/iletisim.html" },
-    { "source": "/tr/iletisim/", "destination": "/tr/iletisim.html" }
+    { "source": "/tr/iletisim/", "destination": "/tr/iletisim.html" },
+    { "source": "/en/privacy-policy", "destination": "/en/privacy-policy.html" },
+    { "source": "/en/privacy-policy/", "destination": "/en/privacy-policy.html" },
+    { "source": "/en/cookie-policy", "destination": "/en/cookie-policy.html" },
+    { "source": "/en/cookie-policy/", "destination": "/en/cookie-policy.html" },
+    { "source": "/en/terms-and-conditions", "destination": "/en/terms-and-conditions.html" },
+    { "source": "/en/terms-and-conditions/", "destination": "/en/terms-and-conditions.html" },
+    { "source": "/en/refund-policy", "destination": "/en/refund-policy.html" },
+    { "source": "/en/refund-policy/", "destination": "/en/refund-policy.html" },
+    { "source": "/en/shipping-policy", "destination": "/en/shipping-policy.html" },
+    { "source": "/en/shipping-policy/", "destination": "/en/shipping-policy.html" },
+    { "source": "/en/disclaimer", "destination": "/en/disclaimer.html" },
+    { "source": "/en/disclaimer/", "destination": "/en/disclaimer.html" }
   ],
   "headers": [
     {

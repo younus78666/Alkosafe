@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>Refund and Return Policy &mdash; AlkoSafe by CROM TEST</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --b9:#08243E;--b8:#10417A;--b7:#155091;--b6:#1A64B0;--b5:#2176CC;
+  --b4:#42A5F5;--b3:#90CAF9;--b1:#E3F2FD;
+  --gd:#E5A832;--gl:#F2CA6B;
+  --w:#fff;--g0:#FAFBFC;--g1:#F1F3F5;--g2:#E9ECEF;--g4:#ADB5BD;--g6:#6C757D;--g8:#343A40;--g9:#1A1D21;
+  --gn:#2E7D32;
+  --fd:'Roboto',sans-serif;--fb:'Poppins',-apple-system,sans-serif;
+  --mw:1200px;--sp:clamp(60px,8vw,110px);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:var(--fb);color:var(--g9);background:var(--w);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:var(--b6);text-decoration:none;transition:color .2s}
+a:hover{color:var(--b8)}
+.c{max-width:var(--mw);margin:0 auto;padding:0 24px}
+.sp{padding-top:var(--sp);padding-bottom:var(--sp)}
+.ico{width:24px;height:24px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+.ico-sm{width:16px;height:16px}
+/* Announcement */
+.ann{background:var(--b9);color:var(--b3);text-align:center;padding:10px 16px;font-size:13px;letter-spacing:.04em;font-weight:500}
+.ann strong{color:var(--gl)}
+/* Header */
+.hdr{background:var(--w);border-bottom:1px solid var(--g2);position:sticky;top:0;z-index:100}
+.hdr-in{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo-div{width:1px;height:28px;background:var(--g2)}
+.logo-txt{font-family:var(--fd);font-size:17px;font-weight:700;color:var(--b8);letter-spacing:.04em}
+.logo-txt span{color:var(--gd)}
+.logo-img{height:36px;width:auto}
+.logo-img.footer{height:30px}
+.nav{display:flex;gap:28px;align-items:center}
+.nav a{font-family:var(--fd);font-size:13px;font-weight:500;color:var(--g8);text-decoration:none;transition:color .2s;letter-spacing:.02em}
+.nav a:hover{color:var(--b6)}
+.nav-cta{background:var(--b7)!important;color:var(--w)!important;padding:10px 22px!important;border-radius:6px;font-weight:600!important}
+.lang-sw{display:flex;align-items:center;gap:2px;font-size:13px;font-weight:600;border:1px solid var(--g2);border-radius:6px;overflow:hidden}
+.lang-sw a{padding:6px 12px;text-decoration:none;color:var(--g6);transition:all .2s}
+.lang-sw a.active{background:var(--b7);color:var(--w)}
+.lang-sw a:hover:not(.active){background:var(--g1);color:var(--g8)}
+/* Footer */
+.ftr{background:var(--g9);color:rgba(255,255,255,.6);padding:60px 0 32px}
+.ftg{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:48px}
+.ftb p{font-size:14px;line-height:1.7;margin-top:14px;max-width:320px}
+.ftr h4{font-family:var(--fd);font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.85);margin-bottom:18px}
+.ftl{list-style:none}.ftl li{margin-bottom:10px}
+.ftl a{font-size:14px;color:rgba(255,255,255,.5);text-decoration:none;transition:color .2s}.ftl a:hover{color:var(--w)}
+.ftbt{border-top:1px solid rgba(255,255,255,.08);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;font-size:13px}
+.ftlg{display:flex;gap:24px}.ftlg a{color:rgba(255,255,255,.4);text-decoration:none}.ftlg a:hover{color:rgba(255,255,255,.7)}
+/* Legal Content */
+.legal-hero{background:linear-gradient(160deg,var(--b9),var(--b8) 50%,#0E3E6E);color:var(--w);padding:clamp(48px,6vw,80px) 0;text-align:center}
+.legal-hero h1{font-family:var(--fd);font-size:clamp(32px,4.5vw,48px);font-weight:700;letter-spacing:-.02em;margin-bottom:12px}
+.legal-hero p{font-size:15px;color:rgba(255,255,255,.6)}
+.legal{max-width:800px;margin:0 auto;padding:clamp(40px,6vw,72px) 24px}
+.legal h2{font-family:var(--fd);font-size:clamp(20px,2.5vw,26px);font-weight:700;color:var(--b9);margin:48px 0 16px;padding-bottom:10px;border-bottom:2px solid var(--b1);letter-spacing:-.01em}
+.legal h2:first-child{margin-top:0}
+.legal p{font-size:15px;color:var(--g8);line-height:1.75;margin-bottom:16px}
+.legal ul,.legal ol{margin:0 0 20px;padding:0 0 0 0;list-style:none}
+.legal ul li,.legal ol li{position:relative;padding-left:24px;font-size:15px;color:var(--g8);line-height:1.75;margin-bottom:8px}
+.legal ul li::before{content:'';position:absolute;left:0;top:11px;width:8px;height:8px;background:var(--b6);border-radius:50%}
+.legal ol{counter-reset:steps}
+.legal ol li{counter-increment:steps}
+.legal ol li::before{content:counter(steps) '.';position:absolute;left:0;top:0;font-weight:700;color:var(--b6)}
+.legal a{color:var(--b6);text-decoration:underline;text-underline-offset:2px}
+.legal a:hover{color:var(--b8)}
+.legal strong{font-weight:600;color:var(--g9)}
+/* Table */
+.legal-table{width:100%;border-collapse:collapse;margin:20px 0 28px;font-size:14px;border-radius:10px;overflow:hidden}
+.legal-table th{background:var(--b9);color:var(--w);font-family:var(--fd);font-weight:600;text-align:left;padding:14px 18px;font-size:13px;letter-spacing:.03em}
+.legal-table td{padding:12px 18px;color:var(--g8);border-bottom:1px solid var(--g2)}
+.legal-table tr:nth-child(even) td{background:var(--g0)}
+.legal-table tr:last-child td{border-bottom:none}
+.eligible-yes{color:var(--gn);font-weight:600}
+.eligible-no{color:#C62828;font-weight:600}
+/* Responsive */
+@media(max-width:1024px){.ftg{grid-template-columns:1fr 1fr}.nav{display:none}}
+@media(max-width:768px){.ftg{grid-template-columns:1fr}.legal-table{font-size:13px}.legal-table th,.legal-table td{padding:10px 12px}}
+.fu{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}.fu.v{opacity:1;transform:translateY(0)}
+</style>
+</head>
+<body>
+
+<!-- SVG Icon Definitions (hidden) -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></symbol>
+</svg>
+
+<!-- ANNOUNCEMENT BAR -->
+<div class="ann"><strong>Free shipping</strong> on all orders across Turkey &middot; CE Certified &middot; Results in 2 minutes</div>
+
+<!-- HEADER -->
+<header class="hdr"><div class="c hdr-in">
+  <a href="/" class="logo">
+    <img src="/images/logo.png" alt="CROM TEST" class="logo-img">
+    <span class="logo-div"></span>
+    <span class="logo-txt">Alko<span>Safe</span></span>
+  </a>
+  <nav class="nav">
+    <a href="/en/how-it-works/">How It Works</a>
+    <a href="/en/compliance/">Certifications</a>
+    <a href="/en/about/">About</a>
+    <a href="/en/contact/">Contact</a>
+    <div class="lang-sw"><a href="/en/" class="active">EN</a><a href="/tr/">TR</a></div>
+    <a href="/#buy" class="nav-cta">Buy Now</a>
+  </nav>
+</div></header>
+
+<!-- HERO -->
+<section class="legal-hero">
+  <div class="c fu">
+    <h1>Refund and Return Policy</h1>
+    <p>Last updated: March 2026</p>
+  </div>
+</section>
+
+<!-- CONTENT -->
+<div class="legal fu">
+
+  <h2>1. No-Return Policy &mdash; Health and Hygiene Exception</h2>
+  <p>AlkoSafe is a saliva-based alcohol test that comes into direct contact with bodily fluids. Once a product has been opened or its sealed packaging has been tampered with, it cannot be returned or exchanged for health and hygiene reasons.</p>
+  <p>This policy is consistent with the following consumer protection regulations that exempt hygiene-sensitive goods from the standard right of withdrawal:</p>
+  <ul>
+    <li><strong>EU Directive 2011/83/EU, Article 16(e)</strong> &mdash; exempts sealed goods not suitable for return due to health protection or hygiene reasons, where the seal has been broken after delivery.</li>
+    <li><strong>UK Consumer Contracts Regulations 2013, Regulation 28(3)(b)</strong> &mdash; provides the same exemption for sealed goods that have been unsealed after delivery.</li>
+    <li><strong>Turkish Distance Sales Regulation (Mesafeli S&ouml;zle&scedil;meler Y&ouml;netmeli&gbreve;i)</strong> &mdash; exempts goods that are unsuitable for return due to their nature, including health and hygiene products.</li>
+  </ul>
+
+  <h2>2. Sealed Products &mdash; 14-Day Right of Withdrawal</h2>
+  <p>If your AlkoSafe product is still factory-sealed and in its original, unopened packaging, you have the right to withdraw from the purchase within 14 calendar days of receiving the order.</p>
+  <p>To exercise this right:</p>
+  <ol>
+    <li>Email <a href="mailto:info@alkosafe.com">info@alkosafe.com</a> within 14 days of delivery, stating your order number and reason for return.</li>
+    <li>We will confirm your return request and provide return shipping instructions.</li>
+    <li>Ship the sealed, unopened product back to us. The customer is responsible for return shipping costs.</li>
+    <li>Once we receive and inspect the product, we will process your refund within 14 calendar days.</li>
+  </ol>
+
+  <h2>3. Damaged or Defective Products</h2>
+  <p>If your AlkoSafe product arrives damaged or is found to be defective, we will provide a full replacement or refund at no cost to you.</p>
+  <p>To report a damaged or defective item:</p>
+  <ul>
+    <li>Email <a href="mailto:info@alkosafe.com">info@alkosafe.com</a> within 7 days of receiving the product.</li>
+    <li>Include your order number and clear photographs showing the damage or defect.</li>
+    <li>We will review your claim and, if approved, arrange a replacement shipment or refund at no additional cost to you.</li>
+  </ul>
+
+  <h2>4. Wrong Item Received</h2>
+  <p>If you receive an incorrect item, please contact us within 7 days of delivery:</p>
+  <ul>
+    <li>Email <a href="mailto:info@alkosafe.com">info@alkosafe.com</a> with your order number and a description or photo of the item received.</li>
+    <li>We will arrange collection of the incorrect product at our expense.</li>
+    <li>The correct item will be dispatched to you as soon as possible.</li>
+  </ul>
+
+  <h2>5. Lost Orders</h2>
+  <p>If your order has not arrived within the expected delivery window, please allow an additional 5 business days to account for potential carrier delays. If the order still has not been delivered after this period:</p>
+  <ul>
+    <li>Contact us at <a href="mailto:info@alkosafe.com">info@alkosafe.com</a> with your order number.</li>
+    <li>We will open an investigation with the shipping carrier and aim to resolve the matter within 3 business days.</li>
+    <li>If the order is confirmed as lost, we will send a replacement or issue a full refund at your preference.</li>
+  </ul>
+
+  <h2>6. Refund Processing</h2>
+  <p>All approved refunds are processed within 14 calendar days of receiving the returned product (or confirming eligibility for non-return cases such as lost orders). The time for the refund to appear in your account depends on your payment method:</p>
+  <ul>
+    <li><strong>Credit or debit card:</strong> 3&ndash;10 business days after the refund is issued, depending on your card provider.</li>
+    <li><strong>Bank transfer (EFT/Havale):</strong> 3&ndash;5 business days after the refund is issued.</li>
+  </ul>
+
+  <h2>7. Summary</h2>
+  <table class="legal-table">
+    <tr><th>Situation</th><th>Eligible for Refund/Return?</th></tr>
+    <tr><td>Unopened, sealed product (within 14 days)</td><td class="eligible-yes">Yes</td></tr>
+    <tr><td>Opened or used product</td><td class="eligible-no">No</td></tr>
+    <tr><td>Damaged or defective product</td><td class="eligible-yes">Yes</td></tr>
+    <tr><td>Wrong item received</td><td class="eligible-yes">Yes</td></tr>
+    <tr><td>Lost in transit</td><td class="eligible-yes">Yes</td></tr>
+    <tr><td>Pre-dispatch cancellation (within 24 hours)</td><td class="eligible-yes">Yes</td></tr>
+  </table>
+
+  <h2>8. Contact</h2>
+  <p>If you have any questions about our Refund and Return Policy or need to submit a return request, please contact us:</p>
+  <ul>
+    <li><strong>Email:</strong> <a href="mailto:info@alkosafe.com">info@alkosafe.com</a></li>
+    <li><strong>Response time:</strong> We aim to respond to all enquiries within 2 business days.</li>
+  </ul>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="ftr"><div class="c">
+  <div class="ftg">
+    <div class="ftb">
+      <a href="/" class="logo">
+        <img src="/images/logo.png" alt="CROM TEST" class="logo-img footer" style="filter:brightness(0) invert(1)">
+        <span class="logo-div" style="background:rgba(255,255,255,.2)"></span>
+        <span class="logo-txt" style="color:white">Alko<span>Safe</span></span>
+      </a>
+      <p>A saliva alcohol test by CROM TEST. Swiss-grade materials. British know-how. Manufactured in Turkey to European CE standards.</p>
+    </div>
+    <div><h4>Product</h4><ul class="ftl"><li><a href="/#buy">Buy AlkoSafe</a></li><li><a href="/en/how-it-works/">How It Works</a></li><li><a href="/en/compliance/">Certifications</a></li></ul></div>
+    <div><h4>Company</h4><ul class="ftl"><li><a href="/en/about/">About CROM TEST</a></li><li><a href="/en/contact/">Contact</a></li><li><a href="/tr/blog/">Blog (TR)</a></li></ul></div>
+    <div><h4>Legal</h4><ul class="ftl"><li><a href="/en/privacy-policy">Privacy Policy</a></li><li><a href="/en/cookie-policy">Cookie Policy</a></li><li><a href="/en/terms-and-conditions">Terms and Conditions</a></li><li><a href="/en/refund-policy">Refund Policy</a></li><li><a href="/en/shipping-policy">Shipping Policy</a></li><li><a href="/en/disclaimer">Disclaimer</a></li></ul></div>
+  </div>
+  <div class="ftbt">
+    <span>&copy; 2026 CROM TEST. All rights reserved.</span>
+    <div class="ftlg"><a href="/en/privacy-policy">Privacy</a><a href="/en/cookie-policy">Cookies</a><a href="/en/terms-and-conditions">Terms</a><a href="/en/refund-policy">Refunds</a><a href="/en/disclaimer">Disclaimer</a></div>
+  </div>
+</div></footer>
+
+<script>
+const obs=new IntersectionObserver(e=>{e.forEach(en=>{if(en.isIntersecting)en.target.classList.add('v')})},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.fu').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
