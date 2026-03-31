@@ -62,6 +62,18 @@ img{max-width:100%;display:block}
 .what-text{max-width:800px;margin:0 auto}
 .what-text p{font-size:16px;color:var(--g6);line-height:1.7;margin-bottom:20px}
 .what-text p:last-child{margin-bottom:0}
+/* CE Section — Two-column layout */
+.ce-layout{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;max-width:1100px;margin:0 auto}
+.ce-text p{font-size:16px;color:var(--g6);line-height:1.7;margin-bottom:20px}
+.ce-text p:last-child{margin-bottom:0}
+.ce-sub{font-family:var(--fd);font-size:16px;font-weight:700;color:var(--g9);margin:32px 0 16px}
+.ce-cards{display:flex;flex-direction:column;gap:14px}
+.ce-card{background:var(--w);border:1px solid var(--g2);border-radius:16px;padding:20px;display:flex;gap:16px;align-items:flex-start;transition:all .3s}
+.ce-card:hover{border-color:var(--b4);box-shadow:0 8px 28px rgba(0,0,0,.04);transform:translateY(-3px)}
+.ce-card-ico{width:44px;height:44px;background:var(--b1);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ce-card-ico .ico{width:22px;height:22px;stroke:var(--b7)}
+.ce-card h4{font-size:14px;font-weight:700;color:var(--g9);margin-bottom:4px}
+.ce-card p{font-size:13px;color:var(--g6);line-height:1.5}
 /* Icon cards grid (3x2) */
 .icg{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
 .icc{background:var(--w);border:1px solid var(--g2);border-radius:16px;padding:32px 24px;text-align:center;transition:all .3s}
@@ -141,7 +153,7 @@ body.oc-open{overflow:hidden}
 .logo-img{height:36px;width:auto}
 .logo-img.footer{height:30px}
 /* Responsive */
-@media(max-width:1024px){.icg{grid-template-columns:repeat(2,1fr)}.dlg{grid-template-columns:repeat(2,1fr)}.ctai{flex-direction:column;text-align:center}.ctabs{justify-content:center}.ftg{grid-template-columns:1fr 1fr}.nav{display:none}.mob-toggle{display:block}}
+@media(max-width:1024px){.ce-layout{grid-template-columns:1fr}.icg{grid-template-columns:repeat(2,1fr)}.dlg{grid-template-columns:repeat(2,1fr)}.ctai{flex-direction:column;text-align:center}.ctabs{justify-content:center}.ftg{grid-template-columns:1fr 1fr}.nav{display:none}.mob-toggle{display:block}}
 @media(max-width:768px){.icg{grid-template-columns:1fr}.dlg{grid-template-columns:1fr}.ftg{grid-template-columns:1fr}}
 .fu{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}.fu.v{opacity:1;transform:translateY(0)}
 </style>
@@ -199,20 +211,36 @@ body.oc-open{overflow:hidden}
   <div class="sh tc fu">
     <div class="sl">Certification</div>
     <h2>CE Mark — European Conformity</h2>
+    <p>What this certification covers and what it means for you as a buyer.</p>
   </div>
-  <div class="what-text tc fu">
-    <p>The CE Mark is the manufacturer's declaration that AlkoSafe meets the health, safety, and environmental protection requirements of applicable European directives. CE marking allows a product to be placed on the market in the EU and Turkey.</p>
-    <p>For AlkoSafe, CE marking means the product has been evaluated for safety and performance, the manufacturing processes meet European standards, and technical documentation is maintained for regulatory inspection.</p>
-  </div>
-  <div class="what-text fu" style="margin-top:48px">
-    <h3 style="font-family:var(--fd);font-size:18px;font-weight:700;margin-bottom:20px">What CE Mark means for you</h3>
-    <ul class="cl">
-      <li><svg class="ico"><use href="#i-check"/></svg>Product assessed against European safety and performance standards</li>
-      <li><svg class="ico"><use href="#i-check"/></svg>Technical documentation exists and is maintained</li>
-      <li><svg class="ico"><use href="#i-check"/></svg>Manufacturer accepts legal accountability</li>
-      <li><svg class="ico"><use href="#i-check"/></svg>Product legally sold in Turkey and European markets</li>
-      <li><svg class="ico"><use href="#i-check"/></svg>Regulatory authorities can request inspection at any time</li>
-    </ul>
+  <div class="ce-layout fu">
+    <div class="ce-text">
+      <p>The CE Mark is the manufacturer's declaration that AlkoSafe meets the health, safety, and environmental protection requirements of applicable European directives. CE marking allows a product to be placed on the market in the EU and Turkey.</p>
+      <p>For AlkoSafe, CE marking means the product has been evaluated for safety and performance, the manufacturing processes meet European standards, and technical documentation is maintained for regulatory inspection.</p>
+      <p>CE marking creates legal accountability — if a CE-marked product causes harm due to non-compliance, the manufacturer bears full legal responsibility.</p>
+    </div>
+    <div class="ce-cards">
+      <div class="ce-card">
+        <div class="ce-card-ico"><svg class="ico"><use href="#i-shield"/></svg></div>
+        <div><h4>Safety Assessed</h4><p>Product evaluated against European safety and performance standards</p></div>
+      </div>
+      <div class="ce-card">
+        <div class="ce-card-ico"><svg class="ico"><use href="#i-clipboard"/></svg></div>
+        <div><h4>Documentation</h4><p>Technical documentation exists, is maintained, and available for inspection</p></div>
+      </div>
+      <div class="ce-card">
+        <div class="ce-card-ico"><svg class="ico"><use href="#i-award"/></svg></div>
+        <div><h4>Legal Accountability</h4><p>Manufacturer accepts full legal responsibility for compliance</p></div>
+      </div>
+      <div class="ce-card">
+        <div class="ce-card-ico"><svg class="ico"><use href="#i-map-pin"/></svg></div>
+        <div><h4>Market Access</h4><p>Legally sold in Turkey and all European markets</p></div>
+      </div>
+      <div class="ce-card">
+        <div class="ce-card-ico"><svg class="ico"><use href="#i-eye"/></svg></div>
+        <div><h4>Regulatory Oversight</h4><p>Authorities can request inspection of supporting documentation at any time</p></div>
+      </div>
+    </div>
   </div>
 </div></section>
 
@@ -314,7 +342,7 @@ body.oc-open{overflow:hidden}
   <div class="ctas">
     <div class="sb"><div class="sbn">99.7%</div><div class="sbl">Sensitivity</div></div>
     <div class="sb"><div class="sbn">2 min</div><div class="sbl">Result Time</div></div>
-    <div class="sb"><div class="sbn">0.2&#8240;</div><div class="sbl">Detection Threshold</div></div>
+    <div class="sb"><div class="sbn">0.2 Promil</div><div class="sbl">Detection Threshold</div></div>
     <div class="sb"><div class="sbn">24 mo</div><div class="sbl">Shelf Life</div></div>
   </div>
 </div></div></section>
