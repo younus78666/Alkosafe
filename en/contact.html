@@ -80,15 +80,18 @@ img{max-width:100%;display:block}
 .fm-submit:hover{background:var(--gl);transform:translateY(-2px)}
 .fm-submit .ico{width:18px;height:18px;stroke:var(--b9)}
 /* Info Cards */
-.ct-info{display:flex;flex-direction:column;gap:16px}
-.ct-card{background:var(--w);border:1px solid var(--g2);border-radius:16px;padding:24px;display:flex;align-items:flex-start;gap:16px;transition:all .3s}
-.ct-card:hover{border-color:var(--b4);box-shadow:0 6px 24px rgba(0,0,0,.04)}
-.ct-card-ico{width:44px;height:44px;background:var(--b1);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.ct-card-ico .ico{width:22px;height:22px;stroke:var(--b7)}
-.ct-card h3{font-family:var(--fd);font-size:15px;font-weight:700;margin-bottom:4px;color:var(--g9)}
-.ct-card p{font-size:14px;color:var(--g6);line-height:1.6}
-.ct-card a{color:var(--b6);text-decoration:none;font-weight:500}
+.ct-info{display:flex;flex-direction:column;gap:14px}
+.ct-card{background:var(--w);border:1px solid var(--g2);border-radius:16px;padding:24px;display:flex;align-items:center;gap:16px;transition:all .3s}
+.ct-card:hover{border-color:var(--b4);box-shadow:0 8px 28px rgba(0,0,0,.04);transform:translateY(-3px)}
+.ct-card-ico{width:48px;height:48px;background:var(--b1);border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ct-card-ico .ico{width:24px;height:24px;stroke:var(--b7)}
+.ct-card h3{font-family:var(--fd);font-size:14px;font-weight:700;margin-bottom:3px;color:var(--g9);letter-spacing:.01em}
+.ct-card p{font-size:14px;color:var(--g6);line-height:1.5}
+.ct-card a{color:var(--b6);text-decoration:none;font-weight:600;font-size:15px}
 .ct-card a:hover{text-decoration:underline}
+.ct-card.ct-email{border-left:4px solid var(--b7);background:linear-gradient(135deg,var(--w),var(--b1))}
+.ct-card.ct-email .ct-card-ico{background:var(--b7)}
+.ct-card.ct-email .ct-card-ico .ico{stroke:var(--w)}
 /* Bulk Highlight Card */
 .bulk-cta{background:var(--b7);border:none;border-radius:16px;padding:28px;color:var(--w)}
 .bulk-cta h3{font-family:var(--fd);font-size:16px;font-weight:700;margin-bottom:8px;color:var(--w)}
@@ -249,10 +252,10 @@ body.oc-open{overflow:hidden}
 
     <!-- RIGHT — Info Cards -->
     <div class="ct-info">
-      <div class="ct-card fu">
-        <div class="ct-card-ico"><svg class="ico"><use href="#i-map-pin"/></svg></div>
+      <div class="ct-card ct-email fu">
+        <div class="ct-card-ico"><svg class="ico"><use href="#i-mail"/></svg></div>
         <div>
-          <h3>Email</h3>
+          <h3>Email Us Directly</h3>
           <p><a href="mailto:info@alkosafe.com">info@alkosafe.com</a></p>
         </div>
       </div>
